@@ -13,9 +13,9 @@ if(!isset($_SESSION['belepett']))
 
 require("../kapcsolat/kapcs.php");
 
-$sql = "SELECT * from keszlet
+$sql = "SELECT * from termek
         INNER JOIN kategoriak 
-        ON kategoriak_id = keszlet.kategoriaid
+        ON kategoriak_id = termek.kategoriaid
         INNER JOIN alkategoriak
         ON alkategoriak_id = alkategoriaid
         ";
