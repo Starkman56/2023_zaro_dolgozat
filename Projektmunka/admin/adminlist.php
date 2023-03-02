@@ -12,18 +12,13 @@ if(!isset($_SESSION['belepett']))
 }
 
 require("../kapcsolat/kapcs.php");
-$rendez = (isset($_GET['rendez'])) ? $_GET['rendez'] : "felvdatum";
-$kifejezes = (isset($_POST['kereso'])) ? $_POST['kereso'] : "";
+
 $sql = "SELECT * from keszlet
-        INNER JOIN kategoriak ON kategoriak.id = keszlet.kategoriaid
-        WHERE ( vonalkod LIKE '%$kifejezes%' 
-        OR felvdatum LIKE '%$kifejezes%'
-        OR nev LIKE '%$kifejezes%'   
-        OR kategoriaid LIKE '%$kifejezes%'   
-        OR darab LIKE '%$kifejezes%'  
-        OR ar LIKE '%$kifejezes%'   
-        OR foto LIKE '%$kifejezes%')
-        ORDER BY {$rendez} ASC";
+        INNER JOIN kategoriak 
+        ON kategoriak_id = keszlet.kategoriaid
+        INNER JOIN alkategoriak
+        ON alkategoriak_id = alkategoriaid
+        ";
 
 $eredmeny = mysqli_query($dbconn, $sql);
 
@@ -33,6 +28,7 @@ $kimenet = "<table><thead>
             <th><a href=\"?rendez=vonalkod\">Vonalkód</a></th>
             <th>Név</th>
             <th>Kategória</th>
+            <th>Alkategória</th>
             <th>Felvitel dátuma</th>
             <th>Darabszám</th>
             <th>Ára</th>
@@ -46,7 +42,8 @@ $kimenet = "<table><thead>
             <td class=\"kep\"><img src=\"../keps/{$sor['foto']}\" alt=\"{$sor['foto']}\" style=\"width: 100%;\"></td>
             <td class=\"vonalkod\">{$sor['vonalkod']}</td>
             <td class=\"nev\">{$sor['nev']}</td>
-            <td class=\"kategorianev\">{$sor['kategorianev']}</td>
+            <td class=\"kategoriak_nev\">{$sor['kategoriak_nev']}</td>
+            <td class=\"alkategoria_nev\">{$sor['alkategoria_nev']}</td>
             <td class=\"felvdatum\">{$sor['felvdatum']}</td>
             <td class=\"darab\">{$sor['darab']}</td>
             <td class=\"ar\">{$sor['ar']}</td>
@@ -63,7 +60,7 @@ $kimenet .= "</tbody></table>";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../adminlista.css">
+    <link rel="stylesheet" href="../css/adminlista.css">
 </head>
 <body>
     <div class="cim">

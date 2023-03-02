@@ -17,12 +17,15 @@ if (isset($_POST['ok'])) {
     $nev = strip_tags(trim($_POST['nev']));
     $ar = strip_tags(trim($_POST['ar']));
     $darab = strip_tags(trim($_POST['darab']));
+    $kategoria_nev = strip_tags(trim($_POST['kategoria_nev']));
+    $alkategoria_nev = strip_tags(trim($_POST['alkategoria_nev']));
     $felvdatum = strip_tags(trim($_POST['felvdatum']));
 
     // változokvizs
     $mime = array("image/gif", "image/png", "image/jpg", "image/jpeg");
 
-    if (empty($vonalkod) || empty($felvdatum) || empty($darab) || empty($ar)) {
+    if (empty($vonalkod) || empty($felvdatum) || empty($darab) || empty($ar)|| empty($kategoria_nev) || empty($alkategoria_nev) ){
+        
         $hibak[] = "Nem adtál meg valamit.";
     }
     if ($_FILES['foto']['error'] == 0 && $_FILES['foto']['size'] > 6000000) {
@@ -61,7 +64,16 @@ if (isset($_POST['ok'])) {
         require("../kapcsolat/kapcs.php");
         $sql = "INSERT INTO keszlet
                 (vonalkod,nev,felvdatum,ar,darab,foto)
-                VALUE('{$vonalkod}','{$nev}','{$felvdatum}','{$ar}','{$darab}','{$foto}')";
+                VALUE('{$vonalkod}','{$nev}','{$felvdatum}','{$ar}','{$darab}','{$foto}')
+                
+                INNER JOIN kategoriak 
+                ON kategoriak_id = keszlet.kategoriaid
+                INNER JOIN alkategoriak
+                ON alkategoriak_id = alkategoriaid
+             
+               
+                
+                "; 
         mysqli_query($dbconn, $sql);
 
         // kép mozgatása a végleges helyére
@@ -80,7 +92,7 @@ if (isset($_POST['ok'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New</title>
-    <link rel="stylesheet" href="../felvitel.css">
+    <link rel="stylesheet" href="../css/felvitel.css">
 </head>
 
 <body>
@@ -110,6 +122,12 @@ if (isset($_POST['ok'])) {
                     </p>
                     <p class="men"><label for="nev">Név*:</label>
                         <input type="text" name="nev" id="nev" placeholder="Krupmli">
+                    </p>
+                    <p class="men"><label for="kategoria_nev">Kategoria*:</label>
+                        <input type="text" name="kategoria_nev" id="kategoria_nev" placeholder="Horgász">
+                    </p>
+                    <p class="men"><label for="alkategoria_nev">Alkategoria*:</label>
+                        <input type="text" name="alkategoria_nev" id="alkategoria_nev" placeholder="Orso">
                     </p>
                     <!-- Dátum megadása -->
                     <p class="men"><label for="felvdatum">Felvitel dátuma*:</label>

@@ -9,45 +9,16 @@ if (!isset($_SESSION['belepett'])) {
     header("Location: false.html");
     exit();
 }
-
+    //Elemek meghívása
 require("../kapcsolat/kapcs.php");
-$rendez = (isset($_GET['rendez'])) ? $_GET['rendez'] : "nev";
-$kifejezes = (isset($_POST['kereso'])) ? $_POST['kereso'] : "";
-$sql =  "SELECT * from keszlet 
-        WHERE ( vonalkod LIKE '%$kifejezes%' 
-        OR felvdatum LIKE '%$kifejezes%'
-        OR nev LIKE '%$kifejezes%'   
-        OR darab LIKE '%$kifejezes%'  
-        OR ar LIKE '%$kifejezes%'   
-        OR foto LIKE '%$kifejezes%')
-        ORDER BY {$rendez} ASC";
-$eredmeny = mysqli_query($dbconn, $sql);
-$kimenet = "";
+require("../components/nav.php");
+//kártyák létrehozása
+$sql =  "SELECT * from termek";
+require("../components/beolvas.php")
 
-while ($sor = mysqli_fetch_assoc($eredmeny)) {
-    $kimenet .=
 
-        "
-          <div class=\"card\">
-              <img src=\"../keps/{$sor['foto']}\" alt=\"{$sor['nev']}\">
-              <div class=\"card-body\">
-                <h5 class=\"card-title\">{$sor['nev']}</h5>
-              </div>
-              <ul class=\"lista list-group list-group-flush\">
-                <li class=\"list-group-item\">{$sor['nev']}</li>
-                <li class=\"list-group-item\">{$sor['darab']}<span> Raktáron</span></li>
-                <li class=\"list-group-item\">{$sor['ar']}<span> Ft </span></li>
-                <input type='number'id='termekdarab' value='1'>
-              </ul>
-              <div class='gombok'>
-              <button type='submit  ' class='btn btn-outline-dark kosarhoz'>Kosárba</button>
-                <button type='submit' class='btn btn-outline-dark bovebben'>Bővebben</button>
-                </div>
-         </div>
-       
-            ";
-}
-$kimenet .= "";
+
+
 ?>
 <html lang="en">
 
@@ -63,80 +34,15 @@ $kimenet .= "";
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="nav_style.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/ujstyle.css">
     <title>Sidebar #1</title>
 
 
     <script defer="" referrerpolicy="origin" src="/cdn-cgi/zaraz/s.js?z=JTdCJTIyZXhlY3V0ZWQlMjIlM0ElNUIlNUQlMkMlMjJ0JTIyJTNBJTIyU2lkZWJhciUyMCUyMzElMjIlMkMlMjJ4JTIyJTNBMC43NTcwNjQ1MzE3ODcxMzc2JTJDJTIydyUyMiUzQTE5MjAlMkMlMjJoJTIyJTNBMTA4MCUyQyUyMmolMjIlM0E5MzclMkMlMjJlJTIyJTNBMTkyMCUyQyUyMmwlMjIlM0ElMjJodHRwcyUzQSUyRiUyRnByZXZpZXcuY29sb3JsaWIuY29tJTJGdGhlbWUlMkZzaWRlYmFyJTJGY29sb3JsaWItc2lkZWJhci12MDElMkYlMjIlMkMlMjJyJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZjb2xvcmxpYi5jb20lMkYlMjIlMkMlMjJrJTIyJTNBMjQlMkMlMjJuJTIyJTNBJTIyVVRGLTglMjIlMkMlMjJvJTIyJTNBLTYwJTJDJTIycSUyMiUzQSU1QiU1RCU3RA=="></script>
-    
-    <!--nav  linkek -->
 </head>
-
 <body>
-
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
- 
-  <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
-                <span></span>
-            </a>   
-            <input class="KeresoItem" id="searchbar" onkeyup="search_item()" type="text"
-        name="search" placeholder="Search">
-    <div class="kosarikon">
-                    <p>0</p><i class="fa fa-shopping-cart"></i>
-                </div>
-  </div>
- 
-</nav>
-
-
-
-
-    <!-- Side Nav menu -->
-    <aside class="sidebar">
-
-
-        
-
-        </div>
-        <div class="side-inner">
-
-            <div class="counter d-flex justify-content-center">
-
-                <div class="col">
-                    <a href="webshop.php">Főoldal</a>
-                </div>
-                <div class="col">
-                    <a href="#">Megrendelések</a>
-                </div>
-                <div class="col">
-                    <a href="#">Profil</a>
-                </div>
-
-            </div>
-            <div class="nav-menu">
-                <ul>
-
-                    <li><a href="horgasz.php">Horgász felszerelések</a></li>
-    
-                    <li><a href="#">Diszállat</a></li>
-                    <li><a href="#">Háztartási cikk</a></li>
-                    <li><a href="#">Kézműves fatermékek</a></li>
-                    <li><a href="#">Stats</a></li>
-                    <li><a href="#">Sign out</a></li>
-
-
-                </ul>
-            </div>
-        </div>
-    </aside>
-
-
-
     <!--Website container-->
     <div class="container">
         <div class="cards">
