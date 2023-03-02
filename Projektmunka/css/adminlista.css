@@ -1,0 +1,160 @@
+*
+{
+    margin:0;
+    padding: 0;
+}
+
+body
+{
+    background-image: url(keps/bg1.jpg);
+}
+
+.kozep
+{
+    margin:0.5rem auto;
+    width: fit-content;
+    padding: 0.5rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kozep a
+{
+    text-decoration: none;
+    color: black;
+}
+.cim
+{
+    background-color: rgba(242, 222, 186, 1);
+}
+
+.cimkozepre
+{
+    margin: 4% auto 0 auto;
+    width: 13%;
+    text-align: center;
+    padding: 0.4rem;
+}
+
+.cimkozepre input
+{
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.szovegkozepre
+{
+    padding: 1.2%;
+    text-align: center;
+}
+
+.szovegkozepre a
+{
+    text-decoration: none;
+    color:black;
+    padding: 10px;
+    background-color: rgba(255, 239, 214, 1);
+    border-radius: 10px;
+}
+
+.respons
+{
+    width: 80%;
+    margin: auto;
+     padding: 10px;
+     background-color: rgba(242, 222, 186, 1);
+     overflow: scroll;
+     overflow-x: auto;
+     max-height: 60vh;
+}
+
+table
+{
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+    
+}
+
+table a
+{
+    text-decoration: none;
+    color:black;
+}
+
+table thead th
+{
+    background-color: #fff;
+    position: sticky; top: 0; z-index: 1;
+}
+
+
+.tabla
+{
+    max-height: 30vh;
+    margin: auto;
+    width: 100%;
+}
+
+/* width */
+.tabla::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+.tabla::-webkit-scrollbar-track {
+  background: #af2c2c;
+}
+
+/* Handle */
+.tabla::-webkit-scrollbar-thumb {
+  background: rgb(114, 38, 38);
+}
+
+/* Handle on hover */
+.tabla::-webkit-scrollbar-thumb:hover {
+  background: rgb(167, 81, 81);
+}
+
+/* .tabla table
+{
+    width: 100%;
+}
+
+table th td
+{
+    text-align: center;
+}
+
+.tabla td
+{
+    text-align: center;
+}
+.tabla .kepes
+{
+    width: 7%;
+}
+td{
+    height: 30%;
+} */
+
+table .kep{
+    max-width: 10rem;
+    max-height: 10rem;
+    text-align: center;
+   
+    
+}
+table td{
+    text-align: center;
+    height: 10rem;
+    width: 10rem;
+    border: solid red;
+    padding : 1rem;
+    font-size: 1rem;
+}
+
+

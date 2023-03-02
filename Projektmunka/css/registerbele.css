@@ -1,0 +1,232 @@
+*
+{
+    margin:0;
+    padding: 0;
+}
+
+.kis .melles
+{
+    margin: 10px auto;
+    width: 50%;
+}
+
+.kis .melles select
+{
+width: 100%;
+text-align: center;
+}
+
+body
+{
+    background-image: url(keps/bg1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2{
+    width: fit-content;
+    margin: 2rem auto;
+    font-size: 4rem;
+}
+.kozep
+{
+    width:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(242, 222, 186, 0.8);
+    padding: 5px;
+    border-radius: 20%;
+    margin: auto;
+}
+
+.hiba
+{
+    margin:auto;
+    width: 80%;
+}
+
+.kozep h1
+{
+    padding: 30px 0 10px 0;
+}
+
+.kozep .error-msg
+{
+    background-color: rgb(253, 56, 56);
+    border: 2px solid rgb(51, 0, 0);
+    border-radius: 20px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.kis
+{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 0 0 30px 0;
+}
+
+.kis .melle input
+{
+    width: 93%;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0 5px;
+} 
+
+.kis .melle p
+{
+    text-align: center;
+}
+
+.kis .gomb
+{
+    width: 50%;
+    margin: 10px auto;
+}
+.kis input[type=submit]
+{
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(255, 239, 214, 1);
+}
+
+.nincs
+{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+label
+{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.nincs a
+{
+    text-decoration: none;
+    color: black;
+    background-color: rgba(240, 248, 255, 0.404);
+    padding: 5px;
+    border-radius: 10px;
+}
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: DarkSalmon;
+    color: white;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
+@media screen and (max-width:1280px)
+{
+    h2{
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    body
+    {
+        background-image: url(keps/bg1.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .kozep
+    {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(242, 222, 186, 0.8);
+        padding: 5px;
+        border-radius: 20%;
+    }
+    
+    .hiba
+    {
+        margin:auto;
+        width: 80%;
+    }
+
+    .kozep h1
+    {
+        padding: 30px 0 10px 0;
+    }
+    
+    .kozep .error-msg
+    {
+        background-color: rgb(253, 56, 56);
+        border: 2px solid rgb(51, 0, 0);
+        border-radius: 20px;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .kis
+    {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        padding: 0 0 30px 0;
+    }
+    
+    .kis .melle input
+    {
+        width: 93%;
+        border-radius: 5px;
+        padding: 2px;
+        margin: 0 5px;
+    } 
+    
+    .kis .melle p
+    {
+        text-align: center;
+    }
+    
+    .kis .gomb
+    {
+        width: 50%;
+        margin: 10px auto;
+    }
+    .kis input[type=submit]
+    {
+        width: 100%;
+        padding: 5px;
+        background-color: rgba(255, 239, 214, 1);
+    }
+    
+    .nincs
+    {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    label
+    {
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+
+    .nincs a
+    {
+        text-decoration: none;
+        color: black;
+        background-color: rgba(240, 248, 255, 0.404);
+        padding: 5px;
+        border-radius: 10px;
+    }
+    
+
+}

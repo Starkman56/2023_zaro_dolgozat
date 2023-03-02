@@ -1,0 +1,160 @@
+*
+{
+    margin:0;
+    padding: 0;
+}
+
+body
+{
+    background-image: url(keps/cropped-tanya.jpg);
+    background-color: rgb(94, 45, 45);
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+.kozep
+{
+    margin: 10% 20% ;
+    width: 15%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cim
+{
+    background-color: rgba(253, 13, 13, 0.651);
+    width: 90%;
+    margin: auto;
+}
+
+.cimkozepre
+{
+    margin: 4% auto 0 auto;
+    width: 13%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.cimkozepre input
+{
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.content
+{
+    background-color: rgba(180, 0, 0, 0.651);
+    width: 90%;
+    margin: auto;
+}
+.respons
+{
+    width: 80%;
+    margin: auto;
+    padding: 10px 0 20px 0;
+}
+
+table
+{
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table a
+{
+    text-decoration: none;
+    color:black;
+}
+
+table th
+{
+    background-color: #fff;
+}
+
+.tabla
+{
+    max-height: 600px;
+    margin: auto;
+    overflow: scroll;
+    overflow-x: auto;
+    width: 80%;
+}
+
+/* width */
+.tabla::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+.tabla::-webkit-scrollbar-track {
+  background: #af2c2c;
+}
+
+/* Handle */
+.tabla::-webkit-scrollbar-thumb {
+  background: rgb(114, 38, 38);
+}
+
+/* Handle on hover */
+.tabla::-webkit-scrollbar-thumb:hover {
+  background: rgb(167, 81, 81);
+}
+
+.tabla table
+{
+    width: 100%;
+}
+
+table th td
+{
+    text-align: center;
+}
+
+.tabla table td
+{
+    text-align: center;
+}
+.tabla table .kepes
+{
+    width: 7%;
+}
+
+.tabla table .nemszel
+{
+    max-width: 1.3rem;
+}
+
+.tabla table .fulszel
+{
+    max-width: 1.7rem;
+}
+
+.tabla table .szulszel
+{
+    max-width: 2.5rem;
+}
+
+.tabla table .elszel
+{
+    max-width: 3rem;
+}
+
+.tabla table .szinszel
+{
+    max-width: 1.3rem;
+}
+
+.tabla table .fajszel
+{
+    max-width: 1rem;
+}
+
+.tabla table .padd
+{
+    max-width: 2rem;
+}
