@@ -16,7 +16,7 @@ if(isset($_GET['id']))
     require("../kapcsolat/kapcs.php");
     
     $id= (int)$_GET['id'];
-    $sql = "DELETE FROM keszlet 
+    $sql = "DELETE FROM termek 
             WHERE id = {$id}";
     
     mysqli_query($dbconn, $sql);
