@@ -56,23 +56,35 @@ require("../components/beolvas.php")
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../keps/headerkep.png" class="d-block w-100" alt="...">
+      <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../keps/headerkep.png" class="d-block w-100" alt="...">
+      <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img  class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
+    
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

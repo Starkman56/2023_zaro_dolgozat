@@ -130,7 +130,7 @@ li a{
     margin:10px;
     border: 1px solid white;
 }
-img{
+.card img{
     width: 100%;
     border-radius: 1rem;
     max-width: 8rem;
@@ -542,5 +542,4 @@ display: list-item;
   width: auto;
   margin: auto;
 }
-
 
