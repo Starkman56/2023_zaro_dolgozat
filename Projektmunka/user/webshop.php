@@ -47,7 +47,7 @@ $sql =  "SELECT * from termek";
     <div class="carousel-item active">
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5">Horgász áru</h5>
+        <h5 class="webshoph5  animate__animated animate__pulse">Horgász áru</h5>
         <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
         <p></p>
       </div>
@@ -55,21 +55,21 @@ $sql =  "SELECT * from termek";
     <div class="carousel-item">
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5">Díszállatok</h5>
+        <h5 class="webshoph5  animate__animated animate__pulse">Díszállatok</h5>
         <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
       </div>
     </div>
     <div class="carousel-item">
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5">Háztartási eszközök</h5>
+        <h5 class="webshoph5  animate__animated animate__pulse">Háztartási eszközök</h5>
         <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
       </div>
     </div>
     <div class="carousel-item">
       <img  class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5">Fatermékek</h5>
+        <h5 class="webshoph5  animate__animated animate__pulse">Fatermékek</h5>
         <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
       </div>
     </div>
