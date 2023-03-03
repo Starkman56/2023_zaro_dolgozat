@@ -566,6 +566,12 @@ h4{
   .card{
     margin: auto;
   }
+  .webshopkep{
+    max-width: 16rem;
+    min-height: 12rem;
+    border-radius:0.4rem ;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  }
   .carousel-caption{
     width: fit-content;
     color:#000;
@@ -581,7 +587,7 @@ h4{
     margin: auto;
   }
   .webshoph5{
-    font-size: 1rem;
+    font-size: 0.1rem;
     padding: 2rem;
     background: rgba(255, 255, 255, .6);
     border-radius: 0.5rem;
