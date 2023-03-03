@@ -18,10 +18,13 @@ require("../kapcsolat/kapcs.php");
 if (isset($_POST['ok'])) {
     // változok clear
     $vonalkod = strip_tags(trim($_POST['vonalkod']));
-
     $ar = strip_tags(trim($_POST['ar']));
+     $nev = strip_tags(trim($_POST['nev']));
     $darab = strip_tags(trim($_POST['darab']));
     $felvdatum = strip_tags(trim($_POST['felvdatum']));
+    $alkategoria_id = strip_tags(trim($_POST['alkategoria_id']));
+    $leiras = strip_tags(trim($_POST['leiras']));
+
 
     // változokvizs
     $mime = array("image/gif", "image/png", "image/jpg", "image/jpeg");
@@ -64,8 +67,8 @@ if (isset($_POST['ok'])) {
         // adatok beszúrása az adatbázisba
         $id = (int)$_GET['id'];
 
-        $sql = "UPDATE keszlet
-                SET foto = '{$foto}', ar = '{$ar}', vonalkod = '{$vonalkod}', darab = '{$darab}', felvdatum = '{$felvdatum}'
+        $sql = "UPDATE termek
+                SET foto = '{$foto}', ar = '{$ar}', vonalkod = '{$vonalkod}', nev = '{$nev}', leiras = '{$leiras}', darab = '{$darab}', felvdatum = '{$felvdatum}', alkategoria_id = '{$alkategoria_id}'
                 WHERE id = {$id}";
 
         mysqli_query($dbconn, $sql);
@@ -77,14 +80,18 @@ if (isset($_POST['ok'])) {
     }
 } else {
     $id = (int)$_GET['id'];
-    $sql = "SELECT * from keszlet WHERE id = {$id}";
+    $sql = "SELECT * from termek WHERE id = {$id}";
 
     $eredmeny = mysqli_query($dbconn, $sql);
     $sor = mysqli_fetch_assoc($eredmeny);
+
     $felvdatum = $sor['felvdatum'];
     $ar = $sor['ar'];
     $vonalkod = $sor['vonalkod'];
     $darab = $sor['darab'];
+    $nev = $sor['nev'];
+    $leiras = $sor['leiras'];
+    $alkategoria_id = $sor['alkategoria_id'];
     $foto = ($sor['foto'] != "nincskep.png") ? $sor['foto'] : "nincskep.png";
 }
 ?>
@@ -127,16 +134,53 @@ if (isset($_POST['ok'])) {
                     <p class="men"><label for="vonalkod">Vonalkód*:</label>
                         <input type="text" name="vonalkod" id="vonalkod" value="<?php print $vonalkod; ?>">
                     </p>
-                    <!-- Mobil megadása -->
+                    <!-- Felvitel megadása -->
                     <p class="men"><label for="felvdatum">Felvitel dátuma*:</label>
                         <input type="date" name="felvdatum" id="felvdatum" value="<?php print $felvdatum; ?>">
                     </p>
-                    <!-- E-mail megadása -->
+                    <!-- nev -->
+                    <p class="men"><label for="nev">Név*:</label>
+                        <input type="text" name="nev" id="nev" value="<?php print $nev; ?>">
+                    </p>
+                    <!-- Kategória kiválasztása -->
+                    <p class="men"><label for="vonalkod">Kategória *:</label>
+                    <select class="alkategoria" name="alkategoria_id" id="alkategoria_id" for="alkategoria_id" value="<?php print $alkategoria_id; ?>">
+                        <option value="1">Horgászbot</option>
+                        <option value="2">Orsó</option>
+                        <option value="3">Etetőanyag</option>
+                        <option value="4">Horgász kiegészítő</option>
+                        <option value="5">Horgász ruházat</option>
+                        <option value="6">Haltáp</option>
+                        <option value="7">Rágcsáló táp</option>
+                        <option value="8">Díszállat kiegészítő</option>
+                        <option value="9">Kisállat Alom</option>
+                        <option value="10">Levegőztető,szűrő,melegítő</option>
+                        <option value="11">Konyhai termék</option>
+                        <option value="12">Fürdőszobai termék</option>
+                        <option value="13">Játék</option>
+                        <option value="14">Dísz</option>
+                        <option value="15">Ajándék</option>
+                        <option value="16">Madáretető</option>
+                        <option value="17">Odu</option>
+                        <option value="18">Fali kulcstartó</option>
+                        <option value="19">Kenyértartó</option>
+                        <option value="20">Kosár</option>
+                    </select>
+                    </p>
+                    <!-- Ar megadása -->
                     <p class="men"><label for="ar">Ár*:</label>
                         <input type="text" name="ar" id="ar" value="<?php print $ar; ?>">
                     </p>
+                     <!-- Ar megadása -->
                     <p class="men"><label for="darab">Darab*:</label>
                         <input type="text" name="darab" id="darab" value="<?php print $darab; ?>">
+                    </p>
+                    <!-- leírás -->
+                    <p class="men"><label for="leiras">Leírás:</label>
+                    
+                    <textarea id="leiras" name="leiras" rows="4" cols="50" placeholder="Adja meg a leírást" value="<?php print $leiras; ?>">
+                        
+                    </textarea>
                     </p>
                     <!-- Küldés gomba -->
                     <div class="gomb"><input type="submit" value="Rendben" id="ok" name="ok">

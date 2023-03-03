@@ -115,6 +115,19 @@ form {
     text-decoration: none;
     color: black;
 }
+
+.alkategoria{
+    font-size: 2rem;
+    margin: auto;
+    width: 100%;
+    border: solid red;
+    width: 40rem;
+    text-align: center;
+}
+
+
+
+
 /*
 @media screen and (max-width:600px) {
     body {

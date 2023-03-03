@@ -15,8 +15,8 @@ require("../kapcsolat/kapcs.php");
 require("../components/nav.php");
 $sql =  "SELECT * from termek 
 INNER JOIN kategoriak 
-ON kategoriak_id = termek.kategoriaid
-WHERE kategoriak_id = 1";
+ON kategoria_id = termek.alkategoria_id
+WHERE kategoria_id = 1";
 require("../components/beolvas.php");
 
 

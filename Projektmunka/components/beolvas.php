@@ -14,7 +14,7 @@ while ($sor = mysqli_fetch_assoc($eredmeny)) {
                 <h5 class=\"card-title\">{$sor['nev']}</h5>
               </div>
               <ul class=\"lista list-group list-group-flush\">
-                <li class=\"list-group-item\">{$sor['nev']}</li>
+                <li class=\"leiras list-group-item\">{$sor['leiras']}</li>
                 <li class=\"list-group-item\">{$sor['darab']}<span> Raktáron</span></li>
                 <li class=\"list-group-item\">{$sor['ar']}<span> Ft </span></li>
                 <input type='number'id='termekdarab' value='1'>

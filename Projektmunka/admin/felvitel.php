@@ -19,11 +19,12 @@ if (isset($_POST['ok'])) {
     $darab = strip_tags(trim($_POST['darab']));
     $felvdatum = strip_tags(trim($_POST['felvdatum']));
     $alkategoria_id = strip_tags(trim($_POST['alkategoria_id']));
+    $leiras = strip_tags(trim($_POST['leiras']));
 
     // változokvizs
     $mime = array("image/gif", "image/png", "image/jpg", "image/jpeg");
 
-    if (empty($vonalkod) || empty($felvdatum) || empty($darab) || empty($ar)  ){
+    if (empty($vonalkod) || empty($felvdatum) || empty($darab) || empty($ar) || empty($alkategoria_id)  ){
        
     }
     if ($_FILES['foto']['error'] == 0 && $_FILES['foto']['size'] > 6000000) {
@@ -62,8 +63,8 @@ if (isset($_POST['ok'])) {
         require("../kapcsolat/kapcs.php");
         echo"$alkategoria_id";
         $sql = "INSERT INTO termek
-                (vonalkod,nev,felvdatum,ar,darab,foto,alkategoria_id)
-                VALUE('{$vonalkod}','{$nev}','{$felvdatum}','{$ar}','{$darab}','{$foto}','{$alkategoria_id}') 
+                (vonalkod,nev,felvdatum,ar,darab,foto,alkategoria_id,leiras)
+                VALUE('{$vonalkod}','{$nev}','{$felvdatum}','{$ar}','{$darab}','{$foto}','{$alkategoria_id}','{$leiras}') 
                 
                 "; 
         mysqli_query($dbconn, $sql);
@@ -119,7 +120,10 @@ if (isset($_POST['ok'])) {
                     <p class="men"><label for="nev">Név*:</label>
                         <input type="text" name="nev" id="nev" placeholder="Krupmli">
                     </p>
-                    <select name="alkategoria_id" id="alkategoria_id" for="alkategoria_id">
+                    
+                    <!-- Kategória kiválasztása -->
+                    <p class="men"><label for="vonalkod">Kategória *:</label>
+                    <select class="alkategoria" name="alkategoria_id" id="alkategoria_id" for="alkategoria_id">
                         <option value="1">Horgászbot</option>
                         <option value="2">Orsó</option>
                         <option value="3">Etetőanyag</option>
@@ -141,6 +145,7 @@ if (isset($_POST['ok'])) {
                         <option value="19">Kenyértartó</option>
                         <option value="20">Kosár</option>
                     </select>
+                    </p>
                     <!-- Dátum megadása -->
                     <p class="men"><label for="felvdatum">Felvitel dátuma*:</label>
                         <input type="date" name="felvdatum" id="felvdatum">
@@ -151,6 +156,13 @@ if (isset($_POST['ok'])) {
                     </p>
                     <p class="men"><label for="darab">Darab*:</label>
                         <input type="text" name="darab" id="darab" placeholder="1">
+                    </p>
+                        <!-- leírás -->
+                    <p class="men"><label for="leiras">Leírás:</label>
+                    
+                    <textarea id="leiras" name="leiras" rows="4" cols="50" placeholder="Adja meg a leírást">
+                        
+                    </textarea>
                     </p>
                     <!-- Küldés gomba -->
                     <div class="gomb"><input type="submit" value="Ok" id="ok" name="ok">
