@@ -17,16 +17,14 @@ if (isset($_POST['ok'])) {
     $nev = strip_tags(trim($_POST['nev']));
     $ar = strip_tags(trim($_POST['ar']));
     $darab = strip_tags(trim($_POST['darab']));
-    $kategoria_nev = strip_tags(trim($_POST['kategoria_nev']));
-    $alkategoria_nev = strip_tags(trim($_POST['alkategoria_nev']));
     $felvdatum = strip_tags(trim($_POST['felvdatum']));
+    $alkategoria_id = strip_tags(trim($_POST['alkategoria_id']));
 
     // változokvizs
     $mime = array("image/gif", "image/png", "image/jpg", "image/jpeg");
 
-    if (empty($vonalkod) || empty($felvdatum) || empty($darab) || empty($ar)|| empty($kategoria_nev) || empty($alkategoria_nev) ){
-        
-        $hibak[] = "Nem adtál meg valamit.";
+    if (empty($vonalkod) || empty($felvdatum) || empty($darab) || empty($ar)  ){
+       
     }
     if ($_FILES['foto']['error'] == 0 && $_FILES['foto']['size'] > 6000000) {
         $hibak[] = "Nagy a kép formátuma";
@@ -62,19 +60,17 @@ if (isset($_POST['ok'])) {
     } else {
         // beszúrás az adatbázisba
         require("../kapcsolat/kapcs.php");
-        $sql = "INSERT INTO keszlet
-                (vonalkod,nev,felvdatum,ar,darab,foto)
-                VALUE('{$vonalkod}','{$nev}','{$felvdatum}','{$ar}','{$darab}','{$foto}')
-                
-                INNER JOIN kategoriak 
-                ON kategoriak_id = keszlet.kategoriaid
-                INNER JOIN alkategoriak
-                ON alkategoriak_id = alkategoriaid
-             
-               
+        echo"$alkategoria_id";
+        $sql = "INSERT INTO termek
+                (vonalkod,nev,felvdatum,ar,darab,foto,alkategoria_id)
+                VALUE('{$vonalkod}','{$nev}','{$felvdatum}','{$ar}','{$darab}','{$foto}','{$alkategoria_id}') 
                 
                 "; 
         mysqli_query($dbconn, $sql);
+
+        
+
+        
 
         // kép mozgatása a végleges helyére
 
@@ -123,12 +119,28 @@ if (isset($_POST['ok'])) {
                     <p class="men"><label for="nev">Név*:</label>
                         <input type="text" name="nev" id="nev" placeholder="Krupmli">
                     </p>
-                    <p class="men"><label for="kategoria_nev">Kategoria*:</label>
-                        <input type="text" name="kategoria_nev" id="kategoria_nev" placeholder="Horgász">
-                    </p>
-                    <p class="men"><label for="alkategoria_nev">Alkategoria*:</label>
-                        <input type="text" name="alkategoria_nev" id="alkategoria_nev" placeholder="Orso">
-                    </p>
+                    <select name="alkategoria_id" id="alkategoria_id" for="alkategoria_id">
+                        <option value="1">Horgászbot</option>
+                        <option value="2">Orsó</option>
+                        <option value="3">Etetőanyag</option>
+                        <option value="4">Horgász kiegészítő</option>
+                        <option value="5">Horgász ruházat</option>
+                        <option value="6">Haltáp</option>
+                        <option value="7">Rágcsáló táp</option>
+                        <option value="8">Díszállat kiegészítő</option>
+                        <option value="9">Kisállat Alom</option>
+                        <option value="10">Levegőztető,szűrő,melegítő</option>
+                        <option value="11">Konyhai termék</option>
+                        <option value="12">Fürdőszobai termék</option>
+                        <option value="13">Játék</option>
+                        <option value="14">Dísz</option>
+                        <option value="15">Ajándék</option>
+                        <option value="16">Madáretető</option>
+                        <option value="17">Odu</option>
+                        <option value="18">Fali kulcstartó</option>
+                        <option value="19">Kenyértartó</option>
+                        <option value="20">Kosár</option>
+                    </select>
                     <!-- Dátum megadása -->
                     <p class="men"><label for="felvdatum">Felvitel dátuma*:</label>
                         <input type="date" name="felvdatum" id="felvdatum">
