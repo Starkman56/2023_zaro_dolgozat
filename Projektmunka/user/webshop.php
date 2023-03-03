@@ -55,7 +55,6 @@ require("../components/beolvas.php")
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5">Díszállatok</h5>
         <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
-        <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
@@ -63,7 +62,6 @@ require("../components/beolvas.php")
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5">Háztartási eszközök</h5>
         <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
-        <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
@@ -71,7 +69,6 @@ require("../components/beolvas.php")
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5">Fatermékek</h5>
         <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
-        <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
     
@@ -87,18 +84,20 @@ require("../components/beolvas.php")
 </div>
 <div class="webshopmain">
   <div class="alap">
-    <img class="webshopkep" src="../keps/baits.jpg" alt="">
-    <h4>Eper</h4>
+  <h4>Horgász áru</h4>
+    <img class="webshopkep" src="../keps/fishing.jpg" alt="">
   </div>
   <div class="alap">
+    <h4>Díszállatok</h4>
   <img class="webshopkep" src="../keps/diszallat.jpg" alt="">
-    <h4>Eper</h4>
   </div>
   <div class="alap">
-    <h4>Eper</h4>
+    <h4>Háztartási eszközök</h4>
+  <img class="webshopkep" src="../keps/muanyag_termekek.jpg" alt="">
   </div>
   <div class="alap">
-    <h4>Eper</h4>
+    <h4>Fatermékek</h4>
+  <img class="webshopkep" src="../keps/madareteto.jpg" alt="">
   </div>
 </div>
     <!-- nav scriptek -->
