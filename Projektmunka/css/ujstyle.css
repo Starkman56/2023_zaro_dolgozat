@@ -228,9 +228,10 @@ li{
     width: 30rem;
 }
 #termekdarab{
-    width: 4rem;
+    width: 3rem;
     margin: 0.5rem auto;
     background-color: transparent;
+    border-radius: 8px 0px 8px 0px;
     
 }
 .bovebben{
