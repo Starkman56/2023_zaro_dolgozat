@@ -17,8 +17,11 @@ while ($sor = mysqli_fetch_assoc($eredmeny)) {
                 <li class=\"leiras list-group-item\">{$sor['leiras']}</li>
                 <li class=\"list-group-item\">{$sor['darab']}<span> Raktáron</span></li>
                 <li class=\"list-group-item\">{$sor['ar']}<span> Ft </span></li>
+                <li class=\"kosarli\">
                 <input type='number'id='termekdarab' value='1'>
-              <button type='submit  ' class='btn btn-outline-dark kosarhoz'>Kosárba</button>
+                 <button type='submit  ' class='kosar btn btn-outline-dark kosarhoz'>Kosárba</button>
+                 </li>
+
               </ul>
              
          </div>
