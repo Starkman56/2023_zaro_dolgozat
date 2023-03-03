@@ -30,11 +30,6 @@ require("../components/beolvas.php")
     <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&amp;display=swap" rel="stylesheet">
     <!-- nav linkek -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/ujstyle.css">
     <title>Sidebar #1</title>
@@ -44,43 +39,44 @@ require("../components/beolvas.php")
 </head>
 <body>
     <!--Website container-->
-    <div class="container">
+    <div class="container-fluid">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <button type="button" class="btn btn-outline-dark">Dark</button>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5 class="webshoph5">Horgász áru</h5>
+        <button type="button" class="btn btn-outline-dark">Bővebben</button>
+        <p></p>
       </div>
     </div>
     <div class="carousel-item">
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <h5>Díszállatok</h5>
+        <button type="button" class="btn btn-outline-dark">Bővebben</button>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <h5>Háztartási eszközök</h5>
+        <button type="button" class="btn btn-outline-dark">Bővebben</button>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img  class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <h5>Fatermékek</h5>
+        <button type="button" class="btn btn-outline-dark">Bővebben</button>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>

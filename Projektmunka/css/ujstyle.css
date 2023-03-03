@@ -99,6 +99,9 @@ header{
     justify-content: space-between;
     padding: 15px, 10px;
 }
+.headerkep{
+  width: 100%;
+}
 .lista{
     display: flex;
     list-style:none;
@@ -266,11 +269,7 @@ li{
   @media (max-width: 699px) {
     .cards { grid-template-columns: repeat(1, 1fr); }
 
-   .card{
-
-    margin: auto;
-  }
-
+   .card{margin: auto;}
   }
   @media (min-width: 700px) {
     .cards { grid-template-columns: repeat(2, 1fr); }
@@ -542,4 +541,22 @@ display: list-item;
   width: auto;
   margin: auto;
 }
+.carousel-caption{
+  width: fit-content;
+  color:#000;
+  left: 50%;
+  top: 60%; 
+  transform: translate(-50%, -50%);
+}
+.webshoph5{
+  font-size: 4rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, .6);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+.btn-outline-dark{
+ width: 10rem;
 
+}
