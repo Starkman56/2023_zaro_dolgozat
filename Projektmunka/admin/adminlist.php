@@ -14,11 +14,10 @@ if(!isset($_SESSION['belepett']))
 require("../kapcsolat/kapcs.php");
 
 $sql = "SELECT * from termek
-        INNER JOIN kategoriak 
-        ON kategoriak_id = termek.kategoriaid
-        INNER JOIN alkategoriak
-        ON alkategoriak_id = alkategoriaid
-        ";
+INNER JOIN alkategoriak
+ON alkategoriak.alkategoria_id = termek.alkategoria_id
+INNER JOIN kategoriak
+ON alkategoriak.kategoria_id = kategoriak.kategoria_id";
 
 $eredmeny = mysqli_query($dbconn, $sql);
 
@@ -42,7 +41,7 @@ $kimenet = "<table><thead>
             <td class=\"kep\"><img src=\"../keps/{$sor['foto']}\" alt=\"{$sor['foto']}\" style=\"width: 100%;\"></td>
             <td class=\"vonalkod\">{$sor['vonalkod']}</td>
             <td class=\"nev\">{$sor['nev']}</td>
-            <td class=\"kategoriak_nev\">{$sor['kategoriak_nev']}</td>
+            <td class=\"kategoria_nev\">{$sor['kategoria_nev']}</td>
             <td class=\"alkategoria_nev\">{$sor['alkategoria_nev']}</td>
             <td class=\"felvdatum\">{$sor['felvdatum']}</td>
             <td class=\"darab\">{$sor['darab']}</td>
