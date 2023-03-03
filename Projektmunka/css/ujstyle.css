@@ -633,3 +633,11 @@ input[type=text]:focus {
 .btn-outline-dark.bov{
  width: 10rem;
 }
+.webshopmain{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.alap{
+  display: grid;
+  margin: auto;
+}

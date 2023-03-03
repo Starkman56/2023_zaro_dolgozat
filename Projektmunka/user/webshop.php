@@ -85,13 +85,22 @@ require("../components/beolvas.php")
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-        <div class="cards">
-            <?php
-            print $kimenet;
-            ?>
-        </div>
-    </div>
-
+<div class="webshopmain">
+  <div class="alap">
+    <img class="webshopkep" src="../keps/baits.jpg" alt="">
+    <h4>Eper</h4>
+  </div>
+  <div class="alap">
+  <img class="webshopkep" src="../keps/diszallat.jpg" alt="">
+    <h4>Eper</h4>
+  </div>
+  <div class="alap">
+    <h4>Eper</h4>
+  </div>
+  <div class="alap">
+    <h4>Eper</h4>
+  </div>
+</div>
     <!-- nav scriptek -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
