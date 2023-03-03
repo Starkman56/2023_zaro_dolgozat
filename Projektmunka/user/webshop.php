@@ -25,6 +25,9 @@ $sql =  "SELECT * from termek";
     <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&amp;display=swap" rel="stylesheet">
     <!-- nav linkek -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/ujstyle.css">
     <title>Webshop</title>
@@ -82,19 +85,19 @@ $sql =  "SELECT * from termek";
   </button>
 </div>
 <div class="webshopmain">
-  <div class="alap">
+  <div class="alap animate__animated animate__backInLeft">
   <h4>Horgász áru</h4>
     <img class="webshopkep" src="../keps/fishing.jpg" alt="">
   </div>
-  <div class="alap">
+  <div class="alap animate__animated animate__backInRight">
     <h4>Díszállatok</h4>
   <img class="webshopkep" src="../keps/diszallat.jpg" alt="">
   </div>
-  <div class="alap">
+  <div class="alap animate__animated animate__backInLeft">
     <h4>Háztartási eszközök</h4>
   <img class="webshopkep" src="../keps/muanyag_termekek.jpg" alt="">
   </div>
-  <div class="alap">
+  <div class="alap animate__animated animate__backInRight">
     <h4>Fatermékek</h4>
   <img class="webshopkep" src="../keps/madareteto.jpg" alt="">
   </div>
