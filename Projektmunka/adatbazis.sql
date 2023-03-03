@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Már 02. 11:15
+-- Létrehozás ideje: 2023. Már 03. 09:22
 -- Kiszolgáló verziója: 10.4.24-MariaDB
 -- PHP verzió: 8.1.5
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `keszletgyarmat`
+-- Adatbázis: `adatbazis`
 --
 
 -- --------------------------------------------------------
@@ -61,35 +61,36 @@ INSERT INTO `accounts` (`id`, `name`, `username`, `email`, `password`, `permissi
 --
 
 CREATE TABLE `alkategoriak` (
-  `alkategoriak_id` int(15) NOT NULL,
-  `alkategoria_nev` varchar(200) COLLATE utf8_hungarian_ci NOT NULL
+  `alkategoria_id` int(11) NOT NULL,
+  `alkategoria_nev` varchar(200) COLLATE utf8_hungarian_ci NOT NULL,
+  `kategoria_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `alkategoriak`
 --
 
-INSERT INTO `alkategoriak` (`alkategoriak_id`, `alkategoria_nev`) VALUES
-(1, 'Horgaszbot'),
-(2, 'Orso'),
-(3, 'Etetoanyag'),
-(4, 'Horgasz_Kiegeszito'),
-(5, 'Horgasz_Ruhazat'),
-(6, 'Hal_tap'),
-(7, 'Ragcsalo_Tap'),
-(8, 'Diszallat_Kiegeszito'),
-(9, 'Alom'),
-(10, 'Levegozteto_Szuro_Melegito'),
-(11, 'Konyhai'),
-(12, 'Furdoszoba'),
-(13, 'Jatek'),
-(14, 'Disz'),
-(15, 'Ajandek'),
-(16, 'Madareteto'),
-(17, 'odu'),
-(18, 'kulcstarto'),
-(19, 'kenyertarto'),
-(20, 'kosar');
+INSERT INTO `alkategoriak` (`alkategoria_id`, `alkategoria_nev`, `kategoria_id`) VALUES
+(1, 'Horgaszbot', 1),
+(2, 'Orso', 1),
+(3, 'Etetoanyag', 1),
+(4, 'Horgasz_Kiegeszito', 1),
+(5, 'Horgasz_Ruhazat', 1),
+(6, 'Hal_tap', 2),
+(7, 'Ragcsalo_Tap', 2),
+(8, 'Diszallat_Kiegeszito', 2),
+(9, 'Alom', 2),
+(10, 'Levegozteto_Szuro_Melegito', 2),
+(11, 'Konyhai', 3),
+(12, 'Furdoszoba', 3),
+(13, 'Jatek', 3),
+(14, 'Disz', 3),
+(15, 'Ajandek', 3),
+(16, 'Madareteto', 4),
+(17, 'odu', 4),
+(18, 'kulcstarto', 4),
+(19, 'kenyertarto', 4),
+(20, 'kosar', 4);
 
 -- --------------------------------------------------------
 
@@ -98,19 +99,19 @@ INSERT INTO `alkategoriak` (`alkategoriak_id`, `alkategoria_nev`) VALUES
 --
 
 CREATE TABLE `kategoriak` (
-  `kategoriak_id` int(15) NOT NULL,
-  `kategoriak_nev` varchar(11) COLLATE utf8_hungarian_ci NOT NULL
+  `kategoria_id` int(11) NOT NULL,
+  `kategoria_nev` varchar(50) COLLATE utf8_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `kategoriak`
 --
 
-INSERT INTO `kategoriak` (`kategoriak_id`, `kategoriak_nev`) VALUES
-(1, 'Horgasz'),
-(2, 'Diszallat'),
-(3, 'Haztartasi'),
-(4, 'Fatermekek');
+INSERT INTO `kategoriak` (`kategoria_id`, `kategoria_nev`) VALUES
+(1, 'horgasz'),
+(2, 'diszallat'),
+(3, 'haztartas'),
+(4, 'fatermek');
 
 -- --------------------------------------------------------
 
@@ -140,18 +141,16 @@ CREATE TABLE `termek` (
   `darab` int(5) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL,
   `nev` varchar(50) DEFAULT NULL,
-  `kategoriaid` int(15) DEFAULT NULL,
-  `alkategoriaid` int(15) NOT NULL
+  `alkategoria_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- A tábla adatainak kiíratása `termek`
 --
 
-INSERT INTO `termek` (`id`, `vonalkod`, `felvdatum`, `ar`, `darab`, `foto`, `nev`, `kategoriaid`, `alkategoriaid`) VALUES
-(37, '123123', '2023-02-09', 1230, 4, '1675934610.png', 'Szuper Horgászbot', 1, 1),
-(46, '00000000000', '2023-03-01', 1000, 1, NULL, 'Aranyhaltap', 2, 6),
-(47, '2144511', '2023-03-02', 1400, 30, NULL, 'Tölgy kenyértartó', 4, 19);
+INSERT INTO `termek` (`id`, `vonalkod`, `felvdatum`, `ar`, `darab`, `foto`, `nev`, `alkategoria_id`) VALUES
+(46, '00000000000', '2023-03-01', 1000, 1, NULL, 'Aranyhaltap', 6),
+(47, '2144511', '2023-03-02', 1400, 30, NULL, 'Tölgy kenyértartó', 19);
 
 --
 -- Indexek a kiírt táblákhoz
@@ -167,13 +166,14 @@ ALTER TABLE `accounts`
 -- A tábla indexei `alkategoriak`
 --
 ALTER TABLE `alkategoriak`
-  ADD PRIMARY KEY (`alkategoriak_id`);
+  ADD PRIMARY KEY (`alkategoria_id`),
+  ADD KEY `kategoria_id` (`kategoria_id`);
 
 --
 -- A tábla indexei `kategoriak`
 --
 ALTER TABLE `kategoriak`
-  ADD PRIMARY KEY (`kategoriak_id`);
+  ADD PRIMARY KEY (`kategoria_id`);
 
 --
 -- A tábla indexei `megrendeles`
@@ -186,10 +186,7 @@ ALTER TABLE `megrendeles`
 --
 ALTER TABLE `termek`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `kategoriaid` (`kategoriaid`),
-  ADD KEY `kategoriaid_2` (`kategoriaid`),
-  ADD KEY `kategoriaid_3` (`kategoriaid`),
-  ADD KEY `alkategoriaid` (`alkategoriaid`);
+  ADD KEY `alkategoriaid` (`alkategoria_id`);
 
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
@@ -205,13 +202,13 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT a táblához `alkategoriak`
 --
 ALTER TABLE `alkategoriak`
-  MODIFY `alkategoriak_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `alkategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT a táblához `kategoriak`
 --
 ALTER TABLE `kategoriak`
-  MODIFY `kategoriak_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `kategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT a táblához `megrendeles`
@@ -230,11 +227,16 @@ ALTER TABLE `termek`
 --
 
 --
+-- Megkötések a táblához `alkategoriak`
+--
+ALTER TABLE `alkategoriak`
+  ADD CONSTRAINT `alkategoriak_ibfk_1` FOREIGN KEY (`kategoria_id`) REFERENCES `kategoriak` (`kategoria_id`);
+
+--
 -- Megkötések a táblához `termek`
 --
 ALTER TABLE `termek`
-  ADD CONSTRAINT `termek_ibfk_1` FOREIGN KEY (`kategoriaid`) REFERENCES `kategoriak` (`kategoriak_id`),
-  ADD CONSTRAINT `termek_ibfk_2` FOREIGN KEY (`alkategoriaid`) REFERENCES `alkategoriak` (`alkategoriak_id`);
+  ADD CONSTRAINT `termek_ibfk_1` FOREIGN KEY (`alkategoria_id`) REFERENCES `alkategoriak` (`alkategoria_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
