@@ -661,7 +661,7 @@ h4{
   .webshopmain{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 2rem;
     width: 70%;
     margin: auto;
   }
@@ -689,6 +689,13 @@ h4{
     left: 50%;
     top: 60%; 
     transform: translate(-50%, -50%);
+  }
+  .webshopmain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 70%;
+    margin: auto;
   }
   .webshoph5{
     font-size: 4rem;
