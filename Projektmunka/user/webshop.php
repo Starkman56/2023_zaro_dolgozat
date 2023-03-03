@@ -59,7 +59,7 @@ require("../components/beolvas.php")
     <div class="carousel-item">
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Díszállatok</h5>
+        <h5 class="webshoph5">Díszállatok</h5>
         <button type="button" class="btn btn-outline-dark">Bővebben</button>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
@@ -67,7 +67,7 @@ require("../components/beolvas.php")
     <div class="carousel-item">
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Háztartási eszközök</h5>
+        <h5 class="webshoph5">Háztartási eszközök</h5>
         <button type="button" class="btn btn-outline-dark">Bővebben</button>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
@@ -75,7 +75,7 @@ require("../components/beolvas.php")
     <div class="carousel-item">
       <img  class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Fatermékek</h5>
+        <h5 class="webshoph5">Fatermékek</h5>
         <button type="button" class="btn btn-outline-dark">Bővebben</button>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
