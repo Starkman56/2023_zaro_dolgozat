@@ -117,14 +117,14 @@ li a{
     cursor: pointer;
     font-size: 2rem;
     color: rgb(0, 0, 0);
-    padding-left: 2rem;
-    
+    padding-left: 2rem;  
 }
 .kosarikon p {
     padding: 10px;
     float: left;   
     color: #000;
 }
+
 
 .itemsBox{
     display: flex;
@@ -267,15 +267,57 @@ li{
 
 
   @media (max-width: 699px) {
-    .cards { grid-template-columns: repeat(1, 1fr); }
-
-   .card{margin: auto;}
+    .cards { 
+      grid-template-columns: repeat(1, 1fr); 
+    }
+    .card{
+      margin: auto;
+    }
+    .carousel-caption{
+      width: fit-content;
+      color:#000;
+      left: 20%;
+      top: 30%; 
+      transform: translate(-50%, -50%);
+    }
+    .webshoph5{
+      font-size: 4rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, .6);
+      border-radius: 0.5rem;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+      margin-bottom: 2rem;
+    }
+    .btn-outline-dark.bov{
+     width: 10rem;
+    }
   }
   @media (min-width: 700px) {
     .cards { grid-template-columns: repeat(2, 1fr); }
     .card{
 
       margin: auto;
+    }
+    .carousel-caption{
+      width: fit-content;
+      color:#000;
+      left: 50%;
+      top: 60%; 
+      transform: translate(-50%, -50%);
+    }
+    .carousel{
+      margin-bottom: 2rem;
+    }
+    .webshoph5{
+      font-size: 4rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, .6);
+      border-radius: 0.5rem;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+      margin-bottom: 2rem;
+    }
+    .btn-outline-dark.bov{
+     width: 10rem;
     }
   }
   @media (min-width: 1000px) {
@@ -284,12 +326,48 @@ li{
 
       margin: auto;
     }
+    .carousel-caption{
+      width: fit-content;
+      color:#000;
+      left: 50%;
+      top: 60%; 
+      transform: translate(-50%, -50%);
+    }
+    .webshoph5{
+      font-size: 4rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, .6);
+      border-radius: 0.5rem;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+      margin-bottom: 2rem;
+    }
+    .btn-outline-dark.bov{
+     width: 10rem;
+    }
   }
   @media (min-width: 1200px) {
     .cards { grid-template-columns: repeat(4, 1fr); }
     .card{
 
       margin: auto;
+    }
+    .carousel-caption{
+      width: fit-content;
+      color:#000;
+      left: 50%;
+      top: 60%; 
+      transform: translate(-50%, -50%);
+    }
+    .webshoph5{
+      font-size: 4rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, .6);
+      border-radius: 0.5rem;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+      margin-bottom: 2rem;
+    }
+    .btn-outline-dark.bov{
+     width: 10rem;
     }
   }
 /* kártyák */
@@ -530,10 +608,6 @@ input[type=text]:focus {
  margin-left: 90px;
 }
 
-
-.lista{
-display: list-item;
-}
 .nincslista.active{
   display: none;
 }
@@ -556,7 +630,6 @@ display: list-item;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
 }
-.btn-outline-dark{
+.btn-outline-dark.bov{
  width: 10rem;
-
 }

@@ -13,7 +13,7 @@ if (!isset($_SESSION['belepett'])) {
 require("../kapcsolat/kapcs.php");
 require("../components/nav.php");
 //kártyák létrehozása
-$sql =  "SELECT * from termek";
+$sql =  "SELECT * from termek"; 
 require("../components/beolvas.php")
 ?>
 <html lang="en">
@@ -46,7 +46,7 @@ require("../components/beolvas.php")
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5">Horgász áru</h5>
-        <button type="button" class="btn btn-outline-dark">Bővebben</button>
+        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
         <p></p>
       </div>
     </div>
@@ -54,7 +54,7 @@ require("../components/beolvas.php")
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5">Díszállatok</h5>
-        <button type="button" class="btn btn-outline-dark">Bővebben</button>
+        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
@@ -62,7 +62,7 @@ require("../components/beolvas.php")
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5">Háztartási eszközök</h5>
-        <button type="button" class="btn btn-outline-dark">Bővebben</button>
+        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
@@ -70,7 +70,7 @@ require("../components/beolvas.php")
       <img  class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5">Fatermékek</h5>
-        <button type="button" class="btn btn-outline-dark">Bővebben</button>
+        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
@@ -89,17 +89,6 @@ require("../components/beolvas.php")
             <?php
             print $kimenet;
             ?>
-        </div>
-    </div>
-
-    <!-- kosár tartalma felugró ablakban fog megjelenni-->
-    <div class="cartBox">
-        <div class="cart">
-            <!-- x gomb amivel bezárjuk-->
-            <i class="fa fa-close"></i>
-            <h1>Kosár tartalma</h1>
-            <!-- táblázat, ahová az adatok kerülnek, amikor hozzá adják a kosárhoz-->
-            <table></table>
         </div>
     </div>
 
