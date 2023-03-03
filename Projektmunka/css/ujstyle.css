@@ -566,6 +566,15 @@ h4{
   .card{
     margin: auto;
   }
+  .alap{
+    height: fit-content;
+    margin: auto;
+  }
+  h4{
+    margin: auto;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+  }
   .carousel-caption{
     width: fit-content;
     color:#000;
@@ -576,9 +585,16 @@ h4{
   .webshopmain{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
+    gap: 1rem;
     width: 70%;
     margin: auto;
+  }
+  .webshopkep{
+    max-width: 16rem;
+    min-height: 14rem;
+    border-radius:0.4rem ;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
   }
   .webshoph5{
     font-size: 1rem;
@@ -588,6 +604,7 @@ h4{
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
   }
+  
   .btn-outline-dark.bov{
    width: 10rem;
   }
@@ -605,6 +622,7 @@ h4{
     top: 60%; 
     transform: translate(-50%, -50%);
   }
+  
   .carousel{
     margin-bottom: 2rem;
   }

@@ -14,7 +14,6 @@ require("../kapcsolat/kapcs.php");
 require("../components/nav.php");
 //kártyák létrehozása
 $sql =  "SELECT * from termek"; 
-require("../components/beolvas.php")
 ?>
 <html lang="en">
 
