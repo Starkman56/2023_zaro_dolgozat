@@ -41,11 +41,11 @@
                     <div class="dropdown" style="float:right;">
                         <button class="dropbtn">⮟</button>
                         <div class="dropdown-content">
-                            <a href="#">Horgászbot</a>
-                            <a href="#">Orsó</a>
-                            <a href="#">Etetőanyag,pellet,bojli</a>
-                            <a href="#">Horgász iegészítő</a>
-                            <a href="#">Ruházat</a>
+                            <a href="horgaszbot.php">Horgászbot</a>
+                            <a href="orso.php">Orsó</a>
+                            <a href="etetoanyag.php">Etetőanyag,pellet,bojli</a>
+                            <a href="kiegeszito.php">Horgász kiegészítő</a>
+                            <a href="ruhazat.php">Ruházat</a>
                         </div>
                 </div>
             </li>
