@@ -16,7 +16,7 @@ require("../components/nav.php");
 $sql =  "SELECT * from termek 
 INNER JOIN kategoriak 
 ON kategoria_id = termek.alkategoria_id
-WHERE kategoria_id = 1";
+WHERE alkategoria_id = 1 OR alkategoria_id = 2 ";
 require("../components/beolvas.php");
 
 
