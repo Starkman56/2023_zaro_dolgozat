@@ -49,10 +49,10 @@ if(isset($_POST['ok']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="registerbele.css">
+    <link rel="stylesheet" href="css/registerbele2.css">
 </head>
 <body>
-<h2>Üdvözöljük a weboldalon</h2>
+<div class="background" id="background"></div>
     <div class="kozep">
         <h1>Regisztárció</h1>
         <div class="kis">
@@ -111,16 +111,20 @@ if(isset($_POST['ok']))
                 
                 </div>
             <div class="gomb"><input type="submit" value="OK" id="ok" name="ok"></div>
-            <p class="nincs">Van már fiókod? <a href="belep.php">Igen</a></p>
+            
         </form>
         </div>
+        
+    </div>
+    <div class="kozep2">
+    <p class="nincs">Van már fiókod? <a href="belep.php">Igen</a></p>
     </div>
     <footer>
      <p>Copyright ©
      <br>Kordics Balázs & Szabó Máté
      </p>
     </footer>
-   
+    <script src="js/hater.js"></script>
 </body>
 </html>
 
