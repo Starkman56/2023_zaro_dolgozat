@@ -85,8 +85,8 @@ $sql =  "SELECT * from termek";
   </button>
 </div>
 <div class="webshopmain">
-  <div class="alap animate__animated animate__backInLeft hover-img2">
-    <img class="webshopkep " src="../keps/fishing.jpg" alt=""><figcaption>Horgász áru</figcaption>
+  <div class="alap animate__animated animate__backInLeft hover-img2">    
+  <a href="horgasz.php"><img class="webshopkep " src="../keps/fishing.jpg" alt=""><figcaption>Horgász áru</figcaption></a>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
   <img class="webshopkep" src="../keps/diszallat.jpg" alt=""><figcaption>Díszállatok</figcaption>

@@ -542,12 +542,14 @@ input[type=text]:focus {
   gap: 3rem;
   width: 70%;
   margin: auto;
-  margin-bottom: 5rem;
+
 }
 .alap{
   display: grid;
   margin: auto;
+  margin-bottom: 3rem;
 }
+
 .webshopkep{
   max-width: 25rem;
   min-height: 20rem;
@@ -734,23 +736,16 @@ h4{
 
 
 
-
 .hover-img2{
   color: #fff;
   overflow: hidden;
   position: relative;
   text-align: center;
 }
-
-
-
-
 .hover-img2 * {
   box-sizing: border-box;
   transition: all 0.45s ease;
 }
-
-
 .hover-img2::before,
 .hover-img2::after {
   background-color: rgba(0, 0, 0, 0.5);
@@ -764,20 +759,13 @@ h4{
   z-index: 1;
   opacity: 0;
   transform: scaleY(2);
+  border-radius: 0.5rem;
 }
-
-
-
-
 .hover-img2 {
   vertical-align: top;
   max-width: 100%;
   backface-visibility: hidden;
 }
-
-
-
-
 .hover-img2 figcaption {
   position: absolute;
   top: 0;
@@ -798,31 +786,23 @@ h4{
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
+
 }
-
-
-
-
 .hover-img2:hover::before,
 .hover-img2:hover::after {
   transform: scale(1);
   opacity: 1;
 }
-
-
-
-
 .hover-img2:hover > img {
   opacity: 0.7;
 }
-
-
-
-
 .hover-img2:hover figcaption {
   opacity: 1;
 }
-
+a figcaption{
+  text-decoration: none;
+  color: white;
+}
 
 
 
