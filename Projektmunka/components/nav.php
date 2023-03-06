@@ -36,26 +36,24 @@
                     <span class="caret"></span>
                     <span class="sr-only">Toggle Dropdown</span>
                 </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                <ul class="dropdown-menu 1" role="menu">
+                    <li><a href="#">Horgászbot</a></li>
+                    <li><a href="#">Orsó</a></li>
+                    <li><a href="#">Etetőanyag,pellet,bojli</a></li>
+                    <li><a href="#">Horgász kiegészítő</a></li>
+                    <li><a href="#">Horgász ruházat</a></li>  
                 </ul>
                 <li><a href="#">Diszállat</a></li>
                 <button type="button" class="gomb btn btn-default dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span>
                     <span class="sr-only">Toggle Dropdown</span>
                 </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
+                <ul class="dropdown-menu 2" role="menu">
+                    <li><a href="#">valami</a></li>
+                    <li><a href="#">Anotvalamiher action</a></li>
                     <li><a href="#">Something else here</a></li>
 
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                    
                 </ul>
                 <li><a href="#">Háztartási cikk</a></li>
                 <button type="button" class="gomb btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -67,8 +65,6 @@
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
 
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
                 </ul>
                 <li><a href="#">Kézműves fatermékek</a></li>
                 <button type="button" class="gomb btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -80,8 +76,7 @@
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
 
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                  
                 </ul>
 
                 <li><a href="#">Stats</a></li>
