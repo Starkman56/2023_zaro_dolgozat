@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Már 03. 09:22
+-- Létrehozás ideje: 2023. Már 06. 08:18
 -- Kiszolgáló verziója: 10.4.24-MariaDB
 -- PHP verzió: 8.1.5
 
@@ -141,16 +141,20 @@ CREATE TABLE `termek` (
   `darab` int(5) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL,
   `nev` varchar(50) DEFAULT NULL,
-  `alkategoria_id` int(11) NOT NULL
+  `alkategoria_id` int(11) NOT NULL,
+  `leiras` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- A tábla adatainak kiíratása `termek`
 --
 
-INSERT INTO `termek` (`id`, `vonalkod`, `felvdatum`, `ar`, `darab`, `foto`, `nev`, `alkategoria_id`) VALUES
-(46, '00000000000', '2023-03-01', 1000, 1, NULL, 'Aranyhaltap', 6),
-(47, '2144511', '2023-03-02', 1400, 30, NULL, 'Tölgy kenyértartó', 19);
+INSERT INTO `termek` (`id`, `vonalkod`, `felvdatum`, `ar`, `darab`, `foto`, `nev`, `alkategoria_id`, `leiras`) VALUES
+(83, '00000000', '2023-03-03', 27000, 100, '1677840738.jpeg', 'Okuma Ceymar River Feeder', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
+(84, '00000000', '2023-03-03', 29100, 100, '1677844206.jpeg', 'Okuma Ceymar River Plus', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
+(85, '00000000', '0000-00-00', 32000, 100, '1677844292.jpeg', 'Okuma Ceymar Black', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
+(86, '00000000', '2023-03-03', 41000, 100, '1677844365.jpeg', 'Okuma Custom Black Ceymar River Feeder', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
+(87, '00000000', '2023-03-03', 54900, 100, '1677844433.jpeg', 'Okuma Ceymar River Feeder Professional', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -202,13 +206,13 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT a táblához `alkategoriak`
 --
 ALTER TABLE `alkategoriak`
-  MODIFY `alkategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `alkategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT a táblához `kategoriak`
 --
 ALTER TABLE `kategoriak`
-  MODIFY `kategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `kategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT a táblához `megrendeles`
@@ -220,7 +224,7 @@ ALTER TABLE `megrendeles`
 -- AUTO_INCREMENT a táblához `termek`
 --
 ALTER TABLE `termek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- Megkötések a kiírt táblákhoz

@@ -542,11 +542,11 @@ input[type=text]:focus {
   gap: 3rem;
   width: 70%;
   margin: auto;
+  margin-bottom: 5rem;
 }
 .alap{
   display: grid;
   margin: auto;
-  height: 29rem;
 }
 .webshopkep{
   max-width: 25rem;
@@ -737,12 +737,6 @@ h4{
 
 .hover-img2{
   color: #fff;
-
-
-  /* display: inline-block; */
-  /* margin: 8px; */
-  /* max-width: 320px;
-  min-width: 240px; */
   overflow: hidden;
   position: relative;
   text-align: center;
