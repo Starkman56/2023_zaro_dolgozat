@@ -125,7 +125,11 @@ li a{
     color: #000;
 }
 
-
+.card:hover{
+scale: 30rem;
+transform: scale(1.01);
+box-shadow: 0 0 1em  rgba(0, 0, 0, .3) ;
+}
 .itemsBox{
     display: flex;
 }
@@ -140,8 +144,11 @@ li a{
     max-height: 8rem;
     min-height: 8rem;
     padding: 1rem;
-    box-shadow: 0 0 2em  rgba(0, 0, 0, .5) ;
+    box-shadow: 0 0 1em  rgba(0, 0, 0, .3) ;
     margin-bottom: 2rem;
+}
+.card-header img:hover{
+  transform: scale(1.1);
 }
 .card-header{
   display: flex;
@@ -151,6 +158,7 @@ li a{
   min-height: 15rem;
   
 }
+
   
 p{
     font-size: 20px;
@@ -225,6 +233,11 @@ th,td{
 
 }
 .card{
+    color: black;
+    padding: 1rem;
+    height: 36rem;
+    width: 18rem;
+
    margin-bottom: 2rem;
    background: rgba(255, 255, 255, 0.4);
    
@@ -256,14 +269,7 @@ li{
 
 
 /*kártyák */
-.card {
-    
-    color: black;
-    padding: 1rem;
-    height: 36rem;
-    width: 18rem;
 
-  }
   .cards {
 
     margin: 0 auto;
@@ -725,6 +731,7 @@ h4{
 }
 .kosarli{
   margin: auto;
+ 
 }
 #termekdarab{
   width: 3.5rem;
