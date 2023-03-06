@@ -12,8 +12,8 @@ if (!isset($_SESSION['belepett'])) {
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
 require("../components/nav.php");
-//kártyák létrehozása
-$sql =  "SELECT * from termek"; 
+
+
 ?>
 <html lang="en">
 
