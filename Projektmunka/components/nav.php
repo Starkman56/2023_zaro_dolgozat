@@ -28,56 +28,82 @@
                 <a href="#">Profil</a>
             </div>
         </div>
+
+
         <div class="nav-menu">
-            <ul>
+        <ul>
 
-                <li><a href="horgasz.php">Horgász felszerelések</a></li>
-                <button type="button" class="gomb btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu 1" role="menu">
-                    <li><a href="#">Horgászbot</a></li>
-                    <li><a href="#">Orsó</a></li>
-                    <li><a href="#">Etetőanyag,pellet,bojli</a></li>
-                    <li><a href="#">Horgász kiegészítő</a></li>
-                    <li><a href="#">Horgász ruházat</a></li>  
-                </ul>
-                <li><a href="#">Diszállat</a></li>
-                <button type="button" class="gomb btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu 2" role="menu">
-                    <li><a href="#">valami</a></li>
-                    <li><a href="#">Anotvalamiher action</a></li>
-                    <li><a href="#">Something else here</a></li>
+            <li>
+                <div class="flex">
 
-                    
-                </ul>
-                <li><a href="#">Háztartási cikk</a></li>
-                <button type="button" class="gomb btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <a href="horgasz.php">Horgász felszerelések</a> 
 
-                </ul>
-                <li><a href="#">Kézműves fatermékek</a></li>
-                <button type="button" class="gomb btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <div class="dropdown" style="float:right;">
+                        <button class="dropbtn">⮟</button>
+                        <div class="dropdown-content">
+                            <a href="#">Horgászbot</a>
+                            <a href="#">Orsó</a>
+                            <a href="#">Etetőanyag,pellet,bojli</a>
+                            <a href="#">Horgász iegészítő</a>
+                            <a href="#">Ruházat</a>
+                        </div>
+                </div>
+            </li>
 
-                  
-                </ul>
+
+            <li>
+                <div class="flex">
+
+                <a href="#">Diszállat</a>
+
+                <div class="dropdown" style="float:right;">
+                        <button class="dropbtn">⮟</button>
+                        <div class="dropdown-content">
+                            <a href="#">Díszhal táp</a>
+                            <a href="#">Rágcsáló táp</a>
+                            <a href="#">1 2133123</a>
+                            <a href="#">1 3</a>
+                            <a href="#">1 3</a>
+                        </div>
+                
+                </div>
+            </li>
+
+           <li>
+                <div class="flex">
+
+                <a href="#">Háztartási</a>
+
+                <div class="dropdown" style="float:right;">
+                        <button class="dropbtn">⮟</button>
+                        <div class="dropdown-content">
+                            <a href="#">13123 1</a>
+                            <a href="#">1 123122</a>
+                            <a href="#">1 2133123</a>
+                            <a href="#">1 3</a>
+                            <a href="#">1 3</a>
+                        </div>
+                
+                </div>
+            </li>
+
+
+            <li>
+                <div class="flex">
+
+                    <a href="horgasz.php">Kézműves fatermékek</a> 
+
+                    <div class="dropdown" style="float:right;">
+                        <button class="dropbtn">⮟</button>
+                        <div class="dropdown-content">
+                            <a href="#">1 1</a>
+                            <a href="#">1 2</a>
+                            <a href="#">1 3</a>
+                            <a href="#">1 3</a>
+                            <a href="#">1 3</a>
+                        </div>
+                </div>
+            </li>
 
                 <li><a href="#">Stats</a></li>
                 <li><a href="#">Sign out</a></li>
