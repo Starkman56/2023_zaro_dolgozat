@@ -809,11 +809,13 @@ a figcaption{
 /* Dropdown Button */
 .dropbtn {
   background-color: #ffffff;
-  color: #ff7315;
+  color: #ff7315 ;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  
+  
 }
 
 .dropdown {
@@ -827,7 +829,7 @@ a figcaption{
   right: 0;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
   z-index: 1;
 }
 
@@ -836,9 +838,10 @@ a figcaption{
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {background-color: rgba(255, 255, 255, 0.4)}
 .dropdown:hover .dropdown-content {display: block;}
 
 

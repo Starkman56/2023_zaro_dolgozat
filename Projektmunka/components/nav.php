@@ -61,9 +61,9 @@
                         <div class="dropdown-content">
                             <a href="#">Díszhal táp</a>
                             <a href="#">Rágcsáló táp</a>
-                            <a href="#">1 2133123</a>
-                            <a href="#">1 3</a>
-                            <a href="#">1 3</a>
+                            <a href="#">Díszállat kiegészítő</a>
+                            <a href="#">Kisállat alom</a>
+                            <a href="#">Levegőztető,szűrő</a>
                         </div>
                 
                 </div>
@@ -77,11 +77,11 @@
                 <div class="dropdown" style="float:right;">
                         <button class="dropbtn">⮟</button>
                         <div class="dropdown-content">
-                            <a href="#">13123 1</a>
-                            <a href="#">1 123122</a>
-                            <a href="#">1 2133123</a>
-                            <a href="#">1 3</a>
-                            <a href="#">1 3</a>
+                            <a href="#">Konyha</a>
+                            <a href="#">Fürdőszoba</a>
+                            <a href="#">Játék</a>
+                            <a href="#">Dísz</a>
+                            <a href="#">Ajándék</a>
                         </div>
                 
                 </div>
@@ -96,11 +96,11 @@
                     <div class="dropdown" style="float:right;">
                         <button class="dropbtn">⮟</button>
                         <div class="dropdown-content">
-                            <a href="#">1 1</a>
-                            <a href="#">1 2</a>
-                            <a href="#">1 3</a>
-                            <a href="#">1 3</a>
-                            <a href="#">1 3</a>
+                            <a href="#">Madáretető</a>
+                            <a href="#">Odu</a>
+                            <a href="#">Kulcstartó</a>
+                            <a href="#">Kenyértartó</a>
+                            <a href="#">Fonott kosár</a>
                         </div>
                 </div>
             </li>
