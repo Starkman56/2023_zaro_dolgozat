@@ -18,27 +18,43 @@ text-align: center;
 
 body
 {
-    background-image: url(keps/bg1.jpg);
+    background-image: url(../keps/belep.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-}
-h2{
-    width: fit-content;
-    margin: 2rem auto;
-    font-size: 4rem;
+    
 }
 .kozep
 {
-    width:15%;
+    width:20%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(242, 222, 186, 0.8);
+    background-color: rgba(170, 252, 252, 0.9);
     padding: 5px;
     border-radius: 20%;
     margin: auto;
+    height: 23rem;
+    position: absolute;
+    left: 25%; 
+    top: 20%; 
+}
+.kozep2{
+    width:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(170, 252, 252, 0.6);
+    padding: 5px;
+    border-radius: 30%;
+    margin: auto;
+    height: 5rem;
+    position: absolute;
+    left:30%; 
+    top: 55%; 
+    z-index: -1;
 }
 
 .hiba
@@ -49,7 +65,7 @@ h2{
 
 .kozep h1
 {
-    padding: 30px 0 10px 0;
+    padding: 1rem;
 }
 
 .kozep .error-msg
@@ -81,6 +97,8 @@ h2{
 .kis .melle p
 {
     text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 
 .kis .gomb
@@ -91,14 +109,24 @@ h2{
 .kis input[type=submit]
 {
     width: 100%;
-    padding: 5px;
-    background-color: rgba(255, 239, 214, 1);
+    padding: 0.6rem;
+    margin-top: 3rem;
+    background-color: rgb(139, 241, 254);
+}
+
+.kis input[type=submit]:hover
+{
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 3rem;
+    background-color: rgb(125, 209, 255);
 }
 
 .nincs
 {
     font-size: 1.3rem;
     text-align: center;
+    margin-top: 2.5rem;
 }
 
 label
@@ -119,11 +147,14 @@ label
 footer {
     text-align: center;
     padding: 3px;
-    background-color: DarkSalmon;
-    color: white;
+    background-color: rgb(169, 223, 255);
+    color: rgb(0, 0, 0);
     position:fixed;
     bottom:0;
     width: 100%;
+}
+.email{
+
 }
 @media screen and (max-width:1280px)
 {
@@ -147,7 +178,7 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: rgba(242, 222, 186, 0.8);
+        background-color: rgba(116, 223, 255, 0.8);
         padding: 5px;
         border-radius: 20%;
     }

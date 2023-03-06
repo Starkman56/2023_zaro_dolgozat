@@ -50,8 +50,7 @@ if(isset($_POST['ok']))
     <title>Document</title>
     <link rel="stylesheet" href="css/registerbele.css">
 </head>
-<body>
-<h2>Üdvözöljük a weboldalon</h2>
+<body> 
     <div class="kozep">
         <h1>Belépés</h1>
         <div class="kis">
@@ -69,7 +68,7 @@ if(isset($_POST['ok']))
         <form id="fom" method="post">
             <p>
                 <div class="melle">
-                <label for="email">
+                <label for="email ">
                     <p>E-mail</p>
                     <input type="email" name="email" id="email" required>
                 </label>
@@ -84,9 +83,11 @@ if(isset($_POST['ok']))
                 </div>
             </p>
             <div class="gomb"><input type="submit" value="Belépés" id="ok" name="ok"></div>
-            <p class="nincs">Regisztráció <a href="register.php">Itt!</a></p>
         </form>
         </div>
+    </div>
+    <div class="kozep2">
+            <p class="nincs">Regisztráció <a href="register.php">Itt!</a></p>
     </div>
     <footer>
      <p>Copyright ©
