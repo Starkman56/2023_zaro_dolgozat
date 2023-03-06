@@ -51,6 +51,7 @@ if(isset($_POST['ok']))
     <link rel="stylesheet" href="css/registerbele.css">
 </head>
 <body> 
+    <div class="background" id="background"></div>
     <div class="kozep">
         <h1>Belépés</h1>
         <div class="kis">
@@ -79,7 +80,7 @@ if(isset($_POST['ok']))
                 <label for="password" class="melle">
                     <p>Jelszó</p>
                     <input type="password" name="password" id="password" required>
-                </label>
+                </label>    
                 </div>
             </p>
             <div class="gomb"><input type="submit" value="Belépés" id="ok" name="ok"></div>
@@ -94,6 +95,7 @@ if(isset($_POST['ok']))
      <br>Kordics Balázs & Szabó Máté
      </p>
     </footer>
+    <script src="js/hater.js"></script>
 </body>
 </html>
 
