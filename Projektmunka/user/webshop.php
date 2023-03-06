@@ -85,21 +85,17 @@ $sql =  "SELECT * from termek";
   </button>
 </div>
 <div class="webshopmain">
-  <div class="alap animate__animated animate__backInLeft">
-  <h4>Horgász áru</h4>
-    <img class="webshopkep" src="../keps/fishing.jpg" alt="">
+  <div class="alap animate__animated animate__backInLeft hover-img2">
+    <img class="webshopkep" src="../keps/fishing.jpg" alt=""><figcaption>Horgász áru</figcaption>
   </div>
-  <div class="alap animate__animated animate__backInRight">
-    <h4>Díszállatok</h4>
-  <img class="webshopkep" src="../keps/diszallat.jpg" alt="">
+  <div class="alap animate__animated animate__backInRight hover-img2">
+  <img class="webshopkep" src="../keps/diszallat.jpg" alt=""><figcaption>Díszállatok</figcaption>
   </div>
-  <div class="alap animate__animated animate__backInLeft">
-    <h4>Háztartási eszközök</h4>
-  <img class="webshopkep" src="../keps/muanyag_termekek.jpg" alt="">
+  <div class="alap animate__animated animate__backInLeft hover-img2">
+  <img class="webshopkep" src="../keps/muanyag_termekek.jpg" alt=""><figcaption>Háztartási eszközök</figcaption>
   </div>
-  <div class="alap animate__animated animate__backInRight">
-    <h4>Fatermékek</h4>
-  <img class="webshopkep" src="../keps/madareteto.jpg" alt="">
+  <div class="alap animate__animated animate__backInRight hover-img2">
+  <img class="webshopkep" src="../keps/madareteto.jpg" alt=""><figcaption>Fatermékek</figcaption>
   </div>
 </div>
     <!-- nav scriptek -->
