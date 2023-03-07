@@ -95,8 +95,7 @@ if (isset($_POST['ok'])) {
 <body>
     <div class="kozep">
         <h1>Új árú felvitele</h1>
-        <div class="forom">
-            <div class="kis">
+
                 <div class="hiba">
                     <div class=".error-msg">
                         <?php
@@ -106,24 +105,34 @@ if (isset($_POST['ok'])) {
                         ?>
                     </div>
                 </div>
+
+                
                 <!-- korlátozások -->
-                <form id="from" method="post" enctype="multipart/form-data">
-                    <p class="felhivas"><em>A *-al jelölt mezőket töltsd ki!</em></p>
-                    <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
-                    <p class="men"><Label for="foto">Fotó feltöltése</Label>
+                <form class="form" id="from" method="post" enctype="multipart/form-data">
+                       
+                        <div class="bevitel">
+                        <p class="felhivas">A *-al jelölt mezőket töltsd ki!</p>
+                        <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
+                        </div>
+                        <!-- fotó feltöltése -->
+                        <div class="bevitel">
+                        <Label for="foto">Fotó feltöltése</Label>
                         <input type="file" name="foto" id="foto">
-                    </p>
-                    <!-- Vonalkód megadása -->
-                    <p class="men"><label for="vonalkod">Vonalkód*:</label>
+                        </div>
+                        <!-- Vonalkód megadása -->
+                        <div class="bevitel">
+                        <label for="vonalkod">Vonalkód*:</label>
                         <input type="text" name="vonalkod" id="vonalkod" placeholder="00000000">
-                    </p>
-                    <p class="men"><label for="nev">Név*:</label>
-                        <input type="text" name="nev" id="nev" placeholder="Krupmli">
-                    </p>
-                    
-                    <!-- Kategória kiválasztása -->
-                    <p class="men"><label for="vonalkod">Kategória *:</label>
-                    <select class="alkategoria" name="alkategoria_id" id="alkategoria_id" for="alkategoria_id">
+                        </div>
+                        <!-- Név megadása -->
+                        <div class="bevitel">
+                        <label for="nev">Név*:</label>
+                        <input type="text" name="nev" id="nev" placeholder="Név">
+                        </div>
+                        <!-- Kategória kiválasztása -->
+                        <div class="bevitel">
+                        <label for="vonalkod">Kategória *:</label>
+                        <select class="alkategoria" name="alkategoria_id" id="alkategoria_id" for="alkategoria_id">
                         <option value="1">Horgászbot</option>
                         <option value="2">Orsó</option>
                         <option value="3">Etetőanyag</option>
@@ -144,34 +153,37 @@ if (isset($_POST['ok'])) {
                         <option value="18">Fali kulcstartó</option>
                         <option value="19">Kenyértartó</option>
                         <option value="20">Kosár</option>
-                    </select>
-                    </p>
-                    <!-- Dátum megadása -->
-                    <p class="men"><label for="felvdatum">Felvitel dátuma*:</label>
+                        </select>
+                        </div>
+                        <!-- Dátum megadása -->
+                        <div class="bevitel">
+                        <label for="felvdatum">Felvitel dátuma*:</label>
                         <input type="date" name="felvdatum" id="felvdatum">
-                    </p>
-                    <!-- ár megadása -->
-                    <p class="men"><label for="ar">Ár*:</label>
+                        </div>
+                        <!-- ár megadása -->
+                        <div class="bevitel">
+                        <label for="ar">Ár*:</label>
                         <input type="text" name="ar" id="ar" placeholder="Ára">
-                    </p>
-                    <p class="men"><label for="darab">Darab*:</label>
+                        </div>
+                        <!-- darab megadása -->
+                        <div class="bevitel">
+                        <label for="darab">Darab*:</label>
                         <input type="text" name="darab" id="darab" placeholder="1">
-                    </p>
-                        <!-- leírás -->
-                    <p class="men"><label for="leiras">Leírás:</label>
-                    
-                    <textarea id="leiras" name="leiras" rows="4" cols="50" placeholder="Adja meg a leírást">
-                        
-                    </textarea>
-                    </p>
-                    <!-- Küldés gomba -->
-                    <div class="gomb"><input type="submit" value="Ok" id="ok" name="ok">
+                        </div>
+                        <!-- leírás megadása -->
+                        <div class="bevitel">
+                        <label for="leiras">Leírás:</label>
+                        <textarea id="leiras" name="leiras" rows="4" cols="50" placeholder="Adja meg a leírást"></textarea>
+                        </div>
+                        <!-- Küldés gomba -->
+                        <div class="gomb"><input type="submit" value="Ok" id="ok" name="ok">
                         <p class="koz"><a href="adminlist.php">Vissza</a></p>
-                    </div>
-
+                        </div>   
+                        
+                        
                 </form>
-            </div>
-        </div>
+           
+       
     </div>
 </body>
 

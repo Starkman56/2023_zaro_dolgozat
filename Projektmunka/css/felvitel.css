@@ -4,14 +4,12 @@
 }
 
 body {
-    background-image: url();
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+    background-color: rgb(217, 215, 215);
 }
 
 .kozep {
-    background-color: rgb(87, 175, 209);
+    background-color: rgb(141, 169, 180);
     margin: auto;
     margin-top: 10rem;
 }
@@ -19,6 +17,7 @@ body {
 .forom {
     width: 80%;
     margin: auto;
+    
 }
 
 .kozep h1 {
@@ -26,7 +25,7 @@ body {
 }
 
 .kozep .error-msg {
-    background-color: rgb(253, 56, 56);
+    background-color: rgb(22, 22, 22);
     border: 2px solid rgb(51, 0, 0);
     border-radius: 20px;
     padding: 5px;
@@ -40,91 +39,13 @@ body {
     width: 50%;
 }
 
-.kis {
+
+
+form{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    
-    justify-content: center;
-
-}
-
-
-.kis .men {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: flex-end;
-}
-
-.kis .men2 {
-    display: flex;
-    flex-direction: row;
-    gap: 110px;
-    justify-content: flex-end;
-}
-
-.kis .men input {
-    width: 50%;
-    border-radius: 5px;
-    padding: 2px;
-}
-
-
-/* label
-{
-    display: block;
-    width: 90%;
-    margin: auto;
-} */
-
-.kis .rendben {
-    width: 30%;
-    margin: 10px auto;
-    display: flex;
-    justify-content: center;
-    gap: 2px;
-    flex-direction: column;
-}
-
-.kis input[type=submit] {
-    width: 100%;
-    padding: 5px;
-    background-color: rgb(30, 180, 30);
-    margin: auto;
-}
-
-.felhivas {
     text-align: center;
 }
-
-form {
-    font-size: 2rem;
-    margin: auto;
-    width: 100%;
-    border: solid red;
-    width: 40rem;
-    text-align: center;
-}
-
-.vissza {
-   
-}
-
-.vissza a {
-    text-decoration: none;
-    color: black;
-}
-
-.alkategoria{
-    font-size: 2rem;
-    margin: auto;
-    width: 100%;
-    border: solid red;
-    width: 40rem;
-    text-align: center;
-}
-
 
 
 
