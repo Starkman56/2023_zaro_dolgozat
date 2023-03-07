@@ -121,6 +121,6 @@
         <i class="fa fa-close"></i>
         <h1>Kosár tartalma</h1>
         <!-- táblázat, ahová az adatok kerülnek, amikor hozzá adják a kosárhoz-->
-        <table></table>
+        <table class="table"></table>
     </div>
 </div>

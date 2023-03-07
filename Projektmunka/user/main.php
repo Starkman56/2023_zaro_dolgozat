@@ -51,6 +51,9 @@ require("../kapcsolat/kapcs.php");
           <a class="nav-link" href="galeria.php">Galéria</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="webshop.php">Webshop</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#">Kapcsolat</a>
         </li>
       </ul>

@@ -44,7 +44,6 @@ h1{
     width: fit-content;
     font-size: 3rem;
     background-color: transparent;
-    border: 2px solid black;
     border-radius: 0.5rem;
     padding: 1rem ;
 }
@@ -158,6 +157,9 @@ input{
     background-color: transparent;
     width: 90%;
     margin:1rem auto;
+}
+.table{
+  width: 90%;
 }
 .cartBox{
     position: fixed;
