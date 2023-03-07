@@ -171,7 +171,11 @@ footer {
     width: 11rem;
     border-radius: 2rem;
 }
-
+iframe{
+    height: 90%;
+    width: 70%;
+    margin: auto;
+  }
 @media screen and (max-width:900px)
 {
     h2{
@@ -420,5 +424,4 @@ footer {
         border-radius: 10px;
     }
     
-
 }
