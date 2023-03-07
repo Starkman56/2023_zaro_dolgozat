@@ -266,8 +266,6 @@ li{
 .form-control{
     width: 30rem;
 }
-
-
 .bovebben{
     padding :0.3rem;
     width: 90%;
@@ -282,13 +280,6 @@ li{
     margin: auto;
 } */
 /* cart */
-
-
-
-
-/*kártyák */
-
-
   .cards {
 
 
@@ -296,16 +287,6 @@ li{
     display: grid;
     gap: 0.5rem;
   }
-
-
-
-
- 
-/* kártyák */
-
-
-
-
  /* sidenav */
  body:before {
   position: absolute;
@@ -322,26 +303,18 @@ li{
   -o-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
 }
-
-
 body.show-sidebar:before {
   opacity: 1;
   visibility: visible;
 }
-
-
 .site-section {
   padding: 7rem 0;
 }
-
-
 aside,
 main {
   height: 100vh;
   min-height: 580px;
 }
-
-
 aside {
   width: 300px;
   left: 0;
@@ -357,15 +330,11 @@ aside {
   transition: 1s transform cubic-bezier(0.23, 1, 0.32, 1);
   transition: 1s transform cubic-bezier(0.23, 1, 0.32, 1), 1s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-
 .show-sidebar aside {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
 }
-
-
 aside .toggle {
   padding-left: 30px;
   padding-top: 30px;
@@ -375,21 +344,15 @@ aside .toggle {
   -ms-transform: translateX(100%);
   transform: translateX(100%);
 }
-
-
 .show-sidebar aside .toggle .burger:before,
 .show-sidebar aside .toggle .burger span,
 .show-sidebar aside .toggle .burger:after {
   background: #fff;
 }
-
-
 .show-sidebar aside {
   -webkit-box-shadow: 10px 0 30px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 10px 0 30px 0 rgba(0, 0, 0, 0.1);
 }
-
-
 aside .side-inner {
   padding: 30px 0;
   height: 100vh;
@@ -397,8 +360,6 @@ aside .side-inner {
   background-color: rgb(255, 255, 255);
   -webkit-overflow-scrolling: touch;
 }
-
-
 aside .side-inner .profile {
   margin-left: auto;
   margin-right: auto;
@@ -407,55 +368,39 @@ aside .side-inner .profile {
   padding-bottom: 30px;
   border-bottom: 1px solid #efefef;
 }
-
-
 aside .side-inner .profile img {
   width: 80px;
   margin: 0 auto 20px auto;
   border-radius: 50%;
 }
-
-
 aside .side-inner .profile .name {
   font-size: 18px;
   margin-bottom: 0;
 }
-
-
 aside .side-inner .profile .country {
   font-size: 14px;
   color: #cfcfcf;
 }
-
-
 aside .side-inner .counter {
   margin-bottom: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #efefef;
   text-align: center;
 }
-
-
 aside .side-inner .counter div .number {
   display: block;
   font-size: 20px;
   color: #000;
 }
-
-
 aside .side-inner .counter div .number-label {
   color: #cfcfcf;
 }
-
-
 aside .side-inner .nav-menu ul,
 aside .side-inner .nav-menu ul li {
   padding: 0;
   margin: 0px;
   list-style: none;
 }
-
-
 aside .side-inner .nav-menu ul li a {
   display: block;
   padding-left: 30px;
@@ -468,8 +413,6 @@ aside .side-inner .nav-menu ul li a {
   -o-transition: .3s padding-left ease;
   transition: .3s padding-left ease;
 }
-
-
 aside .side-inner .nav-menu ul li a:before {
  
   content: "";
@@ -485,34 +428,24 @@ aside .side-inner .nav-menu ul li a:before {
   -o-transition: .3s opacity ease, .3s visibility ease, .3s width ease;
   transition: .3s opacity ease, .3s visibility ease, .3s width ease;
 }
-
-
 aside .side-inner .nav-menu ul li a:active,
 aside .side-inner .nav-menu ul li a:focus,
 aside .side-inner .nav-menu ul li a:hover {
   outline: none;
 }
-
-
 aside .side-inner .nav-menu ul li a:hover {
   background: #fcfcfc;
   color: #000;
 }
-
-
 aside .side-inner .nav-menu ul li a:hover:before {
   width: 4px;
   opacity: 1;
   visibility: visible;
 }
-
-
 aside .side-inner .nav-menu ul li.active a {
   background: #fcfcfc;
   color: #000;
 }
-
-
 aside .side-inner .nav-menu ul li.active a:before {
   opacity: 1;
   visibility: visible;
@@ -523,14 +456,6 @@ aside .side-inner .nav-menu ul li.active a:before {
    
     width: 100%;
 }
-
-
-
-
-
-
-
-
 .gomb{
  
   margin-left: 40px;
@@ -539,46 +464,27 @@ aside .side-inner .nav-menu ul li.active a:before {
 .gomb:hover{
   border: solid #ff7315 2.5px;
 }
-
-
-
-
-
-
 /* Kereső */
 #searchbar{
   margin-left: 15%;
   padding:15px;
   border-radius: 10px;
 }
-
-
-
-
 input[type=text] {
    width: 30%;
    -webkit-transition: width 0.15s ease-in-out;
    transition: width 0.15s ease-in-out;
 }
 
-
-
-
 /* When the input field gets focus,
      change its width to 100% */
 input[type=text]:focus {
   width: 70%;
 }
-
-
-
-
 #list{
  font-size:  1.5em;
  margin-left: 90px;
 }
-
-
 .nincslista.active{
   display: none;
 }
@@ -958,9 +864,7 @@ footer{
 .row-1{
   background-color:#1E242A !important;
 }
-
 .row-2{
-  
   background-color: #28323C !important;
 }
 iframe{
@@ -968,6 +872,12 @@ iframe{
   width: 70%;
   margin: auto;
 }
-
-
+.list-unstyled{
+  margin: auto;
+  width: fit-content;
+}
+.row .row-2{
+  text-align:center
+  
+}
 
