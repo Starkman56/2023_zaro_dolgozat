@@ -110,7 +110,6 @@ require("../components/nav.php");
 
     <!-- nav scriptek -->
     <script src="../js/script.js"></script>
-    <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
     <footer >
        <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3">
            <div class="col-12">
@@ -133,7 +132,6 @@ require("../components/nav.php");
             </div>
         </div>
     </footer>
-</div>
   </body>
 
 </html>

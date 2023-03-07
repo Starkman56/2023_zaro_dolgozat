@@ -898,6 +898,7 @@ h3{
 
 footer{
   color:#caced1 !important;
+  width: 100% !important;
 }
 
 li{
@@ -912,4 +913,9 @@ li{
 .row-2{
   
   background-color: #28323C !important;
+}
+iframe{
+  height: 90%;
+  width: 70%;
+  margin: auto;
 }
