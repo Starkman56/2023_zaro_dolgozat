@@ -474,18 +474,14 @@
     gap: 3rem;
     width: 70%;
     margin: auto;
-  
-  
   }
   .alap{
     display: grid;
     margin: auto;
     margin-bottom: 3rem;
   }
-  
-  
   .webshopkep{
-    max-width: 25rem;
+    max-width: 30rem;
     min-height: 20rem;
     border-radius:0.4rem ;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
@@ -493,8 +489,7 @@
   .webshopkep:hover{
     max-width: 25.1rem;
     min-height: 20.1rem;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
-   
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7); 
   }
   h4{
     margin: auto;
@@ -508,7 +503,6 @@
   }
   .kosarli{
     margin: auto;
-   
   }
   #termekdarab{
     width: 3.5rem;
@@ -517,12 +511,6 @@
     background-color: transparent;
     border-radius: 8px 0px 8px 0px;
   }
-  
-  
-  
-  
-  
-  
   .hover-img2{
     color: #fff;
     overflow: hidden;
@@ -591,12 +579,6 @@
     text-decoration: none;
     color: white;
   }
-  
-  
-  
-  
-  
-  
   /* Dropdown Button */
   .dropbtn {
     background-color: #ffffff;
@@ -605,17 +587,11 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
-   
-   
   }
-  
-  
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
-  
   .dropdown-content {
     display: none;
     position: absolute;
@@ -624,31 +600,19 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
     z-index: 1;
-  }
-  
-  
+  } 
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-   
   }
-  
-  
   .dropdown-content a:hover {background-color: rgba(255, 255, 255, 0.4)}
   .dropdown:hover .dropdown-content {display: block;}
-  
-  
-  
-  
   .flex{
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  .dropbtn{
-   
   }
   .flex a {
     padding-right: 0px;
@@ -683,6 +647,10 @@
   .row .row-2{
     text-align:center;
     
+  }
+  .szoveg{
+    text-align: justify;
+    color: #000;
   }
   @media (max-width: 699px) {
     .cards {

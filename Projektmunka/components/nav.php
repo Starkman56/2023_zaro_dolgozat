@@ -4,6 +4,7 @@
         <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
             <span></span>
         </a>
+        
         <input class="KeresoItem" id="searchbar" onkeyup="search_item()" type="text"
         name="search" placeholder="Keresés a termékek között...">
         <div class="kosarikon">
@@ -19,7 +20,7 @@
         <div class="counter d-flex justify-content-center">
 
             <div class="col">
-                <a href="webshop.php">Főoldal</a>
+                <a href="main.php">Főoldal</a>
             </div>
             <div class="col">
                 <a href="#">Megrendelések</a>
