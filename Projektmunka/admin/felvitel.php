@@ -93,7 +93,7 @@ if (isset($_POST['ok'])) {
 </head>
 
 <body>
-    <div class="kozep">
+    
         <h1>Új árú felvitele</h1>
 
                 <div class="hiba">
@@ -110,7 +110,7 @@ if (isset($_POST['ok'])) {
                 <!-- korlátozások -->
                 <form class="form" id="from" method="post" enctype="multipart/form-data">
                        
-                        <div class="bevitel">
+                        <div class="">
                         <p class="felhivas">A *-al jelölt mezőket töltsd ki!</p>
                         <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
                         </div>
@@ -121,18 +121,18 @@ if (isset($_POST['ok'])) {
                         </div>
                         <!-- Vonalkód megadása -->
                         <div class="bevitel">
-                        <label for="vonalkod">Vonalkód*:</label>
+                        <label for="vonalkod">*Vonalkód:</label>
                         <input type="text" name="vonalkod" id="vonalkod" placeholder="00000000">
                         </div>
                         <!-- Név megadása -->
                         <div class="bevitel">
-                        <label for="nev">Név*:</label>
+                        <label for="nev">*Név:</label>
                         <input type="text" name="nev" id="nev" placeholder="Név">
                         </div>
                         <!-- Kategória kiválasztása -->
                         <div class="bevitel">
-                        <label for="vonalkod">Kategória *:</label>
-                        <select class="alkategoria" name="alkategoria_id" id="alkategoria_id" for="alkategoria_id">
+                        <label for="vonalkod">*Kategória:</label>
+                        <select class="alkategoria" name="alkategoria_id" id="alkategoria_id" for="alkategoria_id" >
                         <option value="1">Horgászbot</option>
                         <option value="2">Orsó</option>
                         <option value="3">Etetőanyag</option>
@@ -157,34 +157,35 @@ if (isset($_POST['ok'])) {
                         </div>
                         <!-- Dátum megadása -->
                         <div class="bevitel">
-                        <label for="felvdatum">Felvitel dátuma*:</label>
+                        <label for="felvdatum">*Felvitel dátuma:</label>
                         <input type="date" name="felvdatum" id="felvdatum">
                         </div>
                         <!-- ár megadása -->
                         <div class="bevitel">
-                        <label for="ar">Ár*:</label>
+                        <label for="ar">*Ár:</label>
                         <input type="text" name="ar" id="ar" placeholder="Ára">
                         </div>
                         <!-- darab megadása -->
                         <div class="bevitel">
-                        <label for="darab">Darab*:</label>
+                        <label for="darab">*Darab:</label>
                         <input type="text" name="darab" id="darab" placeholder="1">
                         </div>
                         <!-- leírás megadása -->
                         <div class="bevitel">
-                        <label for="leiras">Leírás:</label>
-                        <textarea id="leiras" name="leiras" rows="4" cols="50" placeholder="Adja meg a leírást"></textarea>
+                        <label for="leiras">*Leírás:</label>
+                        <textarea maxlength="200" id="leiras" name="leiras" rows="4" cols="50" placeholder="Adja meg a leírást (200 karakter)"></textarea>
                         </div>
+                        
                         <!-- Küldés gomba -->
-                        <div class="gomb"><input type="submit" value="Ok" id="ok" name="ok">
-                        <p class="koz"><a href="adminlist.php">Vissza</a></p>
-                        </div>   
-                        
-                        
+                        <div class="gomb">
+                            <input class="ok" type="submit" value="Ok" id="ok" name="ok">
+                            <a href="adminlist.php">Vissza</a></p>
+                        </div>  
                 </form>
-           
+            
+                        
        
-    </div>
+   
 </body>
 
 </html>
