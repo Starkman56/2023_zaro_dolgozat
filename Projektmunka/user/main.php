@@ -48,7 +48,7 @@ require("../kapcsolat/kapcs.php");
           <a class="nav-link active" aria-current="page" href="#">Főoldal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Galéria</a>
+          <a class="nav-link" href="galeria.php">Galéria</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Kapcsolat</a>

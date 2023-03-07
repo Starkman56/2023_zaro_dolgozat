@@ -475,6 +475,16 @@
     width: 70%;
     margin: auto;
   }
+  .galeriamain{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    width: 80%;
+    margin: auto;
+  }
+  .galeriakep{
+    width: 25rem;
+  }
   .alap{
     display: grid;
     margin: auto;
