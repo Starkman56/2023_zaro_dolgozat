@@ -945,4 +945,29 @@ a figcaption{
   padding-right: 0px;
 }
 
+.social{
+  font-size: 21px !important; 
+}
+.color-text{
+  color:#757575 !important;
+}
+footer{
+  color:#caced1 !important;
+  width: 100% !important;
+}
+.row-1{
+  background-color:#1E242A !important;
+}
+
+.row-2{
+  
+  background-color: #28323C !important;
+}
+iframe{
+  height: 90%;
+  width: 70%;
+  margin: auto;
+}
+
+
 
