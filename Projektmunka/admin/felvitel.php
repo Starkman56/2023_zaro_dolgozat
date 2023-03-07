@@ -24,9 +24,17 @@ if (isset($_POST['ok'])) {
     // változokvizs
     $mime = array("image/gif", "image/png", "image/jpg", "image/jpeg");
 
-    if (empty($vonalkod) || empty($felvdatum) || empty($darab) || empty($ar) || empty($alkategoria_id)  ){
-       
+    // ||empty($vonalkod) || empty($felvdatum) || empty($darab) || empty($ar) || empty($alkategoria_id) || empty($leiras)
+     
+    if (empty($foto)  ){
+        $hibak[] = "Adjon meg képet!";
+     }
+    if (empty($nev)  ){
+       $hibak[] = "Adjon meg nevet!";
     }
+
+
+
     if ($_FILES['foto']['error'] == 0 && $_FILES['foto']['size'] > 6000000) {
         $hibak[] = "Nagy a kép formátuma";
     }
@@ -76,7 +84,7 @@ if (isset($_POST['ok'])) {
         // kép mozgatása a végleges helyére
 
         move_uploaded_file($_FILES['foto']['tmp_name'], "../keps/{$foto}");
-        header("Location: adminlist.php");
+        // header("Location: adminlist.php");
     }
 }
 ?>
@@ -96,6 +104,12 @@ if (isset($_POST['ok'])) {
     
         <h1>Új árú felvitele</h1>
 
+                
+
+                
+                <!-- korlátozások -->
+                <form class="form" id="from" method="post" enctype="multipart/form-data">
+                       
                 <div class="hiba">
                     <div class=".error-msg">
                         <?php
@@ -106,10 +120,6 @@ if (isset($_POST['ok'])) {
                     </div>
                 </div>
 
-                
-                <!-- korlátozások -->
-                <form class="form" id="from" method="post" enctype="multipart/form-data">
-                       
                         <div class="">
                         <p class="felhivas">A *-al jelölt mezőket töltsd ki!</p>
                         <input type="hidden" name="MAX_FILE_SIZE" value="6000000">
