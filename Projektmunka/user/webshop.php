@@ -13,7 +13,6 @@ if (!isset($_SESSION['belepett'])) {
 require("../kapcsolat/kapcs.php");
 require("../components/nav.php");
 
-
 ?>
 <html lang="en">
 
@@ -98,6 +97,7 @@ require("../components/nav.php");
   <img class="webshopkep" src="../keps/madareteto.jpg" alt=""><figcaption>Fatermékek</figcaption>
   </div>
 </div>
+
     <!-- nav scriptek -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -109,6 +109,11 @@ require("../components/nav.php");
 
     <!-- nav scriptek -->
     <script src="../js/script.js"></script>
-</body>
+  <?php
+  require("../components/footer.php");
+  ?>  
+
+
+  </body>
 
 </html>
