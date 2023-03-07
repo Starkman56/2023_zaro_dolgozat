@@ -115,10 +115,10 @@ require("../components/nav.php");
            <div class="col-12">
                 <div class="row row-2">
                    
-                    <div class="col-sm-3  my-sm-0 mt-5"><ul class="list-unstyled"><li class="mt-0">Platform</li><li>Help Center</li><li>Security</li></ul></div>
-                    <div class="col-sm-3  my-sm-0 mt-5"><ul class="list-unstyled"><li class="mt-0">Customers</li><li>Use Cases</li><li>Customers Services</li></ul>
+                    <div class="col-sm-4  my-sm-0 mt-5"><ul class="list-unstyled"><li class="mt-0">Platform</li><li>Help Center</li><li>Security</li></ul></div>
+                    <div class="col-sm-4  my-sm-0 mt-5"><ul class="list-unstyled"><li class="mt-0">Customers</li><li>Use Cases</li><li>Customers Services</li></ul>
                     </div>
-                    <div class="col-sm-3  my-sm-0 mt-5"><ul class="list-unstyled"><li class="mt-0"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2665.54694621034!2d19.29940541588336!3d48.08038726312102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476aa079e388b043%3A0xd91a09ed7e7857af!2sBalassagyarmat%2C%20R%C3%A1k%C3%B3czi%20fejedelem%20%C3%BAt%2072%2C%202660!5e0!3m2!1shu!2shu!4v1678103399399!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li></li></ul>
+                    <div class="col-sm-4  my-sm-0 mt-5"><ul class="list-unstyled"><li class="mt-0"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2665.54694621034!2d19.29940541588336!3d48.08038726312102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476aa079e388b043%3A0xd91a09ed7e7857af!2sBalassagyarmat%2C%20R%C3%A1k%C3%B3czi%20fejedelem%20%C3%BAt%2072%2C%202660!5e0!3m2!1shu!2shu!4v1678103399399!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li></li></ul>
                   </div>                   
                 </div>  
            </div>
