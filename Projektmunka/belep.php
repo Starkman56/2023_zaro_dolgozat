@@ -90,13 +90,11 @@ if(isset($_POST['ok']))
     <div class="kozep2">
             <p class="nincs">Regisztráció <a href="register.php">Itt!</a></p>
     </div>
-    <footer>
-     <p>Copyright ©
-     <br>Kordics Balázs & Szabó Máté
-     </p>
-    </footer>
+    
     <script src="js/hater.js"></script>
+    
 </body>
+
 </html>
 
 
