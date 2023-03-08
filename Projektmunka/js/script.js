@@ -1,4 +1,7 @@
 window.onload = function(){
+
+    console.log("Ez a windowOnload eleje");
+
     const kosarikon = document.querySelector('.kosarikon');
     //console.log(kosarikon);
     const cartCloseBtn = document.querySelector('.fa-close');
@@ -12,18 +15,21 @@ window.onload = function(){
         cartBox.classList.remove('active');
     })
     const kosarhozgomb = document.getElementsByClassName('kosarhoz')
-    console.log(kosarhozgomb);
+    console.log("Ez a kosár gomb",kosarhozgomb);
     let cuccok = [];
     for (let i = 0; i < kosarhozgomb.length; i++) {
         kosarhozgomb[i].addEventListener("click",function(e){
+            //console.log("Ez a kosár forciklus belseje, a storage vizsgálat elött");
             if(typeof(Storage) !== 'undefined'){
-                let cucc = {                    
-                    id: i + 1,
-                    name: e.target.parentElement.parentElement.children[2].children[0].innerHTML,
-                    no: parseInt(e.target.parentElement.parentElement.children[2].children[1].innerHTML),
-                    price: parseInt(e.target.parentElement.parentElement.children[2].children[2].innerHTML),
-                    darab: parseInt(e.target.parentElement.parentElement.children[2].children[3].value),
-                };
+                //console.log("Ez a storage ág",e);
+                //console.log("parent element",e.target.parentElement.children[0].value);
+                let cucc = {                   
+                    id: i + 1, 
+                    name: e.target.parentElement.parentElement.parentElement.children[0].children[1].innerHTML,
+                    no: parseInt(e.target.parentElement.parentElement.children[1].innerHTML),
+                    price: parseInt(e.target.parentElement.parentElement.children[2].innerHTML),
+                    darab: parseInt(e.target.parentElement.children[0].value),
+               };
                 console.log(cucc);
                 //adjuk hozzá a localstoragehez az elemet.
                 if (JSON.parse(localStorage.getItem('cuccok')) === null){
