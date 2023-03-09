@@ -11,7 +11,7 @@ if (!isset($_SESSION['belepett'])) {
 }
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
-require("../components/nav.php");
+require("../components/mainnav.php");
 
 
 ?>
