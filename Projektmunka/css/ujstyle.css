@@ -155,11 +155,11 @@ input{
 .kosarhoz{
     padding :0.3rem;
     background-color: transparent;
-    width: 90%;
+    width: 70%;
     margin:1rem auto;
 }
 .table{
-  width: 90%;
+  width: 70%;
 }
 .cartBox{
     position: fixed;
