@@ -1,3 +1,4 @@
+
 <footer>
        <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3" style="bottom:0;">
            <div class="col-12">
@@ -13,7 +14,7 @@
                 </div>  
            </div>
        </div>
-       <div class="row justify-content-center mt-0 pt-0 row-1 mb-0  px-sm-3 px-2">
+       <div class="footerhatter row justify-content-center mt-0 pt-0 row-1 mb-0  px-sm-3 px-2">
             <div class="col-12">
                 <div class="row my-4 row-1 no-gutters">
                     <div class="col-sm-3 col-auto text-center"><small>&#9400; Kordics Balázs & Szabó Máté</small></div>
@@ -24,3 +25,5 @@
             </div>
         </div>
     </footer>
+
+    

@@ -13,6 +13,9 @@ if (!isset($_SESSION['belepett'])) {
 //Meghívás 
 require("../kapcsolat/kapcs.php");
 require("../components/nav.php");
+
+
+
 $sql =  "SELECT * from termek
 INNER JOIN alkategoriak
 ON termek.alkategoria_id = alkategoriak.alkategoria_id
@@ -20,6 +23,7 @@ INNER JOIN kategoriak
 ON kategoriak.kategoria_id = alkategoriak.kategoria_id
 WHERE kategoriak.kategoria_id = 1";
 require("../components/beolvas.php");
+
 
 
 ?>
@@ -57,7 +61,9 @@ require("../components/beolvas.php");
             ?>
         </div>
     </div>
-
+<?php
+require("../components/footer.php");
+?>
     
 
     <!-- nav scriptek -->
