@@ -14,8 +14,6 @@ if (!isset($_SESSION['belepett'])) {
 require("../kapcsolat/kapcs.php");
 require("../components/nav.php");
 $sql =  "SELECT * from termek 
-INNER JOIN kategoriak 
-ON kategoria_id = termek.alkategoria_id
 WHERE alkategoria_id = 2";
 require("../components/beolvas.php");
 
@@ -74,7 +72,9 @@ require("../components/beolvas.php");
         </div>
     </div>
 
-    
+    <?php
+require("../components/footer.php");
+?>
 
     <!-- nav scriptek -->
     <script src="js/jquery-3.3.1.min.js"></script>
