@@ -47,12 +47,6 @@ require("../components/beolvas.php");
 <body>
 
 
-
-
-
-
-
-
     <!--Website container-->
     <div class="container">
         <div class="cards">

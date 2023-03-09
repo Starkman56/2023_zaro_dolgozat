@@ -50,8 +50,6 @@
    <span></span>
    <span></span>
 </div>
-
-
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
 
@@ -79,7 +77,7 @@
             <div class="col">
                 <a href="#">Megrendelések</a>
             </div>
-            <div class="col profilinfo">
+            <div class="col">
                 <a href="#">Profil</a>
             </div>
         </div>

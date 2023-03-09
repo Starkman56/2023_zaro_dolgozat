@@ -475,6 +475,13 @@
     width: 70%;
     margin: auto;
   }
+  .diszallatokmain{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    width: 70%;
+    margin: auto;
+  }
   .galeriamain{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -491,6 +498,12 @@
     margin-bottom: 3rem;
   }
   .webshopkep{
+    max-width: 30rem;
+    min-height: 20rem;
+    border-radius:0.4rem ;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  }
+  .diszallatokkep{
     max-width: 30rem;
     min-height: 20rem;
     border-radius:0.4rem ;
@@ -637,6 +650,7 @@
   footer{
     color:#caced1 !important;
     width: 100% !important;
+    
   }
   .row-1{
     background-color:#1E242A !important;
@@ -662,6 +676,7 @@
     text-align: justify;
     color: #000;
   }
+
   @media (max-width: 699px) {
     .cards {
       grid-template-columns: repeat(1, 1fr);

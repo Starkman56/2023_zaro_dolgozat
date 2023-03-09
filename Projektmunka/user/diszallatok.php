@@ -29,7 +29,7 @@ require("../kapcsolat/kapcs.php");
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/mainpage.css">
-    <title>MainPage</title>
+    <title>Diszallatok</title>
     <script defer="" referrerpolicy="origin" src="/cdn-cgi/zaraz/s.js?z=JTdCJTIyZXhlY3V0ZWQlMjIlM0ElNUIlNUQlMkMlMjJ0JTIyJTNBJTIyU2lkZWJhciUyMCUyMzElMjIlMkMlMjJ4JTIyJTNBMC43NTcwNjQ1MzE3ODcxMzc2JTJDJTIydyUyMiUzQTE5MjAlMkMlMjJoJTIyJTNBMTA4MCUyQyUyMmolMjIlM0E5MzclMkMlMjJlJTIyJTNBMTkyMCUyQyUyMmwlMjIlM0ElMjJodHRwcyUzQSUyRiUyRnByZXZpZXcuY29sb3JsaWIuY29tJTJGdGhlbWUlMkZzaWRlYmFyJTJGY29sb3JsaWItc2lkZWJhci12MDElMkYlMjIlMkMlMjJyJTIyJTNBJTIyaHR0cHMlM0ElMkYlMkZjb2xvcmxpYi5jb20lMkYlMjIlMkMlMjJrJTIyJTNBMjQlMkMlMjJuJTIyJTNBJTIyVVRGLTglMjIlMkMlMjJvJTIyJTNBLTYwJTJDJTIycSUyMiUzQSU1QiU1RCU3RA=="></script>
 </head>
 
@@ -61,50 +61,13 @@ require("../kapcsolat/kapcs.php");
   </div>
 </nav>
     <!--Website container-->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Horgász-Díszállat-Háztartási bolt</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
-        <p></p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Kapcsolat</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
-      </div>
-    </div>
     
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<div class="webshopmain">
+<div class="diszallatokmain">
   <div class="alap animate__animated animate__backInLeft hover-img2">    
-  <a href="../user/webshop.php"><img class="webshopkep " src="../keps/fishing.jpg" alt=""><figcaption>Webshop</figcaption></a>
-  </div>
-  <div class="alap animate__animated animate__backInLeft">
-  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis neque totam natus in fugiat, alias ut cumque perferendis blanditiis consequuntur nam autem nesciunt tenetur unde sed vitae numquam magni similique.</p>
-  </div>
-  <div class="alap animate__animated animate__backInRight">
-  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde assumenda enim a rerum nulla modi quia. Expedita culpa ea molestiae dolore nostrum voluptate animi, pariatur ipsam et voluptates, omnis debitis.</p>
+  <a href="../user/webshop.php"><img class="diszallatokkep " src="../keps/fishing.jpg" alt=""><figcaption>Webshop</figcaption></a>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
-  <a href="../user/diszallatok.php"> <img class="webshopkep" src="../keps/madareteto.jpg" alt=""><figcaption>Díszállatok</figcaption></a>
+  <a href="../user/diszallatok.php"> <img class="diszallatokkep" src="../keps/madareteto.jpg" alt=""><figcaption>Díszállatok</figcaption></a>
   </div>
   
 </div>
