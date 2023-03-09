@@ -1,3 +1,57 @@
+<div class="background">
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+</div>
+
+
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
 
@@ -20,7 +74,7 @@
         <div class="counter d-flex justify-content-center">
 
             <div class="col">
-                <a href="main.php">Főoldal</a>
+                <a href="webshop.php">Főoldal</a>
             </div>
             <div class="col">
                 <a href="#">Megrendelések</a>
@@ -124,3 +178,4 @@
         <table class="table"></table>
     </div>
 </div>
+

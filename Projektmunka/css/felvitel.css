@@ -79,6 +79,7 @@ option{
     background-color: rgb(206, 206, 206);
     border: solid black 2px;
     font-size: 1rem;
+    resize: none;
 }
 #leiras:hover{
     background-color: white;

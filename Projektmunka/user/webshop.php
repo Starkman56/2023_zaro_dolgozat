@@ -13,6 +13,7 @@ if (!isset($_SESSION['belepett'])) {
 require("../kapcsolat/kapcs.php");
 require("../components/nav.php");
 
+
 ?>
 <html lang="en">
 
@@ -108,6 +109,7 @@ require("../components/nav.php");
 
     <!-- nav scriptek -->
     <script src="../js/script.js"></script>
+
   <?php
   require("../components/footer.php");
   ?>  
