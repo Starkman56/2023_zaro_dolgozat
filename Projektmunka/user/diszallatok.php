@@ -45,7 +45,7 @@ require("../kapcsolat/kapcs.php");
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Főoldal</a>
+          <a class="nav-link active" aria-current="page" href="main.php">Főoldal</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="galeria.php">Galéria</a>
