@@ -1,3 +1,6 @@
+
+
+
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
 
@@ -20,7 +23,7 @@
         <div class="counter d-flex justify-content-center">
 
             <div class="col">
-                <a href="main.php">Főoldal</a>
+                <a href="webshop.php">Főoldal</a>
             </div>
             <div class="col">
                 <a href="#">Megrendelések</a>
@@ -123,4 +126,57 @@
         <!-- táblázat, ahová az adatok kerülnek, amikor hozzá adják a kosárhoz-->
         <table class="table"></table>
     </div>
+</div>
+
+<div class="background">
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
 </div>
