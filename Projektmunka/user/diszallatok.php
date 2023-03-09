@@ -45,7 +45,7 @@ require("../kapcsolat/kapcs.php");
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Főoldal</a>
+          <a class="nav-link active" aria-current="page" href="main.php">Főoldal</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="galeria.php">Galéria</a>
@@ -64,12 +64,23 @@ require("../kapcsolat/kapcs.php");
     
 <div class="diszallatokmain">
   <div class="alap animate__animated animate__backInLeft hover-img2">    
-  <a href="../user/webshop.php"><img class="diszallatokkep " src="../keps/fishing.jpg" alt=""><figcaption>Webshop</figcaption></a>
+  <a href="../user/webshop.php"><img class="diszallatokkep " src="../keps/fishing.jpg" alt=""><figcaption>Madarak</figcaption></a>
+  </div>
+  <div class="alap animate__animated animate__backInRight">
+  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis neque totam natus in fugiat, alias ut cumque perferendis blanditiis consequuntur nam autem nesciunt tenetur unde sed vitae numquam magni similique.</p>
+  </div>
+  <div class="alap animate__animated animate__backInLeft">
+  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis neque totam natus in fugiat, alias ut cumque perferendis blanditiis consequuntur nam autem nesciunt tenetur unde sed vitae numquam magni similique.</p>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
-  <a href="../user/diszallatok.php"> <img class="diszallatokkep" src="../keps/madareteto.jpg" alt=""><figcaption>Díszállatok</figcaption></a>
+  <a href="../user/diszallatok.php"> <img class="diszallatokkep" src="../keps/madareteto.jpg" alt=""><figcaption>Diszhalak</figcaption></a>
   </div>
-  
+  <div class="alap animate__animated animate__backInLeft hover-img2">    
+  <a href="../user/webshop.php"><img class="diszallatokkep " src="../keps/fishing.jpg" alt=""><figcaption>Rágcsáló</figcaption></a>
+  </div>
+  <div class="alap animate__animated animate__backInRight">
+  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis neque totam natus in fugiat, alias ut cumque perferendis blanditiis consequuntur nam autem nesciunt tenetur unde sed vitae numquam magni similique.</p>
+  </div>
 </div>
 
     <!-- nav scriptek -->

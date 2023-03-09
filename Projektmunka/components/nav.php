@@ -47,7 +47,9 @@
 </div>
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-
+        <a class="navbar-brand" href="main.php">
+        <img src="../keps/logo.jpg" alt="Logo" width="90rem" >
+        </a>
         <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
             <span></span>
         </a>
@@ -152,9 +154,7 @@
                         </div>
                 </div>
             </li>
-
-                <li><a href="#">Stats</a></li>
-                <li><a href="#">Sign out</a></li>
+                <li><a href="logout.php">Kijelentkezés</a></li>
             </ul>
         </div>
     </div>

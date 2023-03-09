@@ -11,7 +11,7 @@ if (!isset($_SESSION['belepett'])) {
 }
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
-
+require("../components/mainnav.php");
 
 ?>
 <html lang="en">
@@ -34,32 +34,6 @@ require("../kapcsolat/kapcs.php");
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg sticky-top  bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="../keps/logo.jpg" alt="Logo" width="90rem" >
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Főoldal</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="galeria.php">Galéria</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="webshop.php">Webshop</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Kapcsolat</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
     <!--Website container-->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
   <div class="carousel-indicators">
@@ -71,7 +45,6 @@ require("../kapcsolat/kapcs.php");
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5  animate__animated animate__pulse">Horgász-Díszállat-Háztartási bolt</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
         <p></p>
       </div>
     </div>
@@ -79,7 +52,6 @@ require("../kapcsolat/kapcs.php");
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5  animate__animated animate__pulse">Kapcsolat</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
       </div>
     </div>
     

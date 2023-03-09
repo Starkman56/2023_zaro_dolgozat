@@ -11,7 +11,7 @@ if (!isset($_SESSION['belepett'])) {
 }
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
-require("../components/nav.php");
+require("../components/mainnav.php");
 
 
 ?>
@@ -47,7 +47,6 @@ require("../components/nav.php");
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5  animate__animated animate__pulse">Horgász áru</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
         <p></p>
       </div>
     </div>
@@ -55,21 +54,18 @@ require("../components/nav.php");
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5  animate__animated animate__pulse">Díszállatok</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
       </div>
     </div>
     <div class="carousel-item">
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5  animate__animated animate__pulse">Háztartási eszközök</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
       </div>
     </div>
     <div class="carousel-item">
       <img  class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5  animate__animated animate__pulse">Fatermékek</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
       </div>
     </div>
     
