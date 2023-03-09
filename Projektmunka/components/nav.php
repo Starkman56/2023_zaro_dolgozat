@@ -75,7 +75,7 @@
                 <a href="#">Megrendelések</a>
             </div>
             <div class="col">
-                <a href="#">Profil</a>
+                <a href="../belep.php">Belépés</a>
             </div>
         </div>
 
