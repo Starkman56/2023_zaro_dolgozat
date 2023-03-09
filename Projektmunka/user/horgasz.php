@@ -13,10 +13,12 @@ if (!isset($_SESSION['belepett'])) {
 //Meghívás 
 require("../kapcsolat/kapcs.php");
 require("../components/nav.php");
-$sql =  "SELECT * from termek 
-INNER JOIN kategoriak 
-ON kategoria_id = termek.alkategoria_id
-WHERE alkategoria_id = 1 OR alkategoria_id = 2 OR alkategoria_id = 3 OR alkategoria_id = 4";
+$sql =  "SELECT * from termek
+INNER JOIN alkategoriak
+ON termek.alkategoria_id = alkategoriak.alkategoria_id
+INNER JOIN kategoriak
+ON kategoriak.kategoria_id = alkategoriak.kategoria_id
+WHERE kategoriak.kategoria_id = 1";
 require("../components/beolvas.php");
 
 
