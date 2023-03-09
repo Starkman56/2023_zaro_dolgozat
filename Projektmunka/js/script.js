@@ -7,6 +7,7 @@ window.onload = function(){
     //console.log("Írd má ki:" + cartCloseBtn);
     const cartBox = document.querySelector('.cartBox');
     //console.log(cartBox);
+    
     kosarikon.addEventListener("click",function(){
         cartBox.classList.add('active');
     })
