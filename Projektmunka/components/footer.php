@@ -21,7 +21,7 @@
                     <div class="col  my-auto text-md-left  text-right "> <small> hello@gmail.com <span><img src="https://i.imgur.com/TtB6MDc.png" class="img-fluid "  width="25"></span> <span><img src="https://i.imgur.com/N90KDYM.png" class="img-fluid "  width="25"></span></small>  </div> 
                 </div>
             </div>
-        </div> 
+        </div>  
            </div>
            
        </div>

@@ -96,7 +96,13 @@ require("../components/nav.php");
   <div class="alap animate__animated animate__backInRight hover-img2">
   <img class="webshopkep" src="../keps/madareteto.jpg" alt=""><figcaption>Fatermékek</figcaption>
   </div>
+  
 </div>
+
+
+<?php
+require("../components/footer.php");
+?>
 
     <!-- nav scriptek -->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -110,9 +116,7 @@ require("../components/nav.php");
     <!-- nav scriptek -->
     <script src="../js/script.js"></script>
 
-  <?php
-  require("../components/footer.php");
-  ?>  
+  
 
 
   </body>

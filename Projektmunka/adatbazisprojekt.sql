@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Már 06. 08:18
--- Kiszolgáló verziója: 10.4.24-MariaDB
--- PHP verzió: 8.1.5
+-- Létrehozás ideje: 2023. Már 09. 09:55
+-- Kiszolgáló verziója: 10.4.27-MariaDB
+-- PHP verzió: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `adatbazis`
+-- Adatbázis: `adatbazisprojekt`
 --
 
 -- --------------------------------------------------------
@@ -28,31 +28,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `accounts` (
-  `id` int(255) NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `username` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `permission` varchar(255) DEFAULT 'user'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- A tábla adatainak kiíratása `accounts`
---
-
-INSERT INTO `accounts` (`id`, `name`, `username`, `email`, `password`, `permission`) VALUES
-(1, 'seme', 'dadwda', 'kiscica@gmail.com', 'fb0456d5293888623882d331030d16ec651f6cbd', 'user'),
-(2, 'oke', 'Sem', 'veddeddmeg@gmail.com', '7592c793d07efdc80804c78c748f93b13568bec9', 'admin'),
-(3, 'Egyszeru', 'Egyszer', 'kocsis.krisztina@gmail.com', '7c3cb4e01c01f002650d6f33dc0ade93a1eff5ff', 'user'),
-(4, 'Egyszeruw', 'Egyszerw', 'ekek@gmail.com', 'fa8edda52f645321de953c354ad0731de653dba2', 'admin'),
-(5, 'pontolyan', 'mintricsie', 'pont@gmail.com', 'be4a4cd0349c557b9abe9ea7903e9fd643149564', 'user'),
-(6, 'lehet', 'Lehet', 'lehet@gmail.com', 'fc3a12bcbc036296e245bbe3d8c5bb9644d1053a', 'admin'),
-(7, 'Báttya', 'Bártya', 'battya@gmail.com', '63720647af013050dc3b4eb40f198ffabdbddfc7', 'admin'),
-(8, 'Tehen ', 'Szaporito', 'tehen.szaporito@gmail.com', 'd3c9b18287407c7a6050311c0fc8d024fedb8c4e', 'admin'),
-(9, 'Eperke', 'Eperke', 'Eperke@gmail.com', 'b68499eec00932095fcb434d9de737c9386790a6', 'user'),
-(10, 'Almafa', 'Almafa', 'almafa@gmail.com', '7cdab41b409db1d38c13dfc9f5b6635dd7b6352a', 'admin'),
-(11, 'teszt', 'teszt', 'teszt@gmail.com', '34228a532093278fcdc65c3a1338482e8bdc44f6', 'admin'),
-(12, 'tesztuser', 'tesztuser', 'tesztuser@gmail.com', '8cc5e5cc34ccd6c81075e40bf6a20fd65dec8b11', 'user');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -62,7 +44,7 @@ INSERT INTO `accounts` (`id`, `name`, `username`, `email`, `password`, `permissi
 
 CREATE TABLE `alkategoriak` (
   `alkategoria_id` int(11) NOT NULL,
-  `alkategoria_nev` varchar(200) COLLATE utf8_hungarian_ci NOT NULL,
+  `alkategoria_nev` varchar(200) NOT NULL,
   `kategoria_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
@@ -100,7 +82,7 @@ INSERT INTO `alkategoriak` (`alkategoria_id`, `alkategoria_nev`, `kategoria_id`)
 
 CREATE TABLE `kategoriak` (
   `kategoria_id` int(11) NOT NULL,
-  `kategoria_nev` varchar(50) COLLATE utf8_hungarian_ci NOT NULL
+  `kategoria_nev` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
@@ -120,11 +102,12 @@ INSERT INTO `kategoriak` (`kategoria_id`, `kategoria_nev`) VALUES
 --
 
 CREATE TABLE `megrendeles` (
-  `id` int(15) NOT NULL,
+  `id` int(11) NOT NULL,
   `datum` date NOT NULL,
-  `cim` varchar(20) COLLATE utf8_hungarian_ci NOT NULL,
-  `tel` varchar(20) COLLATE utf8_hungarian_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8_hungarian_ci NOT NULL
+  `cim` varchar(20) NOT NULL,
+  `tel` varchar(20) NOT NULL,
+  `accounts_id` int(11) NOT NULL,
+  `termek_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 -- --------------------------------------------------------
@@ -143,7 +126,7 @@ CREATE TABLE `termek` (
   `nev` varchar(50) DEFAULT NULL,
   `alkategoria_id` int(11) NOT NULL,
   `leiras` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- A tábla adatainak kiíratása `termek`
@@ -154,7 +137,17 @@ INSERT INTO `termek` (`id`, `vonalkod`, `felvdatum`, `ar`, `darab`, `foto`, `nev
 (84, '00000000', '2023-03-03', 29100, 100, '1677844206.jpeg', 'Okuma Ceymar River Plus', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
 (85, '00000000', '0000-00-00', 32000, 100, '1677844292.jpeg', 'Okuma Ceymar Black', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
 (86, '00000000', '2023-03-03', 41000, 100, '1677844365.jpeg', 'Okuma Custom Black Ceymar River Feeder', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
-(87, '00000000', '2023-03-03', 54900, 100, '1677844433.jpeg', 'Okuma Ceymar River Feeder Professional', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.');
+(87, '00000000', '2023-03-03', 54900, 100, '1677844433.jpeg', 'Okuma Ceymar River Feeder Professional', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
+(88, '0000000', '2023-03-06', 15000, 100, '1678095927.jpeg', 'Döme TEAM FEEDER Carp Fighter', 2, 'Íme a Döme Gábor nevével fémjelzett új orsócsalád, pontyos feederhorgászathoz kifejlesztett, nyeletőfékes orsó modelljei.'),
+(89, '0000000', '2023-03-06', 23000, 100, '1678096193.jpeg', 'Döme TEAM FEEDER Long Cast', 2, 'Íme a Döme Gábor nevével fémjelzett új orsócsalád, pontyos feederhorgászathoz kifejlesztett, nyeletőfékes orsó modelljei.'),
+(90, '0000000', '2023-03-06', 26500, 100, '1678096789.jpeg', 'Delphin CALMO nyeletőfékes orsó', 2, 'Egy egyszerű, de precíz nyeletőfékes orsó széria, amely az igazán kedvező ára ellenére sem fog csalódást okozni paramétereivel és funkcionalitásával.'),
+(91, '0000000', '2023-03-06', 23000, 100, '1678096929.jpeg', 'Döme TEAM FEEDER Pearl Carp', 2, 'A MODECO egy attraktív modern orsó, amely az évek során szerzett megbízható technikai tapasztalatokon alapul.'),
+(92, '0000000', '2023-03-06', 19000, 100, '1678096992.jpeg', 'Delphin MODECO Carp', 2, 'A MODECO egy attraktív modern orsó, amely az évek során szerzett megbízható technikai tapasztalatokon alapul.'),
+(93, '0000000', '2023-03-06', 1500, 100, '1678101120.jpeg', 'Delphin SNAX POP csali Csoki-Banán', 3, 'A D SNAX POP úszó csalik átfogó sorozata, amely a halak számára ellenállhatatlan lesz a víz alatt.'),
+(94, '0000000', '2023-03-06', 1500, 100, '1678101212.jpeg', 'Delphin SNAX POP csali Fokhagyma-Vajsav', 3, 'A D SNAX POP úszó csalik átfogó sorozata, amely a halak számára ellenállhatatlan lesz a víz alatt.'),
+(95, '0000000', '2023-03-06', 1500, 100, '1678101328.jpeg', 'Delphin SNAX POP csali Kagyló-Fűszer', 3, 'D SNAX POP úszó csalik átfogó sorozata, amely a halak számára ellenállhatatlan lesz a víz alatt'),
+(96, '0000000', '2023-03-06', 1500, 100, '1678101269.jpeg', 'Delphin SNAX POP csali Kukorica-Ananász', 3, 'D SNAX POP úszó csalik átfogó sorozata, amely a halak számára ellenállhatatlan lesz a víz alatt.'),
+(97, '0000000', '0000-00-00', 1500, 1, '1678101299.jpeg', 'Delphin SNAX POP csali Mangó-Barack', 3, 'D SNAX POP úszó csalik átfogó sorozata, amely a halak számára ellenállhatatlan lesz a víz alatt');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -171,7 +164,8 @@ ALTER TABLE `accounts`
 --
 ALTER TABLE `alkategoriak`
   ADD PRIMARY KEY (`alkategoria_id`),
-  ADD KEY `kategoria_id` (`kategoria_id`);
+  ADD KEY `kategoria_id` (`kategoria_id`),
+  ADD KEY `kategoria_id_2` (`kategoria_id`);
 
 --
 -- A tábla indexei `kategoriak`
@@ -183,14 +177,17 @@ ALTER TABLE `kategoriak`
 -- A tábla indexei `megrendeles`
 --
 ALTER TABLE `megrendeles`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `accounts_id` (`accounts_id`,`termek_id`),
+  ADD KEY `termek_id` (`termek_id`);
 
 --
 -- A tábla indexei `termek`
 --
 ALTER TABLE `termek`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `alkategoriaid` (`alkategoria_id`);
+  ADD KEY `alkategoriaid` (`alkategoria_id`),
+  ADD KEY `alkategoria_id` (`alkategoria_id`);
 
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
@@ -200,31 +197,31 @@ ALTER TABLE `termek`
 -- AUTO_INCREMENT a táblához `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT a táblához `alkategoriak`
 --
 ALTER TABLE `alkategoriak`
-  MODIFY `alkategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `alkategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT a táblához `kategoriak`
 --
 ALTER TABLE `kategoriak`
-  MODIFY `kategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `kategoria_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT a táblához `megrendeles`
 --
 ALTER TABLE `megrendeles`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT a táblához `termek`
 --
 ALTER TABLE `termek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- Megkötések a kiírt táblákhoz
@@ -235,6 +232,13 @@ ALTER TABLE `termek`
 --
 ALTER TABLE `alkategoriak`
   ADD CONSTRAINT `alkategoriak_ibfk_1` FOREIGN KEY (`kategoria_id`) REFERENCES `kategoriak` (`kategoria_id`);
+
+--
+-- Megkötések a táblához `megrendeles`
+--
+ALTER TABLE `megrendeles`
+  ADD CONSTRAINT `megrendeles_ibfk_1` FOREIGN KEY (`termek_id`) REFERENCES `termek` (`id`),
+  ADD CONSTRAINT `megrendeles_ibfk_2` FOREIGN KEY (`accounts_id`) REFERENCES `accounts` (`id`);
 
 --
 -- Megkötések a táblához `termek`
