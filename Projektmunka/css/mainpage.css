@@ -477,20 +477,22 @@
   }
   .diszallatokmain{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     width: 70%;
     margin: auto;
+    padding-top: 3rem;
   }
   .galeriamain{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    width: 90%;
+    width: 80%;
     margin: auto;
   }
   .galeriakep{
     width: 30rem;
+    margin-top: 2rem;
   }
   .alap{
     display: grid;
@@ -650,6 +652,7 @@
   footer{
     color:#caced1 !important;
     width: 100% !important;
+    position: absolute;
     
   }
   .row-1{

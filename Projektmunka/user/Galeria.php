@@ -51,6 +51,9 @@ require("../kapcsolat/kapcs.php");
           <a class="nav-link" href="#">Galéria</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="webshop.php">Webshop</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#">Kapcsolat</a>
         </li>
       </ul>
@@ -60,37 +63,33 @@ require("../kapcsolat/kapcs.php");
     
 <div class="galeriamain">
   <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
+  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
-  </div> <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
+  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
+  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
-  </div> <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
+  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
+  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
-  </div> <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
+  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
+  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
-  </div> <div class="alap animate__animated animate__backInLeft">    
-  <a href="../user/webshop.php"><img class="galeriakep " src="../keps/fishing.jpg" alt=""></a>
+  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
   </div>
+  <div class="alap animate__animated animate__backInLeft">    
+  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
+  </div>
+  
 </div>
 
     <!-- nav scriptek -->
