@@ -110,10 +110,19 @@ li a{
     float: left;  
     color: #000;
 }
+.card{
+  color: black;
+  padding: 1rem;
+  height: 36rem;
+  width: 18rem;
+ background: rgba(206, 212, 218, 0.8);
+ margin: 100rem;
+}
 .card:hover{
 scale: 30rem;
-transform: scale(1.01);
+transform: scale(1.03);
 box-shadow: 0 0 1em  rgba(0, 0, 0, .3) ;
+border: solid 2px rgb(173, 181, 189);
 }
 .itemsBox{
     display: flex;
@@ -212,14 +221,7 @@ th,td{
     border: 1px solid black;
     padding: 10px;
 }
-.card{
-    color: black;
-    padding: 1rem;
-    height: 36rem;
-    width: 18rem;
-   margin-bottom: 2rem;
-   background: rgba(233, 236, 239, 0.4);
-}
+
 li{
     background: transparent !important;
 }
@@ -664,9 +666,14 @@ a figcaption{
   color:#757575 !important;
 }
 footer{
+  
   color:#caced1 !important;
   width: 100% !important;
+  position: absolute;
+  margin-top: 3rem;
 }
+
+
 
 .row-1{
   background-color:#1E242A !important;
@@ -1324,4 +1331,12 @@ iframe{
   animation-delay: -131s;
   transform-origin: 7vw 17vh;
   box-shadow: 18vmin 0 2.4820269712378833vmin currentColor;
+}
+
+
+.background img{
+  max-width: 4rem;
+  background:transparent;
+ opacity: 0.3;
+  
 }
