@@ -65,7 +65,7 @@
           <a class="nav-link" href="webshop.php">Webshop</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Kapcsolat</a>
+          <a class="nav-link" href="#scroll">Kapcsolat</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../belep.php">Belépés</a>
