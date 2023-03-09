@@ -25,7 +25,7 @@
             <div class="col">
                 <a href="#">Megrendelések</a>
             </div>
-            <div class="col">
+            <div class="col profilinfo">
                 <a href="#">Profil</a>
             </div>
         </div>

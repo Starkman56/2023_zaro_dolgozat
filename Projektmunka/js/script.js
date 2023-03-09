@@ -1,7 +1,6 @@
 window.onload = function(){
 
-    console.log("Ez a windowOnload eleje");
-
+    //console.log("Ez a windowOnload eleje");
     const kosarikon = document.querySelector('.kosarikon');
     //console.log(kosarikon);
     const cartCloseBtn = document.querySelector('.fa-close');
@@ -108,9 +107,6 @@ function deleteall(){
 function megrendeles(){
     window.location.href = "megrendeles.html";
 }
-
-
-
 // Kereső
 function search_item() {
     let input = document.getElementById('searchbar').value
