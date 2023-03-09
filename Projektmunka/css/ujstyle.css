@@ -89,6 +89,7 @@ header{
 }
 .headerkep{
   width: 100%;
+  height: 65%;
 }
 .lista{
     display: flex;

@@ -11,7 +11,7 @@ if (!isset($_SESSION['belepett'])) {
 }
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
-
+require("../components/mainnav.php");
 
 ?>
 <html lang="en">
@@ -71,7 +71,6 @@ require("../kapcsolat/kapcs.php");
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5  animate__animated animate__pulse">Horgász-Díszállat-Háztartási bolt</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
         <p></p>
       </div>
     </div>
@@ -79,7 +78,6 @@ require("../kapcsolat/kapcs.php");
       <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5  animate__animated animate__pulse">Kapcsolat</h5>
-        <button type="button" class="btn btn-outline-dark bov">Bővebben</button>
       </div>
     </div>
     
