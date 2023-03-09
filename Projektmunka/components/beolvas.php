@@ -10,21 +10,19 @@ while ($sor = mysqli_fetch_assoc($eredmeny)) {
         "
           <div class=\"card\">
               
-              <div class=\"card-header\">
+            <div class=\"card-header\">
               <img src=\"../keps/{$sor['foto']}\" alt=\"{$sor['nev']}\">
                 <h5 class=\"card-title\">{$sor['nev']}</h5>
-              </div>
-              <ul class=\"lista list-group list-group-flush\">
-                <li class=\"leiras list-group-item\">{$sor['leiras']}</li>
-                <li class=\"list-group-item\">{$sor['darab']}<span> Raktáron</span></li>
-                <li class=\"list-group-item\">{$sor['ar']}<span> Ft </span></li>
-                <li class=\"kosarli\">
-                <input type='number'id='termekdarab' value='1'>
-                 <button type='submit  ' class='kosar btn btn-outline-dark kosarhoz'>Kosárba</button>
-                 </li>
-
-              </ul>
-             
+            </div>
+            <ul class=\"lista list-group list-group-flush\">
+                  <li class=\"leiras list-group-item\">{$sor['leiras']}</li>
+                  <li class=\"list-group-item\">{$sor['darab']}<span> Raktáron</span></li>
+                  <li class=\"list-group-item\">{$sor['ar']}<span> Ft </span></li>
+                  <li class=\"kosarli\">
+                    <input type='number' min='0' id='termekdarab' value='0'>
+                    <button type='submit  ' class='kosar btn btn-outline-dark kosarhoz'>Kosárba</button>
+                  </li>
+            </ul>           
          </div>
        
             ";        
