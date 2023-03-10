@@ -425,8 +425,17 @@ aside .side-inner .nav-menu ul li.active a:before {
 }
 /* sidenav */
 .navbar{
-   
     width: 100%;
+}
+.navbar-nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.balra, .jobb{
+  display: flex;
+  align-items: center;
 }
 .gomb{
  

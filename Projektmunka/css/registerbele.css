@@ -41,7 +41,7 @@ body
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(170, 252, 252, 0.9);
+    background-color: rgba(206, 212, 218, 0.9);
     padding: 5px;
     border-radius: 20%;
     margin: auto;
@@ -56,7 +56,7 @@ body
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(170, 252, 252, 0.6);
+    background-color: rgba(206, 212, 218, 0.6);
     padding: 5px;
     border-radius: 30%;
     margin: auto;
@@ -121,7 +121,7 @@ body
     width: 100%;
     padding: 0.6rem;
     margin-top: 3rem;
-    background-color: rgb(139, 241, 254);
+    background-color: rgb(173, 181, 189);
 }
 
 .kis input[type=submit]:hover
@@ -129,7 +129,7 @@ body
     width: 100%;
     padding: 0.6rem;
     margin-top: 3rem;
-    background-color: rgb(125, 209, 255);
+    background-color: rgb(108, 117, 125);
 }
 
 .nincs
@@ -157,7 +157,7 @@ label
 footer {
     text-align: center;
     padding: 3px;
-    background-color: rgb(169, 223, 255);
+    background-color: rgb(173, 181, 189,0.5);
     color: rgb(0, 0, 0);
     position:fixed;
     bottom:0;

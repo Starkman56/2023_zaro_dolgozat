@@ -47,7 +47,7 @@
 </div>
 <nav class="navbar navbar-expand-lg sticky-top  bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="main.php">
       <img src="../keps/logo.jpg" alt="Logo" width="90rem" >
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,6 +55,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        <div class="balra">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="main.php">Főoldal</a>
         </li>
@@ -67,12 +68,23 @@
         <li class="nav-item">
           <a class="nav-link" href="#scroll">Kapcsolat</a>
         </li>
-        <li class="nav-item">
+        </div>
+        <div class="jobb">
+        <a href="../belep.php" ><li class="nav-item jobbra ">
+        <img src="../keps/belepicon.jpg"  alt="Logo" width="35rem" >
+        </li>
+        <li class="nav-item jobbra">
           <a class="nav-link" href="../belep.php">Belépés</a>
         </li>
-        <li class="nav-item">
+        </a>
+        <a href="../register.php" ><li class="nav-item jobbra ">
+        <img src="../keps/registericon.jpg"  alt="Logo" width="35rem" >
+        </li>
+        <li class="nav-item jobbra">
           <a class="nav-link" href="../register.php">Regisztráció</a>
         </li>
+        </a>
+        </div>
       </ul>
     </div>
   </div>

@@ -7,7 +7,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 //lapvédelem
 session_start();
-require("../components/loader.php");
+
 if (!isset($_SESSION['belepett'])) {
     header("Location: false.html");
     exit();

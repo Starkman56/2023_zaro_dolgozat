@@ -92,7 +92,11 @@ if(isset($_POST['ok']))
     </div>
     
     <script src="js/hater.js"></script>
-    
+    <footer>
+     <p>Copyright ©
+     <br>Kordics Balázs & Szabó Máté
+     </p>
+    </footer>
 </body>
 
 </html>
