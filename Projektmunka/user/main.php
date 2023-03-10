@@ -5,10 +5,10 @@ error_reporting(E_ALL);
 //lapvédelem
 session_start();
 
-if (!isset($_SESSION['belepett'])) {
+/*if (!isset($_SESSION['belepett'])) {
     header("Location: false.html");
     exit();
-}
+}*/
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
 ?>

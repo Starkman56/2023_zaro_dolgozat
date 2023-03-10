@@ -69,23 +69,36 @@
           <a class="nav-link" href="#scroll">Kapcsolat</a>
         </li>
         </div>
+      
         <div class="jobbrabb">
-        <a href="../belep.php" ><li class="nav-item jobbra ">
+        <?php
+      if (isset($_SESSION['belepett']) == false) {
+        //header("Location: false.html");
+        echo  '
+        <a href="../belep.php" >
+        <li class="nav-item jobbra " id="login">
         <img src="../keps/belepicon.jpg"  alt="Logo" width="35rem" >
-        </li>
-        <li class="nav-item jobbra">
-          <a class="nav-link" href="../belep.php">Belépés</a>
+        <a class="nav-link" href="../belep.php">Belépés</a>
         </li>
         </a>
-        <a href="../register.php" ><li class="nav-item jobbra ">
+        <a href="../register.php" >
+          <li class="nav-item jobbra " id="register">
         <img src="../keps/registericon.jpg"  alt="Logo" width="35rem" >
+        <a class="nav-link" href="../register.php">Regisztráció</a>
         </li>
-        <li class="nav-item jobbra">
-          <a class="nav-link" href="../register.php">Regisztráció</a>
-        </li>
-        </a>
+        ';
+      }
+      else{
+      echo  
+      '<a href="../user/logout.php"><li class="nav-item jobbra " id="logout">
+      <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
+      <a class="nav-link" href="../user/logout.php">Kilépés</a>
+      </li></a>';
+      }
+      ?>
         </div>
       </ul>
+      
     </div>
   </div>
 </nav>

@@ -7,7 +7,14 @@ session_start();
 
 if (!isset($_SESSION['belepett'])) {
     header("Location: false.html");
+    // echo  '<script> let login = document.getElementById("login");
+    // console.log(login);
+    // login.classList.remove("hidden")</script>';
+    // '<script>document.getElementById("register").classList.remove("hidden")</script>';
     exit();
+}
+else{
+//echo  '<script>document.getElementById("logout").classList.remove("hidden")</script>';
 }
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
@@ -19,7 +26,6 @@ require("../kapcsolat/kapcs.php");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&amp;display=swap" rel="stylesheet">
     <!-- nav linkek -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link

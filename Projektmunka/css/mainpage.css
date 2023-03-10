@@ -419,7 +419,7 @@
     justify-content: space-between;
     align-items: center;
 }
-  .balra, .jobbrabb{
+  .balra, .jobbrabb, .jobbra{
     display: flex;
     align-items: center;
   }
@@ -1175,8 +1175,8 @@
    opacity: 0.3;
     
   }
-  .jobbra{
-    
+  .hidden{
+    display: none;
   }
 
   @media (max-width: 699px) {
