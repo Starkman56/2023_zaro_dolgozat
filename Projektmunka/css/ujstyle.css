@@ -92,7 +92,7 @@ header{
 }
 .headerkep{
   width: 100%;
-  height: 65%;
+
 }
 .lista{
     display: flex;
@@ -187,12 +187,12 @@ input{
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, .5);
-    transition: 0.3s linear;
     transform: scale(0);
     z-index: 100;
-}
-.cartBox.active{
+  }
+  .cartBox.active{
     transform: scale(1);
+    transition: 0.3s linear;
 }
 .cartBox .cart{
     position: relative;
@@ -433,7 +433,7 @@ aside .side-inner .nav-menu ul li.active a:before {
   justify-content: space-between;
   align-items: center;
 }
-.balra, .jobb{
+.balra, .jobbrabb{
   display: flex;
   align-items: center;
 }

@@ -15,7 +15,6 @@ if (!isset($_SESSION['belepett'])) {
 
 //Meghívás 
 require("../kapcsolat/kapcs.php");
-require("../components/nav.php");
 
 
 
@@ -42,8 +41,8 @@ require("../components/beolvas.php");
     
 </head>
 <body>
+<?php require("../components/nav.php"); ?>
 
-<div id="loader" class="center"></div>
     <!--Website container-->
     <div class="container">
         <div class="cards">

@@ -12,7 +12,7 @@ if (!isset($_SESSION['belepett'])) {
 
 //Meghívás 
 require("../kapcsolat/kapcs.php");
-require("../components/nav.php");
+
 $sql =  "SELECT * from termek 
 WHERE alkategoria_id = 1";
 require("../components/beolvas.php");
@@ -27,6 +27,7 @@ require("../components/beolvas.php");
     
 </head>
 <body>
+<?php require("../components/nav.php"); ?>
     <!--Website container-->
     <div class="container">
         <div class="cards">

@@ -24,6 +24,7 @@ WHERE alkategoria_id = 5";
     <title>ruhazat</title>    
 </head>
 <body>
+<?php require("../components/nav.php"); ?>
     <!--Website container-->
     <div class="container">
         <div class="cards">

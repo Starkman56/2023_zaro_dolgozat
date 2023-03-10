@@ -8,8 +8,8 @@
    <span><img src="../keps/fishbg7.png" alt=""></span>
    <span><img src="../keps/fishbg8.png" alt=""></span>
    <span><img src="../keps/fishbg9.png" alt=""></span>
-   <span><img src="../keps/fishbg10.png" alt=""></span>
-   <span><img src="../keps/fishbg11.png" alt=""></span>
+   <span><img src="" alt=""></span>
+   <span><img src="" alt=""></span>
    <span></span>
    <span></span>
    <span></span>
@@ -69,7 +69,7 @@
           <a class="nav-link" href="#scroll">Kapcsolat</a>
         </li>
         </div>
-        <div class="jobb">
+        <div class="jobbrabb">
         <a href="../belep.php" ><li class="nav-item jobbra ">
         <img src="../keps/belepicon.jpg"  alt="Logo" width="35rem" >
         </li>
