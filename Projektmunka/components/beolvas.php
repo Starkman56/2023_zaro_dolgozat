@@ -5,6 +5,12 @@ $eredmeny = mysqli_query($dbconn, $sql);
 
 $kimenet = "";
 
+//$sor = mysqli_fetch_assoc($eredmeny);
+/*
+echo "<pre>";
+print_r($sor);
+echo "</pre>";
+*/
 while ($sor = mysqli_fetch_assoc($eredmeny)) {
     $kimenet .=
         "
@@ -20,7 +26,7 @@ while ($sor = mysqli_fetch_assoc($eredmeny)) {
                   <li class=\"list-group-item\">{$sor['ar']}<span> Ft </span></li>
                   <li class=\"kosarli\">
                     <input type='number' min='0' id='termekdarab' value='0'>
-                    <button type='submit  ' class='kosar btn btn-outline-dark kosarhoz'>Kosárba</button>
+                    <button type='submit' id='kosar_{$sor["id"]}' data-product_id = '{$sor['id']}' class='kosar btn btn-outline-dark kosarhoz'>Kosárba</button>
                   </li>
             </ul>           
          </div>

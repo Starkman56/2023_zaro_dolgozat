@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <title>Document</title>
-   
 </head>
 <body>
     <h1>Köszönjük megrendelését</h1>
@@ -13,7 +13,7 @@
     <h4 id="total"></h4>
 
     <h2>A rendelés véglegesítéséhez kérjük adja meg telefonszámát:</h2>
-    <input type="tel" name="tel" id="tel" onkeyup="sendEmail();">  
+    <input type="tel" name="tel" id="tel" onchange="sendEmail();">  
 <script>
    let asd = new Array();
 window.onload = function (){
@@ -33,11 +33,17 @@ window.onload = function (){
     
 }
 
-function sendEmail() {
-  
-            
-    document.write("Üzenete elküldésre került")
-
+    function sendEmail() {
+        let order = localStorage.getItem("cuccok");
+        $.ajax({
+            method: "POST",
+            url: "../api.php",
+            dataType: "JSON",
+            data: { c: "orderSave", cuccok: order },         
+            success:function(result) {
+                console.log(result.message);
+            }                       
+        })
     }
  </script>
 </body>

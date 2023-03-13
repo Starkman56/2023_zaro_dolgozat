@@ -1167,18 +1167,12 @@
     transform-origin: 7vw 17vh;
     box-shadow: 18vmin 0 2.4820269712378833vmin currentColor;
   }
-  
-  
   .background img{
     max-width: 4rem;
     background:transparent;
    opacity: 0.3;
     
   }
-  .hidden{
-    display: none;
-  }
-
   @media (max-width: 699px) {
     .cards {
       grid-template-columns: repeat(1, 1fr);

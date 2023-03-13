@@ -29,6 +29,7 @@ window.onload = function(){
                     no: parseInt(e.target.parentElement.parentElement.children[1].innerHTML),
                     price: parseInt(e.target.parentElement.parentElement.children[2].innerHTML),
                     darab: parseInt(e.target.parentElement.children[0].value),
+                    termek_id: parseInt(e.target.dataset.product_id),
                };
                 console.log(cucc);
                 //adjuk hozzá a localstoragehez az elemet.
