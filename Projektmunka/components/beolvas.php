@@ -17,7 +17,7 @@ while ($sor = mysqli_fetch_assoc($eredmeny)) {
           <div class=\"card\">
               
             <div class=\"card-header\">
-              <img src=\"../keps/{$sor['foto']}\" alt=\"{$sor['nev']}\">
+              <img id =\"arukep\" class=\"cikkkep\" src=\"../keps/{$sor['foto']}\" alt=\"{$sor['nev']}\">
                 <h5 class=\"card-title\">{$sor['nev']}</h5>
             </div>
             <ul class=\"lista list-group list-group-flush\">

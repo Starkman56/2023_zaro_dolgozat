@@ -10,3 +10,4 @@
     <script defer src="js/main.js"></script>
     <script defer src="navbar.js"></script>
     <script defer src="../js/script.js"></script>
+    

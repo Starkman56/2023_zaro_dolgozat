@@ -91,7 +91,7 @@ window.onload = function(){
     JSON.parse(localStorage.getItem('cuccok')).map(data =>{
         sum += data.darab * data.price;
     });
-    tableData += '<tr><td colspan="3" class="jobb"><a href="megrendeles.html">Megrendelés</a></td><td>'+ sum +'</td><td><a href="#" onclick="deleteall(this)">Összes törlése</a></td></tr>';
+    tableData += '<tr><td colspan="3" class="jobb"><a href="megrendeles.php">Megrendelés</a></td><td>'+ sum +'</td><td><a href="#" onclick="deleteall(this)">Összes törlése</a></td></tr>';
     cardBoxTable.innerHTML =tableData;
 }
 /**Törlés a kosárból*/
@@ -114,7 +114,7 @@ function deleteall(){
     window.location.reload();
 }
 function megrendeles(){
-    window.location.href = "megrendeles.html";
+    window.location.href = "megrendeles.php";
 }
 // Kereső
 function search_item() {
@@ -131,5 +131,18 @@ function search_item() {
        
     }
 }
+let modal = document.getElementById('modal');
+console.log(modal);
+let images = document.getElementsByClassName('cikkkep');
+console.log(images);
+for (const image of images) {
+    image.addEventListener("dblclick", () => {
+        modal.children[0].src = image.src;
+        modal.classList.remove("hidden");
+    });
+}
 
+modal.children[1].addEventListener("click", () => {
+    modal.classList.add("hidden");
+});
 

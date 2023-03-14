@@ -39,50 +39,7 @@ require("../kapcsolat/kapcs.php");
 <body>
 <?php require("../components/mainnav.php"); ?>
     <!--Website container-->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Horgász áru</h5>
-        <p></p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Díszállatok</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Háztartási eszközök</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img  class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Fatermékek</h5>
-      </div>
-    </div>
-    
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+   
 <div class="webshopmain">
   <div class="alap animate__animated animate__backInLeft hover-img2">    
   <a href="horgasz.php"><img class="webshopkep " src="../keps/fishing.jpg" alt=""><figcaption>Horgász áru</figcaption></a>

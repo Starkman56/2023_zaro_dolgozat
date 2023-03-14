@@ -1351,13 +1351,46 @@ iframe{
   box-shadow: 18vmin 0 2.4820269712378833vmin currentColor;
 }
 
-
 .background img{
   max-width: 4rem;
   background:transparent;
  opacity: 0.3;
   
 }
+#modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;  
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
 
+#modal.hidden {
+  display: none;
+}
+
+#modal img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  object-fit: contain;
+  border: none;
+}
+
+#modal button {
+  position: fixed;
+  right: 1rem;
+  top: 0.2rem;
+  font-size: 50px;
+  height: 75px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  background: none;
+  color: white;
+}
 
 

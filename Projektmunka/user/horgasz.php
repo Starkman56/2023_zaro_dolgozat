@@ -9,8 +9,9 @@ error_reporting(E_ALL);
 session_start();
 
 if (!isset($_SESSION['belepett'])) {
-    header("Location: false.html");
-    exit();
+    //header("Location: false.html");
+    //exit();
+    
 }
 
 //Meghívás 
@@ -25,8 +26,6 @@ INNER JOIN kategoriak
 ON kategoriak.kategoria_id = alkategoriak.kategoria_id
 WHERE kategoriak.kategoria_id = 1";
 require("../components/beolvas.php");
-
-
 
 ?>
 <html lang="en">
@@ -49,6 +48,10 @@ require("../components/beolvas.php");
             <?php
             print $kimenet;
             ?>
+    </div>
+    <div id="modal" class="hidden">
+            <img src="" alt="">
+            <button>×</button>
         </div>
     </div>
 <?php
@@ -56,5 +59,4 @@ require("../components/footer.php");
 ?>
 
 </body>
-
 </html>
