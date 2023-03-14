@@ -696,8 +696,8 @@
   
   .background {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 150vw;
+    height: 150vh;
     top: 0;
     left: 0;
     background: #f8f9fa;
@@ -1174,6 +1174,12 @@
     
   }
   @media (max-width: 699px) {
+    .galeriamain{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .galeriakep{
+      width: 17rem;
+    }
     .cards {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -1226,9 +1232,13 @@
   @media (min-width: 700px) {
     .cards { grid-template-columns: repeat(2, 1fr); }
     .card{
-  
-  
       margin: auto;
+    }
+    .galeriamain{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .galeriakep{
+      width: 17rem;
     }
     .carousel-caption{
       width: fit-content;
@@ -1237,7 +1247,7 @@
       top: 60%;
       transform: translate(-50%, -50%);
     }
-   
+
     .carousel{
       margin-bottom: 2rem;
     }
@@ -1263,9 +1273,13 @@
   @media (min-width: 1000px) {
     .cards { grid-template-columns: repeat(3, 1fr); }
     .card{
-  
-  
       margin: auto;
+    }
+    .galeriamain{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .galeriakep{
+      width: 30rem;
     }
     .carousel-caption{
       width: fit-content;

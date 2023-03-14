@@ -24,7 +24,7 @@ $eredmeny = mysqli_query($dbconn, $sql);
 $kimenet = "<table><thead>
             <tr>
             <th>Fotó:</th>
-            <th>Vonalkód:</th>
+            <th>Vonalkód</th>
             <th>Név</th>
             <th>Kategória</th>
             <th>Alkategória</th>

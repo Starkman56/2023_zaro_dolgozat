@@ -20,7 +20,10 @@ body {
 
     
 }
-
+h1{
+    text-align: center;
+    margin: 1rem;
+}
 .hiba {
     margin: auto;
     width: 50%;

@@ -6,12 +6,12 @@ error_reporting(E_ALL);
 session_start();
 
 if (!isset($_SESSION['belepett'])) {
-    header("Location: false.html");
-    exit();
+    // header("Location: false.html");
+    // exit();
 }
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
-require("../components/mainnav.php");
+
 
 ?>
 <html lang="en">
@@ -34,7 +34,7 @@ require("../components/mainnav.php");
 </head>
 
 <body>
-    
+    <?php require("../components/mainnav.php"); ?>
 <div class="galeriamain">
   <div class="alap animate__animated animate__backInLeft">    
   <img class="galeriakep " src="../keps/fishing.jpg" alt="">

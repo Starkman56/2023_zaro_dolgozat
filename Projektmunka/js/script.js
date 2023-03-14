@@ -17,6 +17,11 @@ window.onload = function(){
     const kosarhozgomb = document.getElementsByClassName('kosarhoz')
     console.log("Ez a kosár gomb",kosarhozgomb);
     let cuccok = [];
+/*
+    if(JSON.parse(localStorage.getItem('cuccok')) === null) {
+        localStorage.setItem("cuccok", cuccok);
+    }
+*/
     for (let i = 0; i < kosarhozgomb.length; i++) {
         kosarhozgomb[i].addEventListener("click",function(e){
             //console.log("Ez a kosár forciklus belseje, a storage vizsgálat elött");
@@ -31,7 +36,7 @@ window.onload = function(){
                     darab: parseInt(e.target.parentElement.children[0].value),
                     termek_id: parseInt(e.target.dataset.product_id),
                };
-                console.log(cucc);
+                console.log("a cucc",cucc);
                 //adjuk hozzá a localstoragehez az elemet.
                 if (JSON.parse(localStorage.getItem('cuccok')) === null){
                     cuccok.push(cucc);
@@ -40,7 +45,7 @@ window.onload = function(){
                     window.location.reload();
                 }else{
                     const localcuccok = JSON.parse(localStorage.getItem("cuccok"));
-                    console.log(localcuccok);
+                    console.log("localcuccok",localcuccok);
                     localcuccok.map(data =>{
                         if(cucc.id == data.id){
                             cucc.darab += data.darab;
@@ -60,11 +65,13 @@ window.onload = function(){
     //Rendelés hozzáadása a kosárhoz
     const kosarikonP = document.querySelector('.kosarikon p');
     console.log("kosarikonP",kosarikonP);
+
     let no = 0;
     JSON.parse(localStorage.getItem('cuccok')).map(data =>{
         no = no + data.darab;
         
     });
+
     kosarikonP.innerHTML = no;
     //Kosár feltöltése.
     const cardBoxTable = document.querySelector('table');

@@ -6,12 +6,12 @@ error_reporting(E_ALL);
 session_start();
 
 if (!isset($_SESSION['belepett'])) {
-    header("Location: false.html");
+    //header("Location: false.html");
     // echo  '<script> let login = document.getElementById("login");
     // console.log(login);
     // login.classList.remove("hidden")</script>';
     // '<script>document.getElementById("register").classList.remove("hidden")</script>';
-    exit();
+    //exit();
 }
 else{
 //echo  '<script>document.getElementById("logout").classList.remove("hidden")</script>';
