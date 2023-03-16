@@ -67,9 +67,8 @@ $kimenet .= "</tbody></table>";
     <div class="cim">
     <div class="cimkozepre"><h1>Raktáron</h1>
     <p class="kozep"><a href="logout.php">Kijelenkezés</a></p>
-    <form method="post">
-        <input type="search" name="kereso" id="kereso" placeholder="Keresés">
-    </form></div>
+    <input class="KeresoItem" id="searchbar" onkeyup="search_itemadmin()" type="text"
+        name="search" placeholder="Keresés a termékek között...">
     </div>
     <div class="content">
 
@@ -85,5 +84,6 @@ $kimenet .= "</tbody></table>";
     <?php
     require("../components/background.php");
     ?>
+<script src="../js/script.js"></script>
 </body>
 </html>

@@ -80,7 +80,7 @@
       <a class="nav-link" href="../user/logout.php">Kilépés</a>
       </a></li>
       <div class="kosarikon">
-            <p>0</p><i class="fa fa-shopping-cart"></i>
+            <p>0</p><i class="fa fa-shopping-cart kosarkep"></i>
       </div>
       ';
       }

@@ -134,6 +134,21 @@ function search_item() {
        
     }
 }
+function search_itemadmin() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('nev');
+    for (i = 0; i < x.length; i++) {
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].parentElement.style.display="none";
+        }
+        else {
+            x[i].style.display="flex";  
+        }
+       
+    }
+}
+
 let modal = document.getElementById('modal');
 console.log(modal);
 let images = document.getElementsByClassName('cikkkep');

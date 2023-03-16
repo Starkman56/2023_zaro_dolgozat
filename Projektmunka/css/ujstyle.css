@@ -108,8 +108,10 @@ li a{
 .kosarikon{
     cursor: pointer;
     font-size: 3rem;
-    color: rgb(0, 0, 0); 
+    color: rgb(0, 0, 0);
+    padding-top: 0.5rem;
 }
+
 .kosarikon p {
     padding: 10px;
     float: left;  
@@ -447,8 +449,8 @@ aside .side-inner .nav-menu ul li.active a:before {
 }
 /* Kereső */
 #searchbar{
-  margin-left: 15%;
-  padding:15px;
+  margin-left: 3% auto;
+  padding:10px;
   border-radius: 10px;
 }
 input[type=text] {
@@ -526,19 +528,24 @@ h4{
 }
 .kosar{
   width: 5rem;
+  max-height: 2.4rem;
   border: solid black 2px;
   border-radius: 0px 8px 0px 8px;
 }
 .kosarli{
   margin: auto;
- 
+  
 }
 #termekdarab{
   width: 3.5rem;
-  height: 2.2rem;
-  margin: 0.5rem auto;
+  min-height: 2.27rem;
+  margin: auto;
   background-color: transparent;
   border-radius: 8px 0px 8px 0px;
+  border: solid black 2px;
+  text-align: center;
+  padding-bottom: 0.55rem;
+  padding-top: 0.35rem;
 }
 
 
