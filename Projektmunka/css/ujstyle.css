@@ -1384,13 +1384,13 @@ iframe{
 #modal button {
   position: fixed;
   right: 1rem;
-  top: 0.2rem;
+  top: 0.5rem;
   font-size: 50px;
-  height: 75px;
+  height: 100px;
   aspect-ratio: 1/1;
   cursor: pointer;
-  background: none;
-  color: white;
+  background: rgba(255, 123, 123, 0.5);
+  color: black;
 }
 
 

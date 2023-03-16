@@ -93,7 +93,13 @@
       '<a href="../user/logout.php"><li class="nav-item jobbra " id="logout">
       <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
       <a class="nav-link" href="../user/logout.php">Kilépés</a>
-      </li></a>';
+      </a></li>
+      
+      <div class="kosarikon">
+            <p>0</p><i class="fa fa-shopping-cart"></i>
+      </div>
+      
+      ';
       }
       ?>
         </div>
@@ -102,3 +108,12 @@
     </div>
   </div>
 </nav>
+<div class="cartBox">
+    <div class="cart">
+        <!-- x gomb amivel bezárjuk-->
+        <i class="fa fa-close"></i>
+        <h1>Kosár tartalma</h1>
+        <!-- táblázat, ahová az adatok kerülnek, amikor hozzá adják a kosárhoz-->
+        <table class="table"></table>
+    </div>
+</div>

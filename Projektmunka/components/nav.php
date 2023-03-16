@@ -56,9 +56,35 @@
         
         <input class="KeresoItem" id="searchbar" onkeyup="search_item()" type="text"
         name="search" placeholder="Keresés a termékek között...">
-        <div class="kosarikon">
+        <?php
+      if (isset($_SESSION['belepett']) == false) {
+        //header("Location: false.html");
+        echo  '
+        <a href="../belep.php" >
+        <li class="nav-item jobbra " id="login">
+        <img src="../keps/belepicon.jpg"  alt="Logo" width="35rem" >
+        <a class="nav-link" href="../belep.php">Belépés</a>
+        </li>
+        </a>
+        <a href="../register.php" >
+          <li class="nav-item jobbra " id="register">
+        <img src="../keps/registericon.jpg"  alt="Logo" width="35rem" >
+        <a class="nav-link" href="../register.php">Regisztráció</a>
+        </li>
+        ';
+      }
+      else{
+      echo  
+      '<a href="../user/logout.php"><li class="nav-item jobbra " id="logout">
+      <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
+      <a class="nav-link" href="../user/logout.php">Kilépés</a>
+      </a></li>
+      <div class="kosarikon">
             <p>0</p><i class="fa fa-shopping-cart"></i>
-        </div>
+      </div>
+      ';
+      }
+      ?>
     </div>
 </nav>
 <!-- Side Nav menu -->

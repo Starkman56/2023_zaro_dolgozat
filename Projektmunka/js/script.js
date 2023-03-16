@@ -84,7 +84,7 @@ window.onload = function(){
         tableData += '<tr><td colspan="5"></td></tr>';
     }else{
         JSON.parse(localStorage.getItem('cuccok')).map(data => {
-            tableData += '<tr><td>'+data.id+'</td><td>'+data.name+'</td><td>'+data.darab+'</td><td>'+data.price* data.darab+'</td><td><a href="#" onclick=Delete(this);>Törlés</a></td></tr>';
+            tableData += '<tr><td>'+data.id+'</td><td>'+data.name+'</td><td>'+data.darab+'</td><td>'+data.price* data.darab+'</td><td><input><a href="#" onclick=Delete(this);> | Törlés</a></td></tr>';
         })
     }
     let sum = 0;
@@ -99,7 +99,10 @@ function Delete(elem){
     let cuccok = [];
     JSON.parse(localStorage.getItem('cuccok')).map(data =>{
         if(data.id != elem.parentElement.parentElement.children[0].textContent){
+            
             cuccok.push(data);
+            let deletedid = data.id;
+            console.log(deletedid);
         }
     });
     localStorage.setItem("cuccok", JSON.stringify(cuccok));
@@ -145,4 +148,5 @@ for (const image of images) {
 modal.children[1].addEventListener("click", () => {
     modal.classList.add("hidden");
 });
+
 
