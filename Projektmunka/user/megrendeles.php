@@ -53,6 +53,7 @@
                     window.location.href = "horgasz.php";
                 }else{
                     alert("Nincsen raktáron ennyi termék.");
+                    window.location.href = "horgasz.php";
                 }
                 //console.log(result.message);
             }                       

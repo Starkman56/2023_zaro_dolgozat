@@ -11,7 +11,7 @@ session_start();
 if (!isset($_SESSION['belepett'])) {
     //header("Location: false.html");
     //exit();
-    
+    echo '<script>alert("A rendeléshez belépés szükséges!")</script>';
 }
 
 //Meghívás 

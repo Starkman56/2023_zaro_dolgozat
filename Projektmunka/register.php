@@ -58,7 +58,7 @@ if(isset($_POST['ok']))
 <body>
 <div class="background" id="background"></div>
     <div class="kozep">
-        <h1>Regisztárció</h1>
+        <h1>Regisztráció</h1>
         <div class="kis">
         <div class="hiba">
         <?php
