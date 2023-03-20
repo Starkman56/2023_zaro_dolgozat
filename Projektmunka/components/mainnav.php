@@ -72,7 +72,10 @@
       
         <div class="jobbrabb">
         <?php
-      if (isset($_SESSION['belepett']) == false) {
+        
+      if (isset($_SESSION['belepett']) == false)
+      {
+        
         //header("Location: false.html");
         echo  '
         <a href="../belep.php" >
@@ -89,22 +92,25 @@
         ';
       }
       else{
-      echo  
-      '<a href="../user/logout.php"><li class="nav-item jobbra " id="logout">
-      <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
-      <a class="nav-link" href="../user/logout.php">Kilépés</a>
-      </a></li>
-      
-      <div class="kosarikon">
-            <p>0</p><i class="fa fa-shopping-cart"></i>
-      </div>
-      
-      ';
+
+        $bentvan = $_SESSION["user_name"];
+        $logout = '<a href="../user/logout.php"><li class="nav-item jobbra " id="logout">
+        <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
+        <a class="nav-link" href="../user/logout.php">Kilépés</a>
+        </a></li><li class="nav-item jobbra">
+        <p>';
+$logout.=$bentvan;
+$logout.='</p>
+</li>
+<div class="kosarikon">
+      <p>0</p><i class="fa fa-shopping-cart"></i>
+</div>';
+      echo $logout;
       }
       ?>
         </div>
       </ul>
-      
+
     </div>
   </div>
 </nav>

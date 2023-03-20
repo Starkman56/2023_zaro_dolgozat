@@ -22,7 +22,7 @@ if(isset($_POST['ok']))
 
        if($row['permission'] == 'admin')
        {
-        $_SESSION['admin_name'] = $row['name'];
+        $_SESSION['user_name'] = $row['name'];
         $_SESSION['belepett'] = true;
         header('Location:admin/adminlist.php');
        }
@@ -83,6 +83,7 @@ if(isset($_POST['ok']))
                 </label>    
                 </div>
             </p>
+            <p class="jelszomodositas">Jelszó módosítása <a href="register.php">Itt!</a></p>
             <div class="gomb"><input type="submit" value="Belépés" id="ok" name="ok"></div>
         </form>
         </div>
