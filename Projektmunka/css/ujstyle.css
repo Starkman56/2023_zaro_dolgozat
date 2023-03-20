@@ -9,7 +9,7 @@ html {
 body {
     background-color: #d2b9b9;
     position: relative;
-    background-image: url(../keps/bg1.jpg)!important;
+    background-color: white!important;
     background-repeat: no-repeat;
     background-size: cover;  
     background-attachment: fixed;
@@ -105,6 +105,10 @@ li a{
     font-size: 18px;
     font-weight: 600;
 }
+.jelmodositas{
+  color: black;
+}
+
 .kosarikon{
     cursor: pointer;
     font-size: 3rem;
@@ -160,8 +164,6 @@ border: solid 2px rgb(173, 181, 189);
 }
 p{
     font-size: 20px;
-    text-align: right;
-    font-weight: lighter;
     color: rgb(0, 0, 0);
     padding-top: 0.8rem;
     padding-right: 1rem;
@@ -885,8 +887,9 @@ iframe{
   height: 100vh;
   top: 0;
   left: 0;
-  background: #f8f9fa;
   overflow: hidden;
+  background-color: white;
+  z-index: -1;
 }
 
 .background span {
@@ -1395,5 +1398,22 @@ iframe{
   border-color: transparent;
   color: rgba(255, 0, 0, 0.8);
 }
-
+.profilinfo{
+  display: none;
+}
+.profilinfofel{
+  display: block !important;
+  width: 30rem;
+  background-color: black;
+  height: 15rem;
+  position: absolute;
+  left: 75%;
+  margin-top: -1rem;
+  z-index: 1;
+  top: 100%;
+}
+.profilinfofel p{
+  color: white;
+  text-align: center;
+}
 

@@ -161,4 +161,14 @@ modal.children[1].addEventListener("click", () => {
     modal.classList.add("hidden");
 });
 
+function profilinfo(){
+    if (document.getElementById("profilid").className == "profilinfo")
+    {
+      document.getElementById("profilid").className = "profilinfofel";
+    }
+    else {
+      document.getElementById("profilid").className = "profilinfo";
+    }
+
+}
 

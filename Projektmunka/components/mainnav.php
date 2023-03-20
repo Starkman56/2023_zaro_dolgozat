@@ -97,22 +97,30 @@
         <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
         <a class="nav-link" href="../user/logout.php">Kilépés</a>
         </a></li><li class="nav-item jobbra">
-        <p>';
+        <p><a class="jelmodositas" onclick=profilinfo()>';
         $logout.=$bentvan;
-        $logout.='</p>
+        $logout.='</a></p>
         </li>
         <div class="kosarikon">
               <p>0</p><i class="fa fa-shopping-cart"></i>
         </div>';
         echo $logout;
       }
+      
       ?>
+      
         </div>
       </ul>
 
     </div>
   </div>
+  <div class="profilinfo" id="profilid">
+        <p>Profil info</p>
+        <p>Adatok módosítása</p>
+        
+   </div>
 </nav>
+
 <div class="cartBox">
     <div class="cart">
         <!-- x gomb amivel bezárjuk-->

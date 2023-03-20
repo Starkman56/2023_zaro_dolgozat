@@ -4,13 +4,14 @@
     box-sizing: border-box;
   }
   body {
-      background-color: #d2b9b9;
-      position: relative;
-      background-image: url(../keps/bg1.jpg)!important;
-      background-repeat: no-repeat;
-      background-size: cover;  
-      background-attachment: fixed;
-    }
+    background-color: #d2b9b9;
+    position: relative;
+    background-color: white!important;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-attachment: fixed;
+    overflow-x: hidden !important;
+  }
     p {
       color: #b3b3b3;
       font-weight: 300;
@@ -98,6 +99,9 @@
       margin: 10px;
       font-size: 18px;
       font-weight: 600;
+  }
+  .jelmodositas{
+    color: black;
   }
   .kosarikon{
       cursor: pointer;
@@ -699,12 +703,13 @@
   
   .background {
     position: fixed;
-    width: 150vw;
-    height: 300vh;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
-    background: #f8f9fa;
     overflow: hidden;
+    background-color: white;
+    z-index: -1;
   }
   
   .background span {
@@ -1175,6 +1180,24 @@
     background:transparent;
    opacity: 0.3;
     
+  }
+  .profilinfo{
+    display: none;
+  }
+  .profilinfofel{
+    display: block !important;
+    width: 30rem;
+    background-color: black;
+    height: 15rem;
+    position: absolute;
+    left: 75%;
+    margin-top: -1rem;
+    z-index: 1;
+    top: 100%;
+  }
+  .profilinfofel p{
+    color: white;
+    text-align: center;
   }
   @media (min-width: 1200px) {
     .cards { grid-template-columns: repeat(4, 1fr); }

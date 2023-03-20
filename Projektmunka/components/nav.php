@@ -8,8 +8,6 @@
    <span><img src="../keps/fishbg7.png" alt=""></span>
    <span><img src="../keps/fishbg8.png" alt=""></span>
    <span><img src="../keps/fishbg9.png" alt=""></span>
-   <span><img src="../keps/fishbg10.png" alt=""></span>
-   <span><img src="../keps/fishbg11.png" alt=""></span>
    <span></span>
    <span></span>
    <span></span>
@@ -74,18 +72,26 @@
         ';
       }
       else{
-      echo  
-      '<a href="../user/logout.php"><li class="nav-item jobbra " id="logout">
-      <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
-      <a class="nav-link" href="../user/logout.php">Kilépés</a>
-      </a></li>
-      <div class="kosarikon">
-            <p>0</p><i class="fa fa-shopping-cart kosarkep"></i>
-      </div>
-      ';
+        $bentvan = $_SESSION["user_name"];
+        $logout = '<a href="../user/logout.php"><li class="nav-item jobbra " id="logout">
+        <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
+        <a class="nav-link" href="../user/logout.php">Kilépés</a>
+        </a></li><li class="nav-item jobbra">
+        <p><a class="jelmodositas">';
+        $logout.=$bentvan;
+        $logout.='</a></p>
+        </li>
+        <div class="kosarikon">
+              <p>0</p><i class="fa fa-shopping-cart"></i>
+        </div>';
+        echo $logout;
       }
       ?>
     </div>
+    <div class="profilinfo" id="profilid">
+        <p>Profil info</p>
+        <p>Adatok módosítása</p>
+   </div>
 </nav>
 <!-- Side Nav menu -->
 <aside class="sidebar">
