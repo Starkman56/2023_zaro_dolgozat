@@ -140,19 +140,16 @@ function search_itemadmin() {
     let x = document.getElementsByClassName('nev');
     for (i = 0; i < x.length; i++) {
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].parentElement.style.display="none";
+            x[i].parentElement.classList.add("hidden");
         }
         else {
-            x[i].style.display="flex";  
-        }
-       
+            x[i].parentElement.classList.remove("hidden");
+        }  
     }
 }
 
 let modal = document.getElementById('modal');
-console.log(modal);
 let images = document.getElementsByClassName('cikkkep');
-console.log(images);
 for (const image of images) {
     image.addEventListener("dblclick", () => {
         modal.children[0].src = image.src;

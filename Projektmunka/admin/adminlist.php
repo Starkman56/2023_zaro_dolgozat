@@ -64,6 +64,7 @@ $kimenet .= "</tbody></table>";
 
 <body>
     
+    
     <div class="cim">
     <div class="cimkozepre"><h1>Raktáron</h1>
     <p class="kozep"><a href="logout.php">Kijelenkezés</a></p>
@@ -72,14 +73,14 @@ $kimenet .= "</tbody></table>";
     </div>
     <div class="content">
 
-    <p class="szovegkozepre"><a href="felvitel.php">Új árú felvitele</a></p>
+    <p class="szovegkozepre"><a href="felvitel.php">Új áru felvitele</a></p>
     <div class="respons">
 
     <?php
     echo $kimenet;
     ?>
     </div>
-    <p class="szovegkozepre"><a href="felvitel.php">Új árú felvitele</a></p>
+    <p class="szovegkozepre"><a href="felvitel.php">Új áru felvitele</a></p>
     </div>
     <?php
     require("../components/background.php");

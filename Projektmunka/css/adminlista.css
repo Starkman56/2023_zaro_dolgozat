@@ -97,6 +97,9 @@ table thead th
     margin: auto;
     width: 100%;
 }
+.tabla tr.hidden {
+  display: none;
+}
 
 /* width */
 .tabla::-webkit-scrollbar {
