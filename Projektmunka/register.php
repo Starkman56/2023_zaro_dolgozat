@@ -9,31 +9,35 @@ session_start();
 require("kapcsolat/kapcs.php");
 if(isset($_POST['ok']))
 {
-    $name = mysqli_real_escape_string($dbconn, $_POST['name']);
-    $username = mysqli_real_escape_string($dbconn, $_POST['username']);
+    $nev = mysqli_real_escape_string($dbconn, $_POST['nev']);
+    $felhnev = mysqli_real_escape_string($dbconn, $_POST['felhnev']);
     $email = mysqli_real_escape_string($dbconn, $_POST['email']);
-    $pass = sha1($_POST['password']);
-    $passagain = sha1($_POST['passwordagain']);
+    $jelszo = sha1($_POST['jelszo']);
+    $jelszoujra = sha1($_POST['jelszoujra']);
     $usertype = $_POST['user_type'];
+    $iranyitoszam = strip_tags($dbconn, $_POST['iranyitoszam']);
+    $telepules = strip_tags($dbconn, $_POST['telepules']);
+    $szallitasicim = strip_tags($dbconn, $_POST['szallitasicim']);
+    
 
-    $select = "SELECT * FROM `accounts`
-               WHERE email = '$email' && password = '$pass'";
+    $select = "SELECT * FROM `szemelyek`
+               WHERE email = '$email' && jelszo = '$jelszo'";
 
     $result = mysqli_query($dbconn, $select);
 
     if(mysqli_num_rows($result) > 0)
     {
-        $error[] = 'user already exist!';
+        $error[] = 'Felhasználó már léttezik!';
     }
     else
     {
-        if($pass != $passagain)
+        if($jelszo != $jelszoujra)
         {
-            $error[] = 'passord not matched!';
+            $error[] = 'Jelszó nem egyezik!';
         }
         else
         {
-            $insert = "INSERT INTO `accounts`(`name`, `username`, `email`, `password`, `permission`) VALUES ('$name','$username','$email','$pass','$usertype')";
+            $insert = "INSERT INTO `accounts`(`nev`, `felhnev`, `email`, `jelszo`, `permission` , `iranyitoszam` , `telepules` , `szallitasicim`) VALUES ('$nev','$felhnev','$email','$jelszo','$usertype' ,'$iranyitoszam' ,'$telepules' ,'$szallitasicim')";
             mysqli_query($dbconn,$insert);
             header('Location:belep.php');
         }
@@ -47,7 +51,7 @@ if(isset($_POST['ok']))
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta nev="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/registerbele2.css">
 </head>
@@ -69,48 +73,48 @@ if(isset($_POST['ok']))
         </div>
         <form id="fom" method="post">
         <p>
-                <div class="melle"><label for="name">
-                    <p>Name</p>
-                    <input type="text" name="name" id="name" required>
+                <div class="melle"><label for="nev">
+                    <p>nev</p>
+                    <input type="text" nev="nev" id="nev" required>
                 </label></div>
                 
             </p>
         <p>
-        <div class="melle"><label for="username">
-                    <p>Username</p>
-                    <input type="text" name="username" id="username" required>
+        <div class="melle"><label for="felhnev">
+                    <p>felhnev</p>
+                    <input type="text" nev="felhnev" id="felhnev" required>
                 </label></div>
                 
             </p>
             <p>
             <div class="melle"> <label for="email">
                     <p>E-mail</p>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" nev="email" id="email" required>
                 </label></div>
                
             </p>
             <p>
-            <div class="melle"><label for="password">
+            <div class="melle"><label for="jelszo">
                     <p>Jelszó</p>
-                    <input type="password" name="password" id="password" required>
+                    <input type="jelszo" nev="jelszo" id="jelszo" required>
                 </label></div>
                 
             </p>
             <p>
-            <div class="melle"><label for="passwordagain">
+            <div class="melle"><label for="jelszoujra">
                     <p>Jelszó újra</p>
-                    <input type="password" name="passwordagain" id="passwordagain" required>
+                    <input type="jelszo" nev="jelszoujra" id="jelszoujra" required>
                 </label></div>
                 
             </p>
             <div class="melles">
-                <select name="user_type">
+                <select nev="user_type">
                     <option value="user">User</option>
                     <option value="admin">Admin</option>
                     </select>
                 
                 </div>
-            <div class="gomb"><input type="submit" value="OK" id="ok" name="ok"></div>
+            <div class="gomb"><input type="submit" value="OK" id="ok" nev="ok"></div>
             
         </form>
         </div>
