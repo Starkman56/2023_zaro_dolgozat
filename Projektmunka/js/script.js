@@ -78,20 +78,20 @@ window.onload = function(){
     console.log(cardBoxTable);
     let tableData = '';
     //fejléc
-    tableData += '<tr><th>Cikk szám</th><th>Termék neve</th><th>Darab</th><th>Termék ár</th><th>Törlés</th></tr>';
+    tableData += '<tr><th>Cikk szám</th><th>Termék neve</th><th>Darab</th><th>Termék ár</th><th>Darab törlés</th><th>Kategoria törlése</th></tr>';
     if(JSON.parse(localStorage.getItem('cuccok')) [0] === null){
         //Ha nincs hozzá adva termék akkor legyen egy üres sor.
         tableData += '<tr><td colspan="5"></td></tr>';
     }else{
         JSON.parse(localStorage.getItem('cuccok')).map(data => {
-            tableData += '<tr><td>'+data.id+'</td><td>'+data.name+'</td><td>'+data.darab+'</td><td>'+data.price* data.darab+'</td><td><input><a href="#" onclick=Delete(this);> | Törlés</a></td></tr>';
-        })
-    }
+            tableData += '<tr id="sor_'+data.id+'"><td>'+data.id+'</td><td>'+data.name+'</td><td class="darab">'+data.darab+'</td><td>'+data.price* data.darab+'</td><td><input  name="dbTorles" id="productNumber_'+data.termek_id+'" onchange=deleteProductAmount('+data.termek_id+')></td><td><a href="#" onclick=Delete(this);>  Törlés</a></td></tr>';
+        }) 
+        }
     let sum = 0;
     JSON.parse(localStorage.getItem('cuccok')).map(data =>{
         sum += data.darab * data.price;
     });
-    tableData += '<tr><td colspan="3" class="jobb"><a href="megrendeles.php">Megrendelés</a></td><td>'+ sum +'</td><td><a href="#" onclick="deleteall(this)">Összes törlése</a></td></tr>';
+    tableData += '<tr><td colspan="3" class="jobb"><a href="megrendeles.php">Megrendelés</a></td><td>'+ sum +'</td><td colspan="2"><a href="#" onclick="deleteall(this)">Összes törlése</a></td></tr>';
     cardBoxTable.innerHTML =tableData;
 }
 /**Törlés a kosárból*/
@@ -134,6 +134,8 @@ function search_item() {
        
     }
 }
+
+
 function search_itemadmin() {
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
@@ -161,4 +163,35 @@ modal.children[1].addEventListener("click", () => {
     modal.classList.add("hidden");
 });
 
+function profilinfo(){
+    if (document.getElementById("profilid").className == "profilinfo")
+    {
+      document.getElementById("profilid").className = "profilinfofel";
+    }
+    else {
+      document.getElementById("profilid").className = "profilinfo";
+    }
+
+}
+
+function deleteProductAmount(termek_id) {
+    let product = localStorage.getItem("cuccok");
+
+    $.ajax({
+        method: "POST",
+        url: "../api.php",
+        dataType: "JSON",
+        data: { c: "deleteProductAmount", termek_id: termek_id, darab_szam: $("#productNumber_"+termek_id).val(), product: product},         
+        success:function(result) {
+            
+            if(result.deleteline) {
+                $("#sor_"+result.lineid).remove();                
+            } else {
+                $("#sor_"+result.lineid+" .darab").text(result.newAmount);
+            }
+
+            localStorage.setItem("cuccok", JSON.stringify(result.products));
+        }                       
+    })
+}
 

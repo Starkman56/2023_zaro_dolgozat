@@ -9,7 +9,7 @@ html {
 body {
     background-color: #d2b9b9;
     position: relative;
-    background-image: url(../keps/bg1.jpg)!important;
+    background-color: white!important;
     background-repeat: no-repeat;
     background-size: cover;  
     background-attachment: fixed;
@@ -105,6 +105,10 @@ li a{
     font-size: 18px;
     font-weight: 600;
 }
+.jelmodositas{
+  color: black;
+}
+
 .kosarikon{
     cursor: pointer;
     font-size: 3rem;
@@ -160,14 +164,15 @@ border: solid 2px rgb(173, 181, 189);
 }
 p{
     font-size: 20px;
-    text-align: right;
-    font-weight: lighter;
-    color: white;
+    color: rgb(0, 0, 0);
+    padding-top: 0.8rem;
+    padding-right: 1rem;
 }
 input{
     font-size: 0.8rem;
     width: 3vw;
     padding: 0.3rem;
+    background-color: transparent;
 }
 /* cart */
 .kosarhoz{
@@ -176,9 +181,8 @@ input{
     width: 70%;
     margin:1rem auto;
 }
-.table{
-  width: 70%;
-}
+
+
 .cartBox{
     position: fixed;
     top:0;
@@ -225,10 +229,13 @@ input{
     font-size: 2.8rem;
 }
 th,td{
-    border: 1px solid black;
     padding: 10px;
+    text-align: center;
 }
-
+.table{
+  width: 70%;
+  border: none;
+}
 li{
     background: transparent !important;
 }
@@ -883,8 +890,9 @@ iframe{
   height: 100vh;
   top: 0;
   left: 0;
-  background: #f8f9fa;
   overflow: hidden;
+  background-color: white;
+  z-index: -1;
 }
 
 .background span {
@@ -1391,7 +1399,26 @@ iframe{
   cursor: pointer;
   background: transparent;
   border-color: transparent;
-  color: rgba(255, 0, 0, 0.8);
+  color: rgba(255, 255, 255);
 }
-
+.profilinfo{
+  display: none;
+}
+.profilinfofel{
+  display: block !important;
+  width: 14rem;
+  background-color: rgba(0, 0, 0, .8);
+  height: 11.8rem;
+  position: absolute;
+  left: 85%;
+  margin-top: -1rem;
+  z-index: 1;
+  top: 100%;
+  text-align: center;
+}
+.profilinfofel p{
+  color: white;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding-bottom: 0.5rem;
+}
 

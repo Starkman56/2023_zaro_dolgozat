@@ -22,7 +22,7 @@ if(isset($_POST['ok']))
 
        if($row['jog'] == 'admin')
        {
-        $_SESSION['admin_name'] = $row['name'];
+        $_SESSION['user_name'] = $row['name'];
         $_SESSION['belepett'] = true;
         header('Location:admin/adminlist.php');
        }
@@ -62,6 +62,7 @@ if(isset($_POST['ok']))
             }
         }
         ?>
+<<<<<<< HEAD
         <form method="post">
             <p class="jel">Bejelentkezés</p>
             <div class="bevitel">
@@ -78,6 +79,28 @@ if(isset($_POST['ok']))
            
             <div class="gomb"><input type="submit" value="Bejelentkezés" id="ok" name="ok"></div>
             <p class="reg">Nincs még fiókja? <a href="register.php">Regisztráljon itt!</a></p>
+=======
+        </div>
+        <form id="fom" method="post">
+            <p>
+                <div class="melle">
+                <label for="email ">
+                    <p>E-mail</p>
+                    <input type="email" name="email" id="email" required>
+                </label>
+                </div>
+            </p>
+            <p>
+                <div class="melle">
+                <label for="password" class="melle">
+                    <p>Jelszó</p>
+                    <input type="password" name="password" id="password" required>
+                </label>    
+                </div>
+            </p>
+            <p class="jelszomodositas">Jelszó módosítása <a href="register.php">Itt!</a></p>
+            <div class="gomb"><input type="submit" value="Belépés" id="ok" name="ok"></div>
+>>>>>>> e26baa225fef1cf57d9254392e601d128ceb93d0
         </form>
       
     
