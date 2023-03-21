@@ -103,6 +103,34 @@ if ($_POST["c"] == "orderSave") {
         "message" => $data["message"],
     );
 
-    //nem működik vissza küldés, meg kell nézni
+    echo json_encode($result);
+}
+
+if($_POST["c"] == "deleteProductAmount") {
+
+    $products = json_decode($_POST["product"], true);
+    
+    
+    $productToUpdateIndex = array_search($_POST["termek_id"], array_column($products, 'termek_id'));
+
+    $deletLine = false;
+    $lineId = $products[$productToUpdateIndex]["id"];
+    $newAmount = 0;
+
+    if($products[$productToUpdateIndex]["darab"] > $_POST["darab_szam"]) {
+        $newAmount = $products[$productToUpdateIndex]["darab"] - $_POST["darab_szam"];
+        $products[$productToUpdateIndex]["darab"] = $newAmount;
+    } else {
+        $deletLine = true;        
+        unset($products[$productToUpdateIndex]);
+    }
+    
+    $result = array(
+        "products"   => $products,
+        "deleteline" => $deletLine,
+        "lineid"     => $lineId,
+        "newAmount"  => $newAmount,
+    );
+
     echo json_encode($result);
 }
