@@ -68,15 +68,9 @@ if(isset($_POST['ok']))
             <div class="bevitel">
              <input type="email" name="email" id="email" placeholder="E-mail cím" required>
             </div>
-
             <div class="bevitel">
              <input type="password" name="jelszo" id="jelszo" placeholder="Jelszó" required>
-            </div>   
-               
-                   
-                    
-                
-           
+            </div>        
             <div class="gomb"><input type="submit" value="Bejelentkezés" id="ok" name="ok"></div>
             <p class="reg">Nincs még fiókja? <a href="register.php">Regisztráljon itt!</a></p>
 

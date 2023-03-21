@@ -94,7 +94,8 @@ input[type="submit"]:hover{
 
 .gomb{
     text-align: center;
-    margin-top: 1rem;
+    margin: 1rem 0rem 1rem;
+    
   
 }
 .gomb input:hover{
