@@ -77,7 +77,7 @@
         <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
         <a class="nav-link" href="../user/logout.php">Kilépés</a>
         </a></li><li class="nav-item jobbra">
-        <p><a class="jelmodositas">';
+        <p><a class="jelmodositas" onclick=profilinfo()>';
         $logout.=$bentvan;
         $logout.='</a></p>
         </li>
@@ -91,6 +91,7 @@
     <div class="profilinfo" id="profilid">
         <p>Profil info</p>
         <p>Adatok módosítása</p>
+        <p>Megrendelések</p>
    </div>
 </nav>
 <!-- Side Nav menu -->

@@ -1186,11 +1186,11 @@
   }
   .profilinfofel{
     display: block !important;
-    width: 30rem;
+    width: 14rem;
     background-color: black;
-    height: 15rem;
+    height: 11rem;
     position: absolute;
-    left: 75%;
+    left: 85%;
     margin-top: -1rem;
     z-index: 1;
     top: 100%;
@@ -1199,6 +1199,7 @@
     color: white;
     text-align: center;
   }
+  
   @media (min-width: 1200px) {
     .cards { grid-template-columns: repeat(4, 1fr); }
     .card{

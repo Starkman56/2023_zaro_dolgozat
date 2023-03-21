@@ -117,7 +117,7 @@
   <div class="profilinfo" id="profilid">
         <p>Profil info</p>
         <p>Adatok módosítása</p>
-        
+        <p>Megrendelések</p>
    </div>
 </nav>
 
