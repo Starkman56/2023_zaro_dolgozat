@@ -11,16 +11,21 @@ session_start();
 require("kapcsolat/kapcs.php");
 if(isset($_POST['ok']))
 {
-    $name = mysqli_real_escape_string($dbconn, $_POST['name']);
-    $username = mysqli_real_escape_string($dbconn, $_POST['username']);
+    $nev = mysqli_real_escape_string($dbconn, $_POST['nev']);
+    $felhnev = mysqli_real_escape_string($dbconn, $_POST['felhnev']);
     $email = mysqli_real_escape_string($dbconn, $_POST['email']);
-    $pass = sha1($_POST['password']);
-    $passagain = sha1($_POST['passwordagain']);
+    $jelszo = sha1($_POST['jelszo']);
+    $jelszoujra = sha1($_POST['jelszoujra']);
     $usertype = $_POST['user_type'];
 
+    $iranyitoszam = $_POST['iranyitoszam'];
+    $telepules = $_POST['telepules'];
+    $szallitasicim = $_POST['szallitasicim'];
+    $tel = $_POST['tel'];
 
-    $select = "SELECT * FROM `accounts`
-               WHERE email = '$email' && password = '$pass'";
+
+    $select = "SELECT * FROM `szemelyek`
+               WHERE email = '$email' && jelszo = '$jelszo'";
 
 
     $result = mysqli_query($dbconn, $select);
@@ -28,17 +33,17 @@ if(isset($_POST['ok']))
 
     if(mysqli_num_rows($result) > 0)
     {
-        $error[] = 'user already exist!';
+        $error[] = 'Ez a felhasználó már léttezik!';
     }
     else
     {
-        if($pass != $passagain)
+        if($jelszo != $jelszoujra)
         {
-            $error[] = 'passord not matched!';
+            $error[] = 'A jelszavak nem egyeznek!';
         }
         else
         {
-            $insert = "INSERT INTO `accounts`(`name`, `username`, `email`, `password`, `permission`) VALUES ('$name','$username','$email','$pass','$usertype')";
+            $insert = "INSERT INTO `szemelyek`(`nev`, `felhnev`, `email`, `jelszo`, `iranyitoszam`, `telepules`, `szallitasicim`, `tel`) VALUES ('$nev','$felhnev','$email','$jelszo','$iranyitoszam' ,'$telepules' ,'$szallitasicim','$tel')";
             mysqli_query($dbconn,$insert);
             header('Location:belep.php');
         }
@@ -56,13 +61,17 @@ if(isset($_POST['ok']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/registerbele2.css">
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
+
+
+
+
 <div class="background" id="background"></div>
-    <div class="kozep">
-        <h1>Regisztráció</h1>
-        <div class="kis">
+   
+
+        
         <div class="hiba">
         <?php
         if(isset($error))
@@ -74,64 +83,68 @@ if(isset($_POST['ok']))
         }
         ?>
         </div>
-        <form id="fom" method="post">
-        <p>
-                <div class="melle"><label for="name">
-                    <p>Name</p>
-                    <input type="text" name="name" id="name" required>
-                </label></div>
-               
-            </p>
-        <p>
-        <div class="melle"><label for="username">
-                    <p>Username</p>
-                    <input type="text" name="username" id="username" required>
-                </label></div>
-               
-            </p>
-            <p>
-            <div class="melle"> <label for="email">
-                    <p>E-mail</p>
-                    <input type="email" name="email" id="email" required>
-                </label></div>
-               
-            </p>
-            <p>
-            <div class="melle"><label for="password">
-                    <p>Jelszó</p>
-                    <input type="password" name="password" id="password" required>
-                </label></div>
-               
-            </p>
-            <p>
-            <div class="melle"><label for="passwordagain">
-                    <p>Jelszó újra</p>
-                    <input type="password" name="passwordagain" id="passwordagain" required>
-                </label></div>
-               
-            </p>
-            <div class="melles">
+        
+        <form method="post">
+            <h1>Regisztráció</h1>
+        <!-- teljes név -->
+            <div class="bevitel">
+                <input type="text" name="nev" id="nev" required placeholder="Teljes név">
+            </div>
+         <!-- felh név -->
+            <div class="bevitel">
+                <input type="text" name="felhnev" id="felhnev"  placeholder="Felhasználó név" required>
+            </div>
+         <!--  email -->
+            <div class="bevitel">
+                 <input type="email" name="email" id="email"  placeholder="E-mail cím" required>
+            </div>
+         <!--  jelszo -->
+             <div class="bevitel">
+                <input type="password" name="jelszo" id="jelszo"  placeholder="Jelszó"required>
+            </div>
+        <!-- jelszoujra -->
+            <div class="bevitel jelszoujra">
+                <input type="password" name="jelszoujra" id="jelszoujra" placeholder="Jelszó újra" required>
+            </div> 
+        <!--  iranyitoszam -->
+            <div class="bevitel">
+                <input type="text" name="iranyitoszam" id="iranyitoszam" placeholder="Irányítószám" required>
+            </div>
+        <!--  telepules -->
+            <div class="bevitel">
+                 <input type="text" name="telepules" id="telepules" placeholder="Település" required>
+            </div>
+        <!-- szallitasicim -->
+            <div class="bevitel">
+                <input type="text" name="szallitasicim" id="szallitasicim"  placeholder="Utca, házszám" required>
+            </div>
+        <!--  telefon -->
+             <div class="bevitel">
+                <input type="text" name="tel" id="tel" placeholder="Telefonszám" required>
+            </div>
+       
+        <!-- submit gomb -->
+             <div  class="bevitel">
+                <input type="submit" value="Regisztrálok" id="ok" name="ok">
+             </div>
+             <p class="belepes">Van már fiókod? <a href="belep.php">Jelentkezz be itt!</a></p>
+
+            <!-- <div class="melles">
                 <select name="user_type">
                     <option value="user">User</option>
                     <option value="admin">Admin</option>
-                    </select>
-               
-                </div>
-            <div class="gomb"><input type="submit" value="OK" id="ok" name="ok"></div>
+                    </select>   
+            </div> -->
+
+            
            
         </form>
-        </div>
        
-    </div>
-    <div class="kozep2">
-    <p class="nincs">Van már fiókod? <a href="belep.php">Igen</a></p>
-    </div>
-    <footer>
-     <p>Copyright ©
-     <br>Kordics Balázs & Szabó Máté
-     </p>
-    </footer>
-    <script src="js/hater.js"></script>
+    
+   
+    
+    
+   
 </body>
 </html>
 
