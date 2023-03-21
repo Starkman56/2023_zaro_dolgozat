@@ -180,9 +180,8 @@ input{
     width: 70%;
     margin:1rem auto;
 }
-.table{
-  width: 70%;
-}
+
+
 .cartBox{
     position: fixed;
     top:0;
@@ -229,10 +228,13 @@ input{
     font-size: 2.8rem;
 }
 th,td{
-    border: 1px solid black;
     padding: 10px;
+    text-align: center;
 }
-
+.table{
+  width: 70%;
+  border: none;
+}
 li{
     background: transparent !important;
 }
@@ -1396,7 +1398,7 @@ iframe{
   cursor: pointer;
   background: transparent;
   border-color: transparent;
-  color: rgba(255, 0, 0, 0.8);
+  color: rgba(255, 255, 255);
 }
 .profilinfo{
   display: none;
