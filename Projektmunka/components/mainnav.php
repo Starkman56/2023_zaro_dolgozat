@@ -92,7 +92,7 @@
         ';
       }
       else{
-        $bentvan = $_SESSION["user_name"];
+        $bentvan = $_SESSION["felhnev"];
         $logout = '<a href="../user/logout.php"><li class="nav-item jobbra " id="logout">
         <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
         <a class="nav-link" href="../user/logout.php">Kilépés</a>
@@ -116,7 +116,7 @@
   </div>
   <div class="profilinfo" id="profilid">
         <p>Profil info</p>
-        <p>Adatok módosítása</p>
+        <a href="../user/adatokmodositasa.php"><p>Adatok módosítása</p></a>
         <p>Megrendelések</p>
    </div>
 </nav>

@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 session_start();
 
 
-require("kapcsolat/kapcs.php");
+require("../kapcsolat/kapcs.php");
 if(isset($_POST['ok']))
 {
     $nev = mysqli_real_escape_string($dbconn, $_POST['nev']);
@@ -41,7 +41,10 @@ if(isset($_POST['ok']))
         }
         else
         {
-            $insert = "INSERT INTO `szemelyek`(`nev`, `felhnev`, `email`, `jelszo`, `iranyitoszam`, `telepules`, `szallitasicim`, `tel`) VALUES ('$nev','$felhnev','$email','$jelszo','$iranyitoszam' ,'$telepules' ,'$szallitasicim','$tel')";
+            $id = (int)$_GET['id'];
+
+            $insert = "UPDATE `szemelyek`(`nev`, `felhnev`, `email`, `jelszo`, `iranyitoszam`, `telepules`, `szallitasicim`, `tel`) VALUES ('$nev','$felhnev','$email','$jelszo','$iranyitoszam' ,'$telepules' ,'$szallitasicim','$tel')
+            WHERE id = {$id}";
             mysqli_query($dbconn,$insert);
             header('Location:belep.php');
         }
@@ -59,7 +62,7 @@ if(isset($_POST['ok']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="../css/register.css">
 </head>
 <body>
 
@@ -83,7 +86,7 @@ if(isset($_POST['ok']))
         </div>
         
         <form method="post">
-            <h1>Regisztráció</h1>
+            <h1>Adatok módosítása</h1>
         <!-- teljes név -->
             <div class="bevitel">
                 <input type="text" name="nev" id="nev" required placeholder="Teljes név">
@@ -123,9 +126,9 @@ if(isset($_POST['ok']))
        
         <!-- submit gomb -->
              <div  class="bevitel">
-                <input type="submit" value="Regisztrálok" id="ok" name="ok">
+                <input type="submit" value="Módosítás jóváhagyása" id="ok" name="ok">
              </div>
-             <p class="belepes">Van már fiókod? <a href="belep.php">Jelentkezz be itt!</a></p>
+            <a href="main.php">Vissza!</a></p>
 
             <!-- <div class="melles">
                 <select name="user_type">
