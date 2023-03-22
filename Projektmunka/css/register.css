@@ -118,3 +118,7 @@ input[type="submit"]:hover{
 .jelszoujra{
     margin-bottom: 2rem;
 }
+.error{
+    color: rgb(226, 62, 62);
+    
+}

@@ -70,6 +70,9 @@ if(isset($_POST['ok']))
    
 
         
+        
+        
+        <form method="post">
         <div class="hiba">
         <?php
         if(isset($error))
@@ -81,8 +84,6 @@ if(isset($_POST['ok']))
         }
         ?>
         </div>
-        
-        <form method="post">
             <h1>Regisztráció</h1>
         <!-- teljes név -->
             <div class="bevitel">

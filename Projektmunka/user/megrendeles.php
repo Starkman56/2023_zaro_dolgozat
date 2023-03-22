@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,6 +53,7 @@
                 if (result.message == "Sikeres mentés") {                   
                     localStorage.setItem("cuccok", JSON.stringify(null));
                     let cuccok = localStorage.getItem("cuccok");
+                    
                     //console.log("Cuccok tartalma mentés után:",cuccok);
                     window.location.href = "horgasz.php";
                 }else{
