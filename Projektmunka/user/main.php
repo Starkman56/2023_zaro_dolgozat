@@ -25,7 +25,7 @@ require("../kapcsolat/kapcs.php");
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../css/mainpage.css">
+    <link rel="stylesheet" href="../css/ujstyle.css">
     <title>MainPage</title>
 </head>
 
