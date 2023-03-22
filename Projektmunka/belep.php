@@ -18,18 +18,22 @@ if(isset($_POST['ok']))
 
     if(mysqli_num_rows($result) > 0)
     {
+        
        $row = mysqli_fetch_assoc($result);
-
+        
        if($row['jog'] == 'admin')
        {
         $_SESSION['felhnev'] = $row['nev'];
+        $_SESSION['id'] = $row['id'];
         $_SESSION['belepett'] = true;
         header('Location:admin/adminlist.php');
        }
        elseif($row['jog'] == 'user')
        {
         $_SESSION['felhnev'] = $row['felhnev'];
+        $_SESSION['id'] = $row['id'];
         $_SESSION['belepett'] = true;
+        $id = $row['id'];
         header('Location:user/webshop.php');
        }
     }

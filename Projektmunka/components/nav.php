@@ -89,7 +89,7 @@
       ?>
     </div>
     <div class="profilinfo" id="profilid">
-        <p>Profil info</p>
+        <p>Profil info</p>        
         <a href="../user/adatokmodositasa.php"><p>Adatok módosítása</p></a>
         <p>Megrendelések</p>
    </div>

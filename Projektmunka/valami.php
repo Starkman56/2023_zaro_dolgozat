@@ -8,99 +8,49 @@ if (!isset($_SESSION['belepett'])) {
     exit();
 }
 require("../kapcsolat/kapcs.php");
-// lapvédelem
-// formfeldolgozás
+
 
 if (isset($_POST['ok'])) {
-    // változok clear
-    $vonalkod = strip_tags(trim($_POST['vonalkod']));
-    $ar = strip_tags(trim($_POST['ar']));
-     $nev = strip_tags(trim($_POST['nev']));
-    $darab = strip_tags(trim($_POST['darab']));
-    $felvdatum = strip_tags(trim($_POST['felvdatum']));
-    $alkategoria_id = strip_tags(trim($_POST['alkategoria_id']));
-    $leiras = strip_tags(trim($_POST['leiras']));
-    $mime = array("image/gif", "image/png", "image/jpg", "image/jpeg");
-    // változokvizs
-    if (empty($vonalkod)  ){
-        $hibak[] = "Adjon meg vonalkódot!";
-    }
-    if (empty($nev)  ){
-       $hibak[] = "Adjon meg nevet!";
-    }
-    if (empty($alkategoria_id)  ){
-        $hibak[] = "Adjon meg kategóriát!";
-    }
-    if (empty($felvdatum)  ){
-        $hibak[] = "Adjon meg dátumot!";
-     }
-     if (empty($ar)  ){
-        $hibak[] = "Adjon meg árat!";
-     }
-     if (empty($alkategoria_id)  ){
-        $hibak[] = "Adjon meg darabszámot!";
-     }
-     if (empty($leiras)  ){
-        $hibak[] = "Adjon meg leírást!";
-     }
-    if ($_FILES['foto']['error'] == 0 && $_FILES['foto']['size'] > 6000000) {
-        $hibak[] = "Nagy a kép formátuma";
-    }
-    if ($_FILES['foto']['error'] == 0 && !in_array($_FILES['foto']['type'], $mime)) {
-        $hibak[] = "Rossz a kép fájl kiterjesztése";
-    }
-    switch ($_FILES['foto']['type']) {
-        case "image/png":
-            $kit = ".png";
-            break;
-        case "image/gif":
-            $kit = ".gif";
-            break;
-        case "image/jpg":
-            $kit = ".jpg";
-            break;
-        default:
-            $kit = ".jpeg";
-    }
-    $foto = date("U") . $kit;
-    // Hibák összeállítása
-    if (isset($hibak)) {
-        $kimenet = "<ul class=\"error-msg\">\n";
-        foreach ($hibak as $i) {
-            $kimenet .= "<li>$i</li>";
-        }
-        $kimenet .= "</ul>";
-    } else {
-        // adatok beszúrása az adatbázisba
+    
+    $email = $_SESSION["email"];
+    $nev = mysqli_real_escape_string($dbconn, $_POST['nev']);
+    $felhnev = mysqli_real_escape_string($dbconn, $_POST['felhnev']);
+    $email = mysqli_real_escape_string($dbconn, $_POST['email']);
+    $jelszo = sha1($_POST['jelszo']);
+    $jelszoujra = sha1($_POST['jelszoujra']);
+    $iranyitoszam = $_POST['iranyitoszam'];
+    $telepules = $_POST['telepules'];
+    $szallitasicim = $_POST['szallitasicim'];
+    $tel = $_POST['tel'];
+     
+    
         $id = (int)$_GET['id'];
-
-        $sql = "UPDATE termek
-                SET foto = '{$foto}', ar = '{$ar}', vonalkod = '{$vonalkod}', nev = '{$nev}', leiras = '{$leiras}', darab = '{$darab}', felvdatum = '{$felvdatum}', alkategoria_id = '{$alkategoria_id}'
+      
+        $sql = "UPDATE szemelyek
+                SET nev = '{$nev}', felhnev = '{$felhnev}', email = '{$email}', jelszo = '{$jelszo}', iranyitoszam = '{$iranyitoszam}', telepules = '{$telepules}', szallitasicim = '{$szallitasicim}', tel = '{$tel}'
                 WHERE id = {$id}";
 
         mysqli_query($dbconn, $sql);
         var_dump($sql);
-        // kép mozgatása a végleges helyére
+   
 
-        move_uploaded_file($_FILES['foto']['tmp_name'], "../keps/{$foto}");
-        header("Location: adminlist.php");
-    }
+
+
 } else {
     $id = (int)$_GET['id'];
-    $sql = "SELECT * from termek WHERE id = {$id}";
+    $sql = "SELECT * from szemelyek WHERE id = {$id}";
 
     $eredmeny = mysqli_query($dbconn, $sql);
     $sor = mysqli_fetch_assoc($eredmeny);
 
-    $felvdatum = $sor['felvdatum'];
-    $ar = $sor['ar'];
-    $vonalkod = $sor['vonalkod'];
-    $darab = $sor['darab'];
     $nev = $sor['nev'];
-    $leiras = $sor['leiras'];
-    // var_dump($leiras);
-    $alkategoria_id = $sor['alkategoria_id'];
-    $foto = ($sor['foto'] != "nincskep.png") ? $sor['foto'] : "nincskep.png";
+    $felhnev = $sor['felhnev'];
+    $email = $sor['email'];
+    $jelszo = $sor['jelszo'];
+    $iranyitoszam = $sor['iranyitoszam'];
+    $telepules = $sor['telepules'];
+    $szallitasicim = $sor['szallitasicim'];
+    $tel = $sor['tel'];
 }
 ?>
 

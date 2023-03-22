@@ -1,58 +1,41 @@
 <?php
-
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-//lapvédelem
 session_start();
-
-
+if (!isset($_SESSION['belepett'])) {
+    header("Location: ../false.html");
+    exit();
+}
 require("../kapcsolat/kapcs.php");
-if(isset($_POST['ok']))
-{
+$sql = "SELECT * from szemelyek WHERE id = {$_SESSION['id']}";
+$eredmeny = mysqli_query($dbconn, $sql);
+if (isset($_POST['ok'])) {
     $nev = mysqli_real_escape_string($dbconn, $_POST['nev']);
     $felhnev = mysqli_real_escape_string($dbconn, $_POST['felhnev']);
     $email = mysqli_real_escape_string($dbconn, $_POST['email']);
-    $jelszo = sha1($_POST['jelszo']);
-    $jelszoujra = sha1($_POST['jelszoujra']);
     $iranyitoszam = $_POST['iranyitoszam'];
     $telepules = $_POST['telepules'];
     $szallitasicim = $_POST['szallitasicim'];
     $tel = $_POST['tel'];
 
-
-    $select = "SELECT * FROM `szemelyek`
-               WHERE email = '$email' && jelszo = '$jelszo'";
-
-
-    $result = mysqli_query($dbconn, $select);
-
-
-    if(mysqli_num_rows($result) > 0)
-    {
-        $error[] = 'Ez a felhasználó már léttezik!';
-    }
-    else
-    {
-        if($jelszo != $jelszoujra)
-        {
-            $error[] = 'A jelszavak nem egyeznek!';
-        }
-        else
-        {
-            $id = (int)$_GET['id'];
-
-            $insert = "UPDATE `szemelyek`(`nev`, `felhnev`, `email`, `jelszo`, `iranyitoszam`, `telepules`, `szallitasicim`, `tel`) VALUES ('$nev','$felhnev','$email','$jelszo','$iranyitoszam' ,'$telepules' ,'$szallitasicim','$tel')
-            WHERE id = {$id}";
-            mysqli_query($dbconn,$insert);
-            header('Location:belep.php');
-        }
-    }
+        $sql = "UPDATE szemelyek
+                SET nev = '{$nev}', felhnev = '{$felhnev}', email = '{$email}', iranyitoszam = '{$iranyitoszam}', telepules = '{$telepules}', szallitasicim = '{$szallitasicim}', tel = '{$tel}'
+                WHERE id = {$_SESSION['id']}";
+        mysqli_query($dbconn, $sql);
+        header('Location:webshop.php');
+} else {
+    $sor = mysqli_fetch_assoc($eredmeny);
+    $nev = $sor['nev'];
+    $felhnev = $sor['felhnev'];
+    $email = $sor['email'];
+    $iranyitoszam = $sor['iranyitoszam'];
+    $telepules = $sor['telepules'];
+    $szallitasicim = $sor['szallitasicim'];
+    $tel = $sor['tel'];
 }
-
-
 ?>
+
 
 
 <!DOCTYPE html>
@@ -89,39 +72,32 @@ if(isset($_POST['ok']))
             <h1>Adatok módosítása</h1>
         <!-- teljes név -->
             <div class="bevitel">
-                <input type="text" name="nev" id="nev" required placeholder="Teljes név">
+                <input type="text" name="nev" id="nev" required placeholder="Teljes név" value="<?php print $nev; ?>">
             </div>
          <!-- felh név -->
             <div class="bevitel">
-                <input type="text" name="felhnev" id="felhnev"  placeholder="Felhasználó név" required>
+                <input type="text" name="felhnev" id="felhnev"  placeholder="Felhasználó név" required value="<?php print $felhnev; ?>">
             </div>
          <!--  email -->
-            <div class="bevitel">
-                 <input type="email" name="email" id="email"  placeholder="E-mail cím" required>
-            </div>
-         <!--  jelszo -->
-             <div class="bevitel">
-                <input type="password" name="jelszo" id="jelszo"  placeholder="Jelszó"required>
-            </div>
-        <!-- jelszoujra -->
             <div class="bevitel jelszoujra">
-                <input type="password" name="jelszoujra" id="jelszoujra" placeholder="Jelszó újra" required>
-            </div> 
+                 <input type="email" name="email" id="email"  placeholder="E-mail cím" required value="<?php print $email; ?>">
+            </div>
+        
         <!--  iranyitoszam -->
             <div class="bevitel">
-                <input type="text" name="iranyitoszam" id="iranyitoszam" placeholder="Irányítószám" required>
+                <input type="text" name="iranyitoszam" id="iranyitoszam" placeholder="Irányítószám" required value="<?php print $iranyitoszam; ?>">
             </div>
         <!--  telepules -->
             <div class="bevitel">
-                 <input type="text" name="telepules" id="telepules" placeholder="Település" required>
+                 <input type="text" name="telepules" id="telepules" placeholder="Település" required value="<?php print $telepules; ?>">
             </div>
         <!-- szallitasicim -->
             <div class="bevitel">
-                <input type="text" name="szallitasicim" id="szallitasicim"  placeholder="Utca, házszám" required>
+                <input type="text" name="szallitasicim" id="szallitasicim"  placeholder="Utca, házszám" required value="<?php print $szallitasicim; ?>">
             </div>
         <!--  telefon -->
              <div class="bevitel">
-                <input type="text" name="tel" id="tel" placeholder="Telefonszám" required>
+                <input type="text" name="tel" id="tel" placeholder="Telefonszám" required value="<?php print $tel;?>">
             </div>
        
         <!-- submit gomb -->
