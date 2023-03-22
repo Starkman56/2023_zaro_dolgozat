@@ -39,7 +39,7 @@ if(isset($_POST['ok']))
     }
     else
     {
-        $error[] = "rossz email vagy jelszó";
+        $error[] = "Helytelen e-mail címet, vagy jelszót adott meg!";
     }
 }
 
@@ -57,17 +57,18 @@ if(isset($_POST['ok']))
 <body> 
     <div class="background" id="background"></div>
    
+        
+
+        <form method="post">
         <?php
         if(isset($error))
         {
             foreach($error as $error)
             {
-                echo '<p class="error-msg">'.$error.'</p>';
+                echo '<p class="error">'.$error.'</p>';
             }
         }
         ?>
-
-        <form method="post">
             <p class="jel">Bejelentkezés</p>
             <div class="bevitel">
              <input type="email" name="email" id="email" placeholder="E-mail cím" required>

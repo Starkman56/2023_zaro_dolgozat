@@ -89,9 +89,10 @@
       ?>
     </div>
     <div class="profilinfo" id="profilid">
-        <p>Profil info</p>        
+           
         <a href="../user/adatokmodositasa.php"><p>Adatok módosítása</p></a>
         <p>Megrendelések</p>
+        <a href="../user/jelszomodositas.php"><p>Jelszó módosítása</p></a>    
    </div>
 </nav>
 <!-- Side Nav menu -->
