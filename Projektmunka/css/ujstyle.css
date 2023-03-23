@@ -536,6 +536,7 @@ input[type=text]:focus {
   max-height: 20rem;
   border-radius:0.4rem ;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+
 }
 .diszallatokkep{
   max-width: 30rem;
@@ -752,7 +753,7 @@ iframe{
 .background {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -1286,7 +1287,10 @@ iframe{
   border-bottom: 1px solid rgb(255, 255, 255);
   padding-bottom: 0.5rem;
 }
-
+.szoveg{
+  text-align: justify;
+  font-size: 18px;
+}
 
 
 @media (max-width: 1200px) {
@@ -1363,12 +1367,26 @@ iframe{
   .btn-outline-dark.bov{
    width: 10rem;
   }
+  .szoveg{
+    font-size: 14px;
+    text-align: justify;
+  }
+  .profilinfofel{
+    display: block !important;
+    width: 14rem;
+    background-color: rgba(0, 0, 0, .8);
+    height: 11.8rem;
+    position: absolute;
+    left: 75%;
+    margin-top: -1rem;
+    z-index: 1;
+    top: 100%;
+    text-align: center;
+  }
 }
 @media (min-width: 1000px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
   .card{
-
-
     margin: auto;
   }
   .carousel-caption{
@@ -1384,6 +1402,7 @@ iframe{
     gap: 2rem;
     width: 70%;
     margin: auto;
+    margin-top: 2rem;
   }
   .webshoph5{
     font-size: 2rem;
@@ -1396,6 +1415,8 @@ iframe{
   .btn-outline-dark.bov{
    width: 10rem;
   }
+  
+  
 }
 @media (max-width: 699px) {
   .cards {
@@ -1438,7 +1459,6 @@ iframe{
     min-height: 14rem;
     border-radius:0.4rem ;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
-    margin-bottom: 2rem;
   }
   .webshoph5{
     font-size: 1rem;
@@ -1493,5 +1513,17 @@ iframe{
   }
   .btn-outline-dark.bov{
    width: 10rem;
+  }
+  .profilinfofel{
+    display: block !important;
+    width: 14rem;
+    background-color: rgba(0, 0, 0, .8);
+    height: 11.8rem;
+    position: absolute;
+    left: 40%;
+    margin-top: -1rem;
+    z-index: 1;
+    top: 100%;
+    text-align: center;
   }
 }
