@@ -74,6 +74,9 @@ function updateCurrentProductNumber($order = array(), $data = array(), $dbconn) 
     return $message;
 }
 
+
+
+
 if ($_POST["c"] == "orderSave") {
         /*
     "id":4,
