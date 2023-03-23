@@ -1,8 +1,8 @@
-<?php
+  
+    
 
 
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
     <h1>Megrendelés</h1>
     <h3 id="rendeles"></h3>
     <h4 id="total"></h4>
-    <h2>A rendelés véglegesítéséhez kérjük adja meg telefonszámát: <input type="tel" name="tel" id="tel" onchange="sendEmail();">  </h2>
+    <h2>A rendelés véglegesítéséhez kérjük adja meg telefonszámát: <input type="submit" name="tel" id="tel" onclick="sendEmail();">  </h2>
     
 <script>
     let asd = new Array();
@@ -53,7 +53,6 @@
                 if (result.message == "Sikeres mentés") {                   
                     localStorage.setItem("cuccok", JSON.stringify(null));
                     let cuccok = localStorage.getItem("cuccok");
-                    
                     //console.log("Cuccok tartalma mentés után:",cuccok);
                     window.location.href = "horgasz.php";
                 }else{
