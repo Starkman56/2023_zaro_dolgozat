@@ -33,7 +33,6 @@ $kimenet = "<table><thead>
        {
         $kimenet .= "
             <tr>
-
             <td class=\"alkategoria_nev\">{$sor['nev']}</td>
             <td class=\"felvdatum\">{$sor['termek_id']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']}</td>
