@@ -164,6 +164,7 @@ table .padd{
     min-height: 5rem;
     text-align: center;
     background-color: #ced4da;
+    color: black;
     
 }
 @media (max-width: 699px) {
