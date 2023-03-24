@@ -88,10 +88,8 @@ if (isset($_POST['ok'])) {
 } else {
     $id = (int)$_GET['id'];
     $sql = "SELECT * from termek WHERE id = {$id}";
-
     $eredmeny = mysqli_query($dbconn, $sql);
     $sor = mysqli_fetch_assoc($eredmeny);
-
     $felvdatum = $sor['felvdatum'];
     $ar = $sor['ar'];
     $vonalkod = $sor['vonalkod'];
