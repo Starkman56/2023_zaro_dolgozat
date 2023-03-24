@@ -13,7 +13,8 @@ if(!isset($_SESSION['belepett']))
 
 require("../kapcsolat/kapcs.php");
 
-$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, megrendeles.vegosszeg from szemelyek
+$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, megrendeles.vegosszeg, szemelyek.id 
+AS szemelyesid from szemelyek
 INNER JOIN megrendeles
 ON megrendeles.szemelyek_id = szemelyek.id
 INNER JOIN termek
@@ -35,17 +36,17 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
        {
         $kimenet .= "
             <tr>
-            <td class=\"alkategoria_nev\">{$sor['szemelyeknev']}</td>
+            <td class=\"alkategoria_nev\"}>{$sor['szemelyeknev']}</td>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
             <td class=\"darab\">{$sor['vegosszeg']} Ft</td>
             <td class=\"padd\">
-
-            Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><br>
-            Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\">
-            Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\">
-            Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\">
-            
+            <ul>
+            <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
+            <li>Feldolgozás alatt<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
+            <li>Futárszolgálat-nál<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
+            <li>Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
+            </ul>
             </td>
             </tr> ";
         }

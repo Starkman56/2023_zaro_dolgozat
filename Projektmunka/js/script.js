@@ -183,6 +183,15 @@ function profilinfo(){
     }
 
 }
+function megrendelve(){
+    if (document.getElementById("profilid").className == "profilinfo")
+    {
+      document.getElementById("profilid").className = "piros";
+    }
+    else {
+      document.getElementById("profilid").className = "profilinfo";
+    }
+}
 
 function deleteProductAmount(termek_id) {
     let product = localStorage.getItem("cuccok");
