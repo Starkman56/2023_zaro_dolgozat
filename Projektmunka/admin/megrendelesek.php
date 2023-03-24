@@ -54,8 +54,6 @@ $kimenet .= "</tbody></table>";
 </head>
 
 <body>
-    
-    
     <div class="cim">
     <div class="cimkozepre"><h1>Megrendelések</h1>
     <p class="kozep"><a href="adminlist.php">Termék táblázat</a></p>
