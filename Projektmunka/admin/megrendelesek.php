@@ -39,8 +39,13 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
             <td class=\"darab\">{$sor['vegosszeg']} Ft</td>
-            <td class=\"padd\">Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><br>
+            <td class=\"padd\">
+
+            Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><br>
             Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\">
+            Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\">
+            Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\">
+            
             </td>
             </tr> ";
         }
