@@ -697,8 +697,11 @@ table .padd{
   .background img{
     max-width: 4rem;
     background:transparent;
-   opacity: 0.3;
-    
+   opacity: 0.3; 
+  }
+  input{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
   }
   
 
