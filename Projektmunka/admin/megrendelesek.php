@@ -13,11 +13,10 @@ if(!isset($_SESSION['belepett']))
 
 require("../kapcsolat/kapcs.php");
 
-$sql = "SELECT * from termek
-INNER JOIN alkategoriak
-ON alkategoriak.alkategoria_id = termek.alkategoria_id
-INNER JOIN kategoriak
-ON alkategoriak.kategoria_id = kategoriak.kategoria_id";
+$sql = "SELECT * from szemelyek
+INNER JOIN megrendeles
+ON megrendeles.szemelyek_id = szemelyek.id
+";
 
 $eredmeny = mysqli_query($dbconn, $sql);
 
@@ -34,10 +33,10 @@ $kimenet = "<table><thead>
        {
         $kimenet .= "
             <tr>
-            <td class=\"alkategoria_nev\">{$sor['alkategoria_nev']}</td>
-            <td class=\"felvdatum\">{$sor['felvdatum']}</td>
-            <td class=\"darab\">{$sor['darab']}</td>
-            <td class=\"ar\">{$sor['ar']}</td>
+            <td class=\"alkategoria_nev\">{$sor['nev']}</td>
+            <td class=\"felvdatum\">{$sor['termek_id']}</td>
+            <td class=\"darab\">{$sor['rendelt_darab']}</td>
+            <td class=\"darab\"></td>
             <td class=\"padd\"><a href=\"torles.php?id={$sor['id']}\">Törlés</a> | <a href=\"modos.php?id={$sor['id']}\">Módosítás</a></td>
             </tr> ";
         }
