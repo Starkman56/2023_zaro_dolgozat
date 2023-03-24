@@ -38,7 +38,10 @@ $kimenet = "<table><thead>
             <td class=\"felvdatum\">{$sor['felvdatum']}</td>
             <td class=\"darab\">{$sor['darab']}</td>
             <td class=\"ar\">{$sor['ar']}</td>
-            <td class=\"padd\"><a href=\"torles.php?id={$sor['id']}\">Törlés</a> | <a href=\"modos.php?id={$sor['id']}\">Módosítás</a></td>
+            <td class=\"padd\"><input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><br>
+            <input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><br>
+            <input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><br>
+            </td>
             </tr> ";
         }
 $kimenet .= "</tbody></table>";
