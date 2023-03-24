@@ -24,6 +24,12 @@
 .cim
 {
     background-color: #ced4da;
+    height: 55rem;
+  }
+.menu{
+  display: flex;
+  flex-direction: row;
+  
 }
 
 .cimkozepre
@@ -36,8 +42,9 @@
 
 .cimkozepre input
 {
+  margin: auto;
     padding: 5px;
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
 }
 
@@ -121,28 +128,6 @@ table thead th
   background: rgb(167, 81, 81);
 }
 
-/* .tabla table
-{
-    width: 100%;
-}
-
-table th td
-{
-    text-align: center;
-}
-
-.tabla td
-{
-    text-align: center;
-}
-.tabla .kepes
-{
-    width: 7%;
-}
-td{
-    height: 30%;
-} */
-
 table .kep{
     max-width: 10rem;
     max-height: 10rem;
@@ -159,6 +144,11 @@ table td{
     font-size: 1rem;
     color: white;
 }
+.megrendelestable td{
+  height: 3rem;
+  width: 3rem;
+  font-size: 20px;
+}
 table .padd{
     min-width: 5rem;
     min-height: 5rem;
@@ -167,22 +157,42 @@ table .padd{
     color: black;
     
 }
+@media (max-width: 1100px) {
+  .cimkozepre
+  {
+      margin: 4% auto 0 auto;
+      width: 30%;
+      text-align: center;
+      padding: 0.4rem;
+  }
+  .cim {
+    background-color: #ced4da;
+    height: 37rem;
+}
+
+}
 @media (max-width: 699px) {
     .cimkozepre
     {
         margin: 4% auto 0 auto;
-        width: 40%;
+        width: 80%;
         text-align: center;
         padding: 0.4rem;
     }
-    
+    h1{
+      text-align: center;
+      font-size: 25px;
+    }
     .cimkozepre input
     {
         padding: 5px;
         width: 100%;
         border-radius: 10px;
     }
-    
+    .cim {
+      background-color: #ced4da;
+      height: 39rem;
+  }
     .szovegkozepre
     {
         margin: 1rem;
@@ -211,6 +221,8 @@ table .padd{
         text-align: center;
     }
 }
+
+
 
 
 @keyframes move {

@@ -13,30 +13,32 @@ if(!isset($_SESSION['belepett']))
 
 require("../kapcsolat/kapcs.php");
 
-$sql = "SELECT * from szemelyek
+$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, megrendeles.vegosszeg from szemelyek
 INNER JOIN megrendeles
 ON megrendeles.szemelyek_id = szemelyek.id
+INNER JOIN termek
+ON megrendeles.termek_id = termek.id
 ";
 
 $eredmeny = mysqli_query($dbconn, $sql);
 
-$kimenet = "<table><thead>
+$kimenet = "<table class=\"megrendelestable\"><thead>
             <tr>
-            <th>Személy_id</th>
-            <th>Termék_id</th>
-            <th>Rendelés Darab</th>
-            <th>Rendelés állapota</th>
-            <th>Műveletek:</th>
+            <th>Felhasználó neve</th>
+            <th>Termék neve</th>
+            <th>Rendelés (DB)</th>
+            <th>Végösszeg (FT)</th>
+            <th>Megrendelve | Kézbesitve</th>
             </tr>";
             $kimenet .= "</thead><tbody class=\"tabla\">";
         while($sor = mysqli_fetch_assoc($eredmeny))
        {
         $kimenet .= "
             <tr>
-            <td class=\"alkategoria_nev\">{$sor['nev']}</td>
-            <td class=\"felvdatum\">{$sor['termek_id']}</td>
-            <td class=\"darab\">{$sor['rendelt_darab']}</td>
-            <td class=\"darab\"></td>
+            <td class=\"alkategoria_nev\">{$sor['szemelyeknev']}</td>
+            <td class=\"felvdatum\">{$sor['termeknev']}</td>
+            <td class=\"darab\">{$sor['rendelt_darab']} db</td>
+            <td class=\"darab\">{$sor['vegosszeg']} Ft</td>
             <td class=\"padd\">Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><br>
             Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\">
             </td>
@@ -60,15 +62,18 @@ $kimenet .= "</tbody></table>";
 <body>
     <div class="cim">
     <div class="cimkozepre"><h1>Megrendelések</h1>
+    <div class="menu">
     <p class="kozep"><a href="adminlist.php">Termék táblázat</a></p>
     <p class="kozep"><a href="logout.php">Kijelenkezés</a></p>
     </div>
+    </div>
     <div class="content">
+    </div>
     <div class="respons">
-
     <?php
     echo $kimenet;
     ?>
+    </div>
     <?php
     require("../components/background.php");
     ?>
