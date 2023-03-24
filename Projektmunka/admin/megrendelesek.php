@@ -43,6 +43,8 @@ $kimenet = "<table><thead>
 $kimenet .= "</tbody></table>";
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
