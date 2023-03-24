@@ -24,6 +24,14 @@ window.onload = function(){
 */
     for (let i = 0; i < kosarhozgomb.length; i++) {
         kosarhozgomb[i].addEventListener("click",function(e){
+            if(parseInt(e.target.parentElement.children[0].value)== 0){
+                Swal.fire(
+                    'Figyelem!',
+                    'Kérjük állítsa be hány darab terméket szeretne rendelni!',
+                    'warning'
+                  )
+                  return false;
+            };
             //console.log("Ez a kosár forciklus belseje, a storage vizsgálat elött");
             if(typeof(Storage) !== 'undefined'){
                 //console.log("Ez a storage ág",e);
