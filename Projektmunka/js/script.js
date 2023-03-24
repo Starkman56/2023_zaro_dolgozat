@@ -86,6 +86,7 @@ window.onload = function(){
         JSON.parse(localStorage.getItem('cuccok')).map(data => {
             tableData += '<tr id="sor_'+data.id+'"><td>'+data.id+'</td><td>'+data.name+'</td><td class="darab">'+data.darab+'</td><td>'+data.price* data.darab+'</td><td><input  name="dbTorles" id="productNumber_'+data.termek_id+'" onchange=deleteProductAmount('+data.termek_id+')></td><td><a href="#" onclick=Delete(this);>  Törlés</a></td></tr>';
         }) 
+        
         }
     let sum = 0;
     JSON.parse(localStorage.getItem('cuccok')).map(data =>{
@@ -118,6 +119,7 @@ function deleteall(){
 }
 function megrendeles(){
     window.location.href = "megrendeles.php";
+
 }
 // Kereső
 function search_item() {

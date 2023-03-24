@@ -1,6 +1,27 @@
-  
-    
+<?php 
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+session_start();
+if (!isset($_SESSION['belepett'])) {
+    header("Location: ../false.html");
+    exit();
+}
+require("../kapcsolat/kapcs.php");
+$sql = "SELECT * from szemelyek WHERE id = {$_SESSION['id']}";
+$eredmeny = mysqli_query($dbconn, $sql);
+
+print_r($_SESSION['id']);
+
+
+
+
+
+
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +42,11 @@
     <h1>Megrendelés</h1>
     <h3 id="rendeles"></h3>
     <h4 id="total"></h4>
-    <h2>A rendelés véglegesítéséhez kérjük adja meg telefonszámát: <input type="submit" name="tel" id="tel" onclick="sendEmail();">  </h2>
+    <h2>A rendelés véglegesítéséhez kérjük adja meg telefonszámát: 
+
+        <input type="submit" name="tel" id="tel" onclick="sendEmail();"> 
+
+     </h2>
     
 <script>
     let asd = new Array();
@@ -32,7 +57,8 @@
         darabszam = data.darab;
         asd.push(data.darab);
         });
-        
+        let cuccok = localStorage.getItem("cuccok");
+        console.log("Kosár tartalma",cuccok);
     let sum = 0;
     JSON.parse(localStorage.getItem('cuccok')).map(data => {
         sum += data.darab * data.price;
@@ -51,6 +77,9 @@
             data: { c: "orderSave", cuccok: order },         
             success:function(result) {
                 if (result.message == "Sikeres mentés") {                   
+                    
+
+                    
                     localStorage.setItem("cuccok", JSON.stringify(null));
                     let cuccok = localStorage.getItem("cuccok");
                     //console.log("Cuccok tartalma mentés után:",cuccok);

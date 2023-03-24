@@ -56,23 +56,37 @@ function getCurrentProductNumber($order = array(), $message = "", $dbconn) {
     return $result;
 }
 
-
+/**A megrendelés táblába, ha van elég darabszám akkor szúrja be az adatot */
 function updateCurrentProductNumber($order = array(), $data = array(), $dbconn) {
     foreach($order as $product) {
         $newProductNumber = $data["products"][$product["termek_id"]] - $product["darab"];
 
-        $sql = "
-            UPDATE termek
-            SET darab = {$newProductNumber}
-            WHERE id = '{$product["termek_id"]}'
-        ";        
-                
+
+
+        
+       
         mysqli_query($dbconn, $sql);
+
+
         $message = "Sikeres mentés";
     }
 
     return $message;
 }
+// function updateOrder($order = array(), $data = array(), $dbconn){
+//     foreach($order as $product) {
+       
+//         $sql ="INSERT INTO megrendeles (`termek_id`, `rendelt_darab`) VALUES ('{$product["termek_id"]}','{$product["darab"]}')";
+//         mysqli_query($dbconn, $sql);
+
+//         $message = "Sikeres mentés";
+//     }
+
+//     return $message;
+
+// }
+
+
 
 if ($_POST["c"] == "orderSave") {
         /*
@@ -95,6 +109,8 @@ if ($_POST["c"] == "orderSave") {
     
     if($data["message"] == "") {
         $data["message"] = updateCurrentProductNumber($order, $data, $dbconn);
+       // $data["message"] = updateOrder($order, $data, $dbconn);
+
     }
 
     //echo $message;
