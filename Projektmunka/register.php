@@ -131,12 +131,12 @@ if(isset($_POST['ok']))
              </div>
              <p class="belepes">Van már fiókod? <a href="belep.php">Jelentkezz be itt!</a></p>
 
-            <!-- <div class="melles">
+            <div class="melles">
                 <select name="user_type">
                     <option value="user">User</option>
                     <option value="admin">Admin</option>
                     </select>   
-            </div> -->
+            </div>
 
             
            
