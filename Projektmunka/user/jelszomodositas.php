@@ -1,4 +1,5 @@
 
+
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -10,13 +11,16 @@ if (!isset($_SESSION['belepett'])) {
 }
 require("../kapcsolat/kapcs.php");
 $sql = "SELECT * from szemelyek WHERE id = {$_SESSION['id']}";
-$eredmeny = mysqli_query($dbconn, $sql); 
+$eredmeny = mysqli_query($dbconn, $sql);
+
+
 
 
 if (isset($_POST['ok'])) {
     $jelszo = sha1($_POST['jelszo']);
     $jelszoujra = sha1($_POST['jelszoujra']);
-    
+   
+
 
     if($jelszo != $jelszoujra)
         {
@@ -31,11 +35,14 @@ if (isset($_POST['ok'])) {
        
 } else {
 
+
     $sor = mysqli_fetch_assoc($eredmeny);
     $jelszo = $sor['jelszo'];
-    
+   
 }
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -47,10 +54,10 @@ if (isset($_POST['ok'])) {
     <title>Document</title>
     <link rel="stylesheet" href="../css/register.css">
 </head>
-<body> 
+<body>
     <div class="background" id="background"></div>
    
-        
+       
         <form method="post">
         <?php
         if(isset($error))
@@ -62,6 +69,7 @@ if (isset($_POST['ok'])) {
         }
         ?>
 
+
             <p class="jel">Jelszó módosítása</p>
            <!--  jelszo -->
            <div class="bevitel">
@@ -70,20 +78,28 @@ if (isset($_POST['ok'])) {
         <!-- jelszoujra -->
             <div class="bevitel jelszoujra">
                 <input type="password" name="jelszoujra" id="jelszoujra" placeholder="Jelszó újra" required>
-            </div> 
+            </div>
             <div class="gomb"><input type="submit" value="Mentés" id="ok" name="ok"></div>
             <a href="main.php">Vissza!</a>
 
+
     </form>
-      
-    
-            
+     
+   
+           
  
-    
+   
     <script src="js/hater.js"></script>
    
 </body>
 
+
 </html>
+
+
+
+
+
+
 
 
