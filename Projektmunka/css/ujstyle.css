@@ -206,7 +206,7 @@ input{
     position: relative;
     height: fit-content;
     width: 60%;
-    background:rgba(255, 255, 255, .6);
+    background:rgba(255, 255, 255, .9);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -524,17 +524,25 @@ input[type=text]:focus {
   width: 30rem;
   margin-top: 2rem;
 }
+.webshopmain p{
+  font-size: 1.5rem;
+}
 .webshopmain{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   width: 70%;
   margin: auto;
+  font-size: 2rem;
+  background: rgba(236, 236, 236, 0.8);
+
+
 }
 .alap{
   display: grid;
   margin: auto;
-  margin-bottom: 3rem;
+  
+  padding: 2rem;
 }
 
 
@@ -614,6 +622,7 @@ h4{
   vertical-align: top;
   max-width: 100%;
   backface-visibility: hidden;
+  
 }
 .hover-img2 figcaption {
   position: absolute;
@@ -635,6 +644,7 @@ h4{
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
+  
 
 
 }
@@ -1298,6 +1308,12 @@ iframe{
 .szoveg{
   text-align: justify;
   font-size: 18px;
+  box-shadow: 5px 5px  rgb(108, 117, 125), 5px 10px 18px rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 12px 12px 5px 12px;
+  
+
 }
 
 @media (min-width:1200px) {
@@ -1323,6 +1339,7 @@ iframe{
     gap: 2rem;
     width: 70%;
     margin: auto;
+    
   }
   .webshoph5{
     font-size: 2.5rem;
@@ -1368,6 +1385,7 @@ iframe{
     gap: 2rem;
     width: 70%;
     margin: auto;
+    box-shadow: 5px 10px 18px rgba(125, 108, 108, 0.5) 
   }
   .webshoph5{
     font-size: 2rem;
@@ -1425,6 +1443,7 @@ iframe{
     width: 70%;
     margin: auto;
     margin-top: 2rem;
+    box-shadow: 5px 10px 18px rgba(125, 108, 108, 0.5) 
   }
   .webshoph5{
     font-size: 2rem;
@@ -1475,6 +1494,7 @@ iframe{
     gap: 1rem;
     width: 70%;
     margin: auto;
+    box-shadow: 5px 10px 18px rgba(125, 108, 108, 0.5) 
   }
   .webshopkep{
     max-width: 16rem;
@@ -1524,6 +1544,7 @@ iframe{
     gap: 3rem;
     width: 70%;
     margin: auto;
+    box-shadow: 5px 10px 18px rgba(125, 108, 108, 0.5) 
   }
   .webshoph5{
     font-size: 1.6rem;
