@@ -28,7 +28,7 @@
     window.onload = function (){
     JSON.parse(localStorage.getItem('cuccok')).map(data => {
             document.getElementById("rendeles").innerHTML+=(
-           '<ul><li>'+data.darab +" darab " + data.name + " "+ (data.darab * data.price) + '</li></ul>');   
+           '<ul><li>'+data.darab +" darab " + data.name + " "+ (data.darab * data.price) + '</li></ul>');   //
         darabszam = data.darab;
         asd.push(data.darab);
         });
