@@ -67,8 +67,10 @@ $kimenet .= "</tbody></table>";
     
     <div class="cim">
     <div class="cimkozepre"><h1>Raktáron</h1>
+    <div class="menu">
     <p class="kozep"><a href="megrendelesek.php">Megrendelések</a></p>
     <p class="kozep"><a href="logout.php">Kijelenkezés</a></p>
+    </div>
     <input class="KeresoItem" id="searchbar" onkeyup="search_itemadmin()" type="text"
         name="search" placeholder="Keresés a termékek között...">
     </div>
@@ -80,8 +82,6 @@ $kimenet .= "</tbody></table>";
     <?php
     echo $kimenet;
     ?>
-    </div>
-    <p class="szovegkozepre"><a href="felvitel.php">Új áru felvitele</a></p>
     </div>
     <?php
     require("../components/background.php");
