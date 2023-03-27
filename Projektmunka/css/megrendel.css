@@ -22,6 +22,7 @@ input{
 .main{
     margin: auto;
     width: fit-content;
+    background:rgba(224, 224, 224, 0.9);
 }
 .navbar-nav {
     width: 100%;

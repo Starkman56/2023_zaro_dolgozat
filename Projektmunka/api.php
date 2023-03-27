@@ -93,13 +93,13 @@ function saveOrder($order = array(), $dbconn) {
     foreach($order as $orderItem) {   
         $sql = "
             INSERT INTO megrendeles
-            (megrendelo_id,termek_id,rendelt_darab, veg_osszeg) VALUES (
+            (szemelyek_id, rendelt_darab, termek_id, vegosszeg) VALUES (
                 '{$_SESSION["id"]}','{$orderItem["darab"]}','{$orderItem["termek_id"]}','{$orderItem["price"]}'
             )
         ";
         
         echo $sql."<br />";
-       mysqli_query($dbconn, $sql);
+       //mysqli_query($dbconn, $sql);
     }
 
 }

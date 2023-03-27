@@ -36,17 +36,30 @@ require("../kapcsolat/kapcs.php");
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
+      <img class="headerkep" src="../keps/elso.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Horgász-Díszállat-Háztartási bolt</h5>
+        <h5 class="webshoph5  animate__animated animate__pulse">Horgász</h5>
         <p></p>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="headerkep" src="../keps/headerkep.png" class="d-block w-100" alt="...">
+      <img class="headerkep" src="../keps/masd.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="webshoph5  animate__animated animate__pulse">Díszállat</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="headerkep" src="../keps/nagykepp.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="webshoph5  animate__animated animate__pulse">Kapcsolat</h5>
+      </div>
+    </div><div class="carousel-item">
+      <img class="headerkep" src="../keps/rakosabb.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="webshoph5  animate__animated animate__pulse">Kapcsolat</h5>
       </div>
@@ -66,14 +79,20 @@ require("../kapcsolat/kapcs.php");
   <div class="alap animate__animated animate__backInLeft hover-img2">    
   <a href="../user/webshop.php"><img class="webshopkep " src="../keps/fishing.jpg" alt=""><figcaption>Webshop</figcaption></a>
   </div>
+  
   <div class="alap animate__animated animate__backInLeft">
-  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis neque totam natus in fugiat, alias ut cumque perferendis blanditiis consequuntur nam autem nesciunt tenetur unde sed vitae numquam magni similique.</p>
+  <p class="szoveg">A üzletünk már több <u> 20 éve</u> üzemel ,de eddig nem volt lehetőség online vásárlásra , egésszen ideáig! <br><br> 
+ Új webáruházunkban minden terméket megtalál, amit az üzletünkben forgalmazunk és az otthona kényelmében vásárolhat! Célunk , hogy minden vásárlónk számára <u>minőségi termékekkel</u> szolgáljunk, a lehető <u>legjobb árakon.</u><br><br>
+  <i> A képre kattintva tovább navigálhat az webáruház oldalára ! </i></p>
+
   </div>
   <div class="alap animate__animated animate__backInRight">
-  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde assumenda enim a rerum nulla modi quia. Expedita culpa ea molestiae dolore nostrum voluptate animi, pariatur ipsam et voluptates, omnis debitis.</p>
+  <p class="szoveg"> Az üzletünk másik fő profilja, a horgászaton kívül, a díszállatok forgalmazása. <br><br>
+  Gazdag fajkínálattal várjuk az érdeklődőket. <br><br>
+  Változatos étrendi kiegészítőket, vitaminokat kínálunk a terráriumi,akváriumi illetve rágcsáló állatok takarmányozásához. Kiegészítő felszereléseink a legjobb gyártóktól szállítjuk. JBL, Anubias, Croci, Fop és még sok más.</p>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
-  <a href="../user/diszallatok.php"> <img class="webshopkep" src="../keps/madareteto.jpg" alt=""><figcaption>Díszállatok</figcaption></a>
+  <a href="../user/diszallatok.php"> <img class="webshopkep" src="../keps/30.jpg" alt=""><figcaption>Díszállatok</figcaption></a>
   </div>
   
 </div>
