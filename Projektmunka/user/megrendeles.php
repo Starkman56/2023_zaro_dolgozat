@@ -21,8 +21,8 @@
     <h1>Megrendelés</h1>
     <h3 id="rendeles"></h3>
     <h4 id="total"></h4>
-    <h2>A rendelés véglegesítéséhez kérjük kattintson a megerősítés gombra: <input type="submit" name="tel" id="tel" onclick="handleOrder();">  </h2>
-    
+    <h2>A rendelés véglegesítéséhez kérjük adja meg telefonszámát: <input type="submit" name="tel" id="tel" onclick="sendEmail();">  </h2>
+   
 <script>
     let asd = new Array();
     window.onload = function (){
@@ -42,7 +42,8 @@
     
 }
 
-    function handleOrder() {
+
+    function sendEmail() {
         let order = localStorage.getItem("cuccok");
         $.ajax({
             method: "POST",
