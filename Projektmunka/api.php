@@ -99,7 +99,7 @@ function saveOrder($order = array(), $dbconn) {
         ";
         
         echo $sql."<br />";
-       //mysqli_query($dbconn, $sql);
+        mysqli_query($dbconn, $sql);
     }
 
 }
