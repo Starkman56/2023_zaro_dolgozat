@@ -29,7 +29,7 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
             <th>Termék neve</th>
             <th>Rendelés (DB)</th>
             <th>Végösszeg (FT)</th>
-            <th>Megrendelve | Kézbesitve</th>
+            <th>Megrendelve | Kézbesítve</th>
             </tr>";
             $kimenet .= "</thead><tbody class=\"tabla\">";
         while($sor = mysqli_fetch_assoc($eredmeny))
@@ -44,7 +44,7 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
             <ul>
             <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
             <li>Feldolgozás alatt<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
-            <li>Futárszolgálat-nál<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
+            <li>Futárszolgálatnál<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
             <li>Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
             </ul>
             </td>

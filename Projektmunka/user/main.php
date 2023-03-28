@@ -50,18 +50,18 @@ require("../kapcsolat/kapcs.php");
     <div class="carousel-item">
       <img class="headerkep" src="../keps/masd.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Díszállat</h5>
+        <h5 class="webshoph5  animate__animated animate__pulse">Akvarisztika</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="headerkep" src="../keps/nagykepp.jpg" class="d-block w-100" alt="...">
+      <img class="headerkep" src="../keps/diszallatok.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Kapcsolat</h5>
+        <h5 class="webshoph5  animate__animated animate__pulse">Díszállat</h5>
       </div>
     </div><div class="carousel-item">
-      <img class="headerkep" src="../keps/rakosabb.jpg" class="d-block w-100" alt="...">
+      <img class="headerkep" src="../keps/háztartás.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 class="webshoph5  animate__animated animate__pulse">Kapcsolat</h5>
+        <h5 class="webshoph5  animate__animated animate__pulse">Háztartás</h5>
       </div>
     </div>
     
