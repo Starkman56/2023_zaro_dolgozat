@@ -24,6 +24,16 @@ window.onload = function(){
 */
     for (let i = 0; i < kosarhozgomb.length; i++) {
         kosarhozgomb[i].addEventListener("click",function(e){
+           let raktardb = parseInt(e.target.parentElement.parentElement.children[1].innerHTML);
+           console.log(raktardb);
+           if(parseInt(e.target.parentElement.children[0].value) > raktardb ) {
+            Swal.fire(
+                'Figyelem!',
+                'Nincs ennyi termék raktáron!',
+                'warning'
+              )
+              return false;
+        };
             if(parseInt(e.target.parentElement.children[0].value)== 0){
                 Swal.fire(
                     'Figyelem!',

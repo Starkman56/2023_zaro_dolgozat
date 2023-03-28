@@ -70,8 +70,11 @@ function updateCurrentProductNumber($order = array(), $data = array(), $dbconn) 
             SET darab = {$newProductNumber}
             WHERE id = '{$product["termek_id"]}'
         ";        
-                
         mysqli_query($dbconn, $sql); 
+        $result = array(
+            "message"   => "Sikeres",
+        );
+        return $result;
     }
 }
 
@@ -185,7 +188,7 @@ if($_POST["c"] == "deleteProductAmount") {
         "deleteline" => $deletLine,
         "lineid"     => $lineId,
         "newAmount"  => $newAmount,
+        "message"    =>$message,
     );
-
     echo json_encode($result);
 }

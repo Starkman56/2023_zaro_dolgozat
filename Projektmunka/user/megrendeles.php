@@ -50,7 +50,7 @@
             dataType: "JSON",
             data: { c: "handleOrder", cuccok: order },         
             success:function(result) {
-                if (result.message == "Sikeres mentés") {                   
+                if (result.message == "Sikeres") {                   
                     localStorage.setItem("cuccok", JSON.stringify(null));
                     let cuccok = localStorage.getItem("cuccok");
                     //console.log("Cuccok tartalma mentés után:",cuccok);
