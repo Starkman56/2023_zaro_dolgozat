@@ -75,9 +75,9 @@ require("../kapcsolat/kapcs.php");
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div class="webshopmain">
+<div class="fooldalmain">
   <div class="alap animate__animated animate__backInLeft hover-img2">    
-  <a href="../user/webshop.php"><img class="webshopkep " src="../keps/fishing.jpg" alt=""><figcaption>Webshop</figcaption></a>
+  <a href="../user/webshop.php"><img class="fooldalkep " src="../keps/fishing.jpg" alt=""><figcaption>Webshop</figcaption></a>
   </div>
   
   <div class="alap animate__animated animate__backInLeft">
@@ -92,7 +92,7 @@ require("../kapcsolat/kapcs.php");
   Változatos étrendi kiegészítőket, vitaminokat kínálunk a terráriumi,akváriumi illetve rágcsáló állatok takarmányozásához. Kiegészítő felszereléseink a legjobb gyártóktól szállítjuk. JBL, Anubias, Croci, Fop és még sok más.</p>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
-  <a href="../user/diszallatok.php"> <img class="webshopkep" src="../keps/30.jpg" alt=""><figcaption>Díszállatok</figcaption></a>
+  <a href="../user/diszallatok.php"> <img class="fooldalkep" src="../keps/30.jpg" alt=""><figcaption>Díszállatok</figcaption></a>
   </div>
   
 </div>

@@ -518,7 +518,7 @@ input[type=text]:focus {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 .galeriakep{
@@ -535,9 +535,15 @@ input[type=text]:focus {
   width: 70%;
   margin: auto;
   font-size: 2rem;
+}
+.fooldalmain{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  width: 70%;
+  margin: auto;
+  font-size: 2rem;
   background: rgba(236, 236, 236, 0.8);
-
-
 }
 .alap{
   display: grid;
@@ -1320,6 +1326,27 @@ iframe{
 @media (min-width:1200px) {
     .cards { grid-template-columns: repeat(4, 1fr); }
 }
+@media (min-width:1100px){
+  .fooldalmain {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    font-size: 2rem;
+    background: rgba(236, 236, 236, 0.8);
+    box-shadow: 5px 10px 18px rgba(125, 108, 108, 0.5);
+}
+.fooldalkep {
+  max-width: 25rem;
+  min-height: 16rem;
+  max-height: 20rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+}
+
 @media (max-width: 1200px) {
   .cards { grid-template-columns: repeat(4, 1fr); }
   .card{
@@ -1340,7 +1367,15 @@ iframe{
     gap: 2rem;
     width: 70%;
     margin: auto;
-    
+  }
+  .fooldalmain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 70%;
+    margin: auto;
+    font-size: 2rem;
+    background: rgba(236, 236, 236, 0.8);
   }
   .webshoph5{
     font-size: 2.5rem;
@@ -1369,7 +1404,14 @@ iframe{
   .card{
     margin: auto;
   }
-  
+  .webshopmain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+  }
   .galeriakep{
     width: 20rem;
   }
@@ -1380,12 +1422,21 @@ iframe{
     top: 60%;
     transform: translate(-50%, -50%);
   }
-  .webshopmain{
+  .webshopkep {
+    max-width: 22rem;
+    min-height: 20rem;
+    max-height: 20rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  }
+    .fooldalmain{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 80%;
     margin: auto;
+    font-size: 2rem;
+    background: rgba(236, 236, 236, 0.8);
     box-shadow: 5px 10px 18px rgba(125, 108, 108, 0.5) 
   }
   .webshoph5{
@@ -1437,15 +1488,13 @@ iframe{
     top: 60%;
     transform: translate(-50%, -50%);
   }
-  .webshopmain{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    width: 70%;
-    margin: auto;
-    margin-top: 2rem;
-    box-shadow: 5px 10px 18px rgba(125, 108, 108, 0.5) 
-  }
+  .fooldalkep {
+    max-width: 22rem;
+    min-height: 16rem;
+    max-height: 20rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
   .webshoph5{
     font-size: 2rem;
     padding: 1.5rem;
@@ -1495,11 +1544,26 @@ iframe{
     gap: 1rem;
     width: 70%;
     margin: auto;
+  }
+  .fooldalmain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.1rem;
+    width: 98%;
+    margin: auto;
+    font-size: 2rem;
+    background: rgba(236, 236, 236, 0.8);
     box-shadow: 5px 10px 18px rgba(125, 108, 108, 0.5) 
   }
   .webshopkep{
-    max-width: 16rem;
-    min-height: 14rem;
+    max-width: 10rem;
+    min-height: 6rem;
+    border-radius:0.4rem ;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  }
+  .fooldalkep{
+    max-width: 10rem;
+    min-height: 6rem;
     border-radius:0.4rem ;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
   }
@@ -1515,6 +1579,14 @@ iframe{
   .btn-outline-dark.bov{
    width: 10rem;
   }
+  .card:hover{
+  
+    scale: 30rem;
+    transform: scale(1.05);
+    box-shadow: 0 0 1em  rgba(0, 0, 0, .3) ;
+    border: solid 2px rgb(173, 181, 189);
+    height: 37rem;
+    }
 }
 @media (max-width: 700px) {
   .cards { grid-template-columns: repeat(1, 1fr); }
@@ -1542,19 +1614,11 @@ iframe{
   .webshopmain{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
+    gap: 1rem;
     width: 70%;
     margin: auto;
-    box-shadow: 5px 10px 18px rgba(125, 108, 108, 0.5) 
   }
-  .webshoph5{
-    font-size: 1.6rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, .6);
-    border-radius: 0.5rem;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
-    margin-bottom: 2rem;
-  }
+
   .btn-outline-dark.bov{
    width: 10rem;
   }
@@ -1584,5 +1648,8 @@ iframe{
 .navbar{
   width: 102%;
 
+}
+.alap{
+  padding: 0.1rem;
 }
 }

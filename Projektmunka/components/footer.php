@@ -1,6 +1,6 @@
 
 <footer id="scroll">
-       <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3" style="bottom:0;">
+       <div class="row justify-content-center mb-0 pt-5 pb-0 row-2" style="bottom:0;">
            <div class="col-12">
                 <div class="row row-2 ">
                     

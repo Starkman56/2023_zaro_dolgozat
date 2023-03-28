@@ -49,7 +49,7 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
             </ul>
             </td>
             </tr> ";
-        }
+       }
 $kimenet .= "</tbody></table>";
 ?>
 
