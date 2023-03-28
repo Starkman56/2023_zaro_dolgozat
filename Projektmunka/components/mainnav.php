@@ -117,7 +117,7 @@
   <div class="profilinfo" id="profilid">
         
         <a href="../user/adatokmodositasa.php"><p>Adatok módosítása</p></a>
-        <p>Megrendelések</p>
+        <a href="../user/rendelesem.php"><p>Megrendelések</p></a>
         <a href="../user/jelszomodositas.php"><p>Jelszó módosítása</p></a>  
    </div>
 </nav>
