@@ -175,7 +175,7 @@ if (isset($_POST['ok'])) {
         <!-- Küldés gomba -->
         <div class="gomb">
             <input class="ok" type="submit" value="Ok" id="ok" name="ok">
-            <a href="adminlist.php">Vissza</a></p>
+            <a href="adminlist.php">Vissza</a>
         </div>
     </form>
 </body>

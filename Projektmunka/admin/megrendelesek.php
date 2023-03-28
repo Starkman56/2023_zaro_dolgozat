@@ -13,7 +13,7 @@ if(!isset($_SESSION['belepett']))
 
 require("../kapcsolat/kapcs.php");
 
-$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, megrendeles.vegosszeg, szemelyek.id 
+$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, Osszeg, szemelyek.id 
 AS szemelyesid from szemelyek
 INNER JOIN megrendeles
 ON megrendeles.szemelyek_id = szemelyek.id
@@ -22,24 +22,25 @@ ON megrendeles.termek_id = termek.id
 ";
 
 $eredmeny = mysqli_query($dbconn, $sql);
-
 $kimenet = "<table class=\"megrendelestable\"><thead>
             <tr>
             <th>Felhasználó neve</th>
             <th>Termék neve</th>
             <th>Rendelés (DB)</th>
-            <th>Végösszeg (FT)</th>
-            <th>Megrendelve | Kézbesítve</th>
+            <th>Összeg (FT)</th>
+            <th>Státusz</th>
             </tr>";
             $kimenet .= "</thead><tbody class=\"tabla\">";
+            
         while($sor = mysqli_fetch_assoc($eredmeny))
+        
        {
         $kimenet .= "
             <tr>
             <td class=\"alkategoria_nev\"}>{$sor['szemelyeknev']}</td>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
-            <td class=\"darab\">{$sor['vegosszeg']} Ft</td>
+            <td class=\"darab\">{$sor['Osszeg']}Ft</td>
             <td class=\"padd\">
             <ul>
             <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
@@ -83,6 +84,7 @@ $kimenet .= "</tbody></table>";
     <?php
     require("../components/background.php");
     ?>
+    </div>
 <script src="../js/script.js"></script>
 </body>
 </html>

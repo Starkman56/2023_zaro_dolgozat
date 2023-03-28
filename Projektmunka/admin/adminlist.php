@@ -65,27 +65,28 @@ $kimenet .= "</tbody></table>";
 <body>
     
     
-    <div class="cim">
+<div class="cim">
     <div class="cimkozepre"><h1>Raktáron</h1>
-    <div class="menu">
-    <p class="kozep"><a href="megrendelesek.php">Megrendelések</a></p>
-    <p class="kozep"><a href="logout.php">Kijelenkezés</a></p>
-    </div>
-    <input class="KeresoItem" id="searchbar" onkeyup="search_itemadmin()" type="text"
+        <div class="menu">
+            <p class="kozep"><a href="megrendelesek.php">Megrendelések</a></p>
+             <p class="kozep"><a href="logout.php">Kijelenkezés</a></p>
+        </div>
+          <input class="KeresoItem" id="searchbar" onkeyup="search_itemadmin()" type="text"
         name="search" placeholder="Keresés a termékek között...">
     </div>
     <div class="content">
-
     <p class="szovegkozepre"><a href="felvitel.php">Új áru felvitele</a></p>
     <div class="respons">
-
-    <?php
-    echo $kimenet;
-    ?>
+            <?php
+            echo $kimenet;
+            ?>
+            </div>
+            <?php
+            require("../components/background.php");
+            ?>
+        </div>
     </div>
-    <?php
-    require("../components/background.php");
-    ?>
+</div>
 <script src="../js/script.js"></script>
 </body>
 </html>
