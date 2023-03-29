@@ -44,13 +44,17 @@
 
     function handleOrder() {
         let order = localStorage.getItem("cuccok");
+        console.log("teszt");
         $.ajax({
             method: "POST",
             url: "../api.php",
             dataType: "JSON",
-            data: { c: "handleOrder", cuccok: order },         
+            data: { 
+                c: "handleOrder", 
+                cuccok: order 
+            },
             success:function(result) {
-                if (result.message == "Sikeres") {                   
+                if (result.message == "Sikeres mentés") {                   
                     localStorage.setItem("cuccok", JSON.stringify(null));
                     let cuccok = localStorage.getItem("cuccok");
                     //console.log("Cuccok tartalma mentés után:",cuccok);
@@ -60,7 +64,10 @@
                     window.location.href = "horgasz.php";
                 }
                 //console.log(result.message);
-            }                       
+            },
+            failure: function(errMsg) {
+                alert(errMsg);
+            }                     
         })
     }
  </script>
