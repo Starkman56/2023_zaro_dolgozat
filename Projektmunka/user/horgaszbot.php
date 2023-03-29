@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 session_start();
 
 if (!isset($_SESSION['belepett'])) {
-    header("Location: false.html");
+    header("Location: ../false.html");
     exit();
 }
 

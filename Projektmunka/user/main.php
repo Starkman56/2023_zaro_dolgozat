@@ -81,15 +81,15 @@ require("../kapcsolat/kapcs.php");
   </div>
   
   <div class="alap animate__animated animate__backInLeft">
-  <p class="szoveg">A üzletünk már több <u> 20 éve</u> üzemel ,de eddig nem volt lehetőség online vásárlásra , egésszen ideáig! <br><br> 
- Új webáruházunkban minden terméket megtalál, amit az üzletünkben forgalmazunk és az otthona kényelmében vásárolhat! Célunk , hogy minden vásárlónk számára <u>minőségi termékekkel</u> szolgáljunk, a lehető <u>legjobb árakon.</u><br><br>
-  <i> A képre kattintva tovább navigálhat az webáruház oldalára ! </i></p>
+  <p class="szoveg">A üzletünk már több <b> 20 éve</b> üzemel ,de eddig nem volt lehetőség online vásárlásra , egésszen ideáig! <br><br>
+  Új webáruházunkban minden terméket megtalál, amit az üzletünkben forgalmazunk és az otthona kényelmében vásárolhat! Célunk , hogy minden vásárlónk számára <b>minőségi termékekkel</b> szolgáljunk, a lehető <b>legjobb árakon.</b><br><br>
+  <i> A képre kattintva tovább navigálhat a webáruház oldalára ! </i>
 
   </div>
   <div class="alap animate__animated animate__backInRight">
-  <p class="szoveg"> Az üzletünk másik fő profilja, a horgászaton kívül, a díszállatok forgalmazása. <br><br>
-  Gazdag fajkínálattal várjuk az érdeklődőket. <br><br>
-  Változatos étrendi kiegészítőket, vitaminokat kínálunk a terráriumi,akváriumi illetve rágcsáló állatok takarmányozásához. Kiegészítő felszereléseink a legjobb gyártóktól szállítjuk. JBL, Anubias, Croci, Fop és még sok más.</p>
+  <p class="szoveg"> Az üzletünk másik fő profilja, a horgászaton kívül, a <b> díszállatok forgalmazása. </b><br><br>
+  <b> Gazdag fajkínálattal</b> várjuk az érdeklődőket. <br><br>
+  Változatos étrendi kiegészítőket, vitaminokat kínálunk a terráriumi,akváriumi illetve rágcsáló állatok takarmányozásához. Kiegészítő felszereléseink a <b>legkiválóbb gyártóktól</b> szállítjuk. JBL, Anubias, Croci, Fop és még sok más.</p>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
   <a href="../user/diszallatok.php"> <img class="fooldalkep" src="../keps/30.jpg" alt=""><figcaption>Díszállatok</figcaption></a>
