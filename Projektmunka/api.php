@@ -141,7 +141,7 @@ if ($_POST["c"] == "handleOrder") {
       */
     $order = json_decode($_POST["cuccok"], true);
     
-    $message = "";
+    //$message = "";
 
     //Cherk currentProductAmount if we do have enough or not
     $data = getCurrentProductNumber($order, $dbconn);
