@@ -13,8 +13,11 @@ if(!isset($_SESSION['belepett']))
 
 require("../kapcsolat/kapcs.php");
 
-$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, Osszeg, szemelyek.id AS szemelyesid,megrendeles.rendeles_azonosito from szemelyek INNER JOIN megrendeles ON megrendeles.szemelyek_id = szemelyek.id INNER JOIN termek ON megrendeles.termek_id = termek.id"
-;
+$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelynev', megrendeles.rendelt_darab, Osszeg, szemelyek.id AS 'szemelyid',megrendeles.rendeles_azonosito,rendeles_allapot.allapot_nev
+from szemelyek
+INNER JOIN megrendeles ON megrendeles.szemelyek_id = szemelyek.id 
+INNER JOIN termek ON megrendeles.termek_id = termek.id
+INNER JOIN rendeles_allapot ON megrendeles.rendeles_allapot_id = rendeles_allapot.allapot_id";
 
 $eredmeny = mysqli_query($dbconn, $sql);
 $kimenet = "<table class=\"megrendelestable\"><thead>
@@ -24,6 +27,7 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
             <th>Rendelés (DB)</th>
             <th>Összeg (FT)</th>
             <th>Rendelés azonosító</th>
+            <th>Rendelés állapot</th>
             <th>Státusz</th>
             </tr>";
             $kimenet .= "</thead><tbody class=\"tabla\">";
@@ -33,11 +37,12 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
        {
         $kimenet .= "
             <tr>
-            <td class=\"alkategoria_nev\"}>{$sor['szemelyeknev']}</td>
+            <td class=\"alkategoria_nev\"}>{$sor['szemelynev']}</td>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
             <td class=\"darab\">{$sor['Osszeg']}Ft</td>
             <td class=\"darab\">{$sor['rendeles_azonosito']}</td>
+            <td class=\"darab\">{$sor['allapot_nev']}</td>
             <td class=\"padd\">
             <ul>
             <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>

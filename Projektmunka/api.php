@@ -98,8 +98,8 @@ function saveOrder($order = array(), $dbconn) {
 
         $sql = "
             INSERT INTO megrendeles
-            (szemelyek_id, rendelt_darab, termek_id, Osszeg,rendeles_azonosito) VALUES (
-                '{$_SESSION["id"]}','{$orderItem["darab"]}','{$orderItem["termek_id"]}','{$Osszeg}','{$string}'
+            (szemelyek_id, rendelt_darab, termek_id, Osszeg,rendeles_azonosito,rendeles_allapot_id) VALUES (
+                '{$_SESSION["id"]}','{$orderItem["darab"]}','{$orderItem["termek_id"]}','{$Osszeg}','{$string}','1'
             )
         ";
         
