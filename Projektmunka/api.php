@@ -96,7 +96,7 @@ function saveOrder($order = array(), $dbconn) {
     foreach($order as $orderItem) {   
         $sql = "
             INSERT INTO megrendeles
-            (szemelyek_id, rendelt_darab, termek_id, vegosszeg) VALUES (
+            (szemelyek_id, rendelt_darab, termek_id, Osszeg) VALUES (
                 '{$_SESSION["id"]}','{$orderItem["darab"]}','{$orderItem["termek_id"]}','{$orderItem["price"]}'
             )
         ";

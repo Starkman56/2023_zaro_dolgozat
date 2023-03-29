@@ -18,7 +18,7 @@ if(isset($_POST['ok']))
     $jelszoujra = sha1($_POST['jelszoujra']);
     $iranyitoszam = $_POST['iranyitoszam'];
     $telepules = $_POST['telepules'];
-    $szallitasicim = $_POST['szallitasicim'];
+    $szallitasicim = $_POST['szallitasi_cim'];
     $tel = $_POST['tel'];
 
 
@@ -41,7 +41,7 @@ if(isset($_POST['ok']))
         }
         else
         {
-            $insert = "INSERT INTO `szemelyek`(`nev`, `felhnev`, `email`, `jelszo`, `iranyitoszam`, `telepules`, `szallitasicim`, `tel`) VALUES ('$nev','$felhnev','$email','$jelszo','$iranyitoszam' ,'$telepules' ,'$szallitasicim','$tel')";
+            $insert = "INSERT INTO `szemelyek`(`nev`, `felhnev`, `email`, `jelszo`, `iranyitoszam`, `telepules`, `szallitasi_cim`, `tel`) VALUES ('$nev','$felhnev','$email','$jelszo','$iranyitoszam' ,'$telepules' ,'$szallitasicim','$tel')";
             mysqli_query($dbconn,$insert);
             header('Location:belep.php');
         }
