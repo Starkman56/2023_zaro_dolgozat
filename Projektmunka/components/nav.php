@@ -1,4 +1,4 @@
-<div class="background">
+<!-- <div class="background">
    <span><img src="../keps/fishbg1.png" alt=""></span>
    <span><img src="../keps/fishbg2.png" alt=""></span>
    <span><img src="../keps/fishbg3.png" alt=""></span>
@@ -41,7 +41,7 @@
    <span></span>
    <span></span>
    <span></span>
-   <span></span>
+   <span></span> -->
 </div>
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">

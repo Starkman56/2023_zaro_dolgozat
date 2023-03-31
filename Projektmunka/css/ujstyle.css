@@ -431,7 +431,7 @@ aside .side-inner .nav-menu ul li.active a:before {
   visibility: visible;
   width: 4px;
 }
-/* sidenav */
+
 .navbar{
     width: 100%;
 }
@@ -494,6 +494,10 @@ input[type=text]:focus {
   top: 60%;
   transform: translate(-50%, -50%);
   
+}
+.nav-item:hover{
+  border-left: solid 4px;
+  background-color: #fff;
 }
 .webshoph5{
   font-size: 4rem;
@@ -1319,7 +1323,7 @@ iframe{
   padding: 2rem;
   background-color: white;
   border-radius: 12px 12px 5px 12px;
-  
+  text-indent: 30px;
 
 }
 
@@ -1652,4 +1656,115 @@ iframe{
 .alap{
   padding: 0.1rem;
 }
+
+}
+ .article{
+  padding: 5rem;
+  background-color: rgba(151, 151, 151, 0.4);
+  text-align: justify;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+  text-indent: 2rem;
+  gap: 2rem;
+  
+}
+
+
+.cim{
+  text-align: left;
+}
+/*.article:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}*/
+.kep img{
+  padding: 10px;
+  border-radius: 2rem;
+  box-shadow: rgba(228, 8, 8, 0.7);
+  
+
+}
+
+.leiras{
+
+  padding: 2rem;
+  background-color:rgba(255, 255, 255, 0.8) ;
+  border-radius: 15px;
+  
+}
+.leiras summary{
+border: solid black;
+max-width: 13rem;
+padding: 5px;
+border-radius: 10px;
+background-color:rgba(255, 255, 255, 0.4) ;
+}
+.leiras li{
+  margin-top: 1rem;
+}
+.leiras p{
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 820px) {
+  .leiras {
+  grid-column: 1/2;  
+  }
+}
+
+
+#more {display: none;}
+#myBtn{
+  padding: 5px;
+  border-radius: 20px;
+  background-color: rgb(195, 195, 195);
+  transition: transform .2s;
+}
+#myBtn:hover{
+  background-color: rgb(255, 255, 255);
+  transform: scale(1.2);
+} 
+
+details[open] p {
+  animation: animateDown 0.2s linear forwards;
+}
+
+@keyframes animateDown {
+  0% {
+    opacity: 0;
+    transform: translatey(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+.vissza1{
+  margin: auto;
+  border: solid black 2px;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: rgb(189, 189, 189);
+  max-width: max-content;
+  text-align: center;
+  
+
+}
+.vissza1 a{
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.vissza1:hover{
+  background-color: rgb(233, 232, 232);
+  border-color: rgb(189, 189, 189);
+  
+  
 }

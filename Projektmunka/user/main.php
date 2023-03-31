@@ -80,16 +80,16 @@ require("../kapcsolat/kapcs.php");
   <a href="../user/webshop.php"><img class="fooldalkep " src="../keps/fishing.jpg" alt=""><figcaption>Webshop</figcaption></a>
   </div>
   
-  <div class="alap animate__animated animate__backInLeft">
-  <p class="szoveg">A üzletünk már több <b> 20 éve</b> üzemel ,de eddig nem volt lehetőség online vásárlásra , egésszen ideáig! <br><br>
-  Új webáruházunkban minden terméket megtalál, amit az üzletünkben forgalmazunk és az otthona kényelmében vásárolhat! Célunk , hogy minden vásárlónk számára <b>minőségi termékekkel</b> szolgáljunk, a lehető <b>legjobb árakon.</b><br><br>
-  <i> A képre kattintva tovább navigálhat a webáruház oldalára ! </i>
+  <div class="alap szoveg animate__animated animate__backInLeft">
+  <p>A üzletünk már több <b> 20 éve</b> üzemel ,de eddig nem volt lehetőség online vásárlásra , egésszen ideáig! 
+  <p>Új webáruházunkban minden terméket megtalál, amit az üzletünkben forgalmazunk és az otthona kényelmében vásárolhat! Célunk , hogy minden vásárlónk számára <b>minőségi termékekkel</b> szolgáljunk, a lehető <b>legjobb árakon.</b> </p> 
+  <p> <i> A képre kattintva tovább navigálhat a webáruház oldalára ! </i></p>
 
   </div>
-  <div class="alap animate__animated animate__backInRight">
-  <p class="szoveg"> Az üzletünk másik fő profilja, a horgászaton kívül, a <b> díszállatok forgalmazása. </b><br><br>
-  <b> Gazdag fajkínálattal</b> várjuk az érdeklődőket. <br><br>
-  Változatos étrendi kiegészítőket, vitaminokat kínálunk a terráriumi,akváriumi illetve rágcsáló állatok takarmányozásához. Kiegészítő felszereléseink a <b>legkiválóbb gyártóktól</b> szállítjuk. JBL, Anubias, Croci, Fop és még sok más.</p>
+  <div class="alap szoveg animate__animated animate__backInRight">
+  <p> Az üzletünk másik fő profilja, a horgászaton kívül, a <b> díszállatok forgalmazása. </b> </p>
+  <p> <b> Gazdag fajkínálattal</b> várjuk az érdeklődőket.</p>
+  <p>Változatos étrendi kiegészítőket, vitaminokat kínálunk a terráriumi,akváriumi illetve rágcsáló állatok takarmányozásához. Kiegészítő felszereléseink a <b>legkiválóbb gyártóktól</b> szállítjuk. JBL, Anubias, Croci, Fop és még sok más.</p>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
   <a href="../user/diszallatok.php"> <img class="fooldalkep" src="../keps/30.jpg" alt=""><figcaption>Díszállatok</figcaption></a>

@@ -3,12 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 //lapvédelem
-session_start();
 
-if (!isset($_SESSION['belepett'])) {
-    header("Location: false.html");
-    exit();
-}
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
 
@@ -39,24 +34,32 @@ require("../components/mainnav.php");
 ?>
     <!--Website container-->
     
+    
 <div class="diszallatokmain">
   <div class="alap animate__animated animate__backInLeft hover-img2">    
-  <a href="../user/webshop.php"><img class="diszallatokkep " src="../keps/fishing.jpg" alt=""><figcaption>Madarak</figcaption></a>
+  <a href="../user/madarak.php"><img class="diszallatokkep " src="../keps/petbirds.png" alt=""><figcaption>Madarak</figcaption></a>
   </div>
-  <div class="alap animate__animated animate__backInRight">
-  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis neque totam natus in fugiat, alias ut cumque perferendis blanditiis consequuntur nam autem nesciunt tenetur unde sed vitae numquam magni similique.</p>
+  <div class="alap szoveg animate__animated animate__backInRight">
+  <p >A díszmadarak káprázatosan színes és barátságos fajaiból, a papagájok és díszpintyek között minden madártartó megtalálhatja leendő kedvencét. Színes apróságok és kézzel nevelt szelíd nagy papagájok megvásárolhatók üzletünkben. A madarak nagy része ellenőrzött tenyészetünkből származik.Üzletünkben megtalálható illetve megrendelhető minden díszmadár számára az ideális táplálék, kalitka és egyéb szükséges felszerelés.
+  <p> Különböző méretben és színben a vevő és a díszmadár igényeihez igazodva. A papagájok kedvelt időtöltése a játék, ezért nefeledkezzünk el gondoskodni erről sem. Fa és műanyag játékok, hinták, létrák, tükrök mind a szárnyas kedvencünk boldog mindennapjainakkellékei.</p>
+ <p> A táplálékok között minden fajnak megtalálható a leg ideálisabb összeállítás. Etetők és itatók széles választékban kaphatóak minden méretű díszmadárhoz.</p>
   </div>
-  <div class="alap animate__animated animate__backInLeft">
-  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis neque totam natus in fugiat, alias ut cumque perferendis blanditiis consequuntur nam autem nesciunt tenetur unde sed vitae numquam magni similique.</p>
+  <div class="alap szoveg animate__animated animate__backInLeft">
+  <p>A díszhalak tartása egyre népszerűbb. Nem csoda, hiszen a nappalinkban csodálni a vízi élővilágot nem csak lenyűgöző, hanem nyugtatóan is hat hektikus hétköznapjainkban.
+    <p>  Az állatkereskedésben fajták százaival találkozhat. Nem mindegyik ugyanolyan alkalmas azonban egy házi akváriumba. A táppal, növényekkel, vízminőséggel és vízhőmérséklettel kapcsolatos igények minden halnál különbözőek, így választásuknál ezeket is mindenképp figyelembe kell venni. Szintén előre érdemes meggyőződni arról, hogy a kiválasztott díszhalak jól kijöjjenek egymással.</p>
+     <p> A következőkben bemutatjuk Önnek a tíz legnépszerűbb édesvízi akváriumba való díszhalat. Ezenkívül részletesen elmagyarázzuk, mire érdemes ezek kiválasztásánál mindenképp odafigyelnie.</p>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
-  <a href="../user/diszallatok.php"> <img class="diszallatokkep" src="../keps/madareteto.jpg" alt=""><figcaption>Diszhalak</figcaption></a>
+  <a href="../user/diszallatok.php"> <img class="diszallatokkep" src="../keps/petfish.jpg" alt=""><figcaption>Diszhalak</figcaption></a>
   </div>
   <div class="alap animate__animated animate__backInLeft hover-img2">    
-  <a href="../user/webshop.php"><img class="diszallatokkep " src="../keps/fishing.jpg" alt=""><figcaption>Rágcsáló</figcaption></a>
+  <a href="../user/webshop.php"><img class="diszallatokkep " src="../keps/petrodents.png" alt=""><figcaption>Kisállatok</figcaption></a>
   </div>
-  <div class="alap animate__animated animate__backInRight">
-  <p class="szoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio delectus dolores, illum quasi voluptatibus ab est. Officiis dolor, quo aliquid magnam aspernatur vitae iure ipsa tenetur recusandae nihil atque alias quaerat at fugit maxime voluptatem deleniti sed similique explicabo. Sint perferendis non voluptate dignissimos provident, nostrum id tenetur, tempore illum dolores vel repudiandae facere, quasi reiciendis nesciunt ratione in harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis neque totam natus in fugiat, alias ut cumque perferendis blanditiis consequuntur nam autem nesciunt tenetur unde sed vitae numquam magni similique.</p>
+  <div class="alap szoveg animate__animated animate__backInRight">
+  <p>Ha azt gondolnánk, hogy kisállatot tartani gyerekjáték, akkor nagyon is tévedünk.</p>
+  <p>Minden kisállat odafigyelést és sok törődést igényel. A kisemlősök népszerűségüket annak köszönhetik, hogy még kifejlett állapotukban is egy kölyök méreteivel rendelkeznek. A megfelelő tartásukhoz rengeteg rágcsálnivaló és sok – sok törődés kell. Ezek az állatok ugyanis szeretik a társaságot, és nagyon ragaszkodnak a gazdájukhoz.</p>
+<p> Hogy milyen fajtát választunk, az már csak rajtunk múlik, mivel egyre több lehetőség áll rendelkezésünkre. Üzletünkben számos hörcsög, tengerimalac és nyúl fajtából válogathat.
+
   </div>
 </div>
 

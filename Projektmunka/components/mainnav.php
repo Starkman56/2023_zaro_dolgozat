@@ -1,4 +1,4 @@
-<div class="background">
+ <div class="background">
    <span><img src="../keps/fishbg1.png" alt=""></span>
    <span><img src="../keps/fishbg2.png" alt=""></span>
    <span><img src="../keps/fishbg3.png" alt=""></span>
@@ -43,7 +43,7 @@
    <span></span>
    <span></span>
    <span></span>
-   <span></span>
+   <span></span> 
 </div>
 <nav class="navbar navbar-expand-lg sticky-top  bg-body-tertiary">
   <div class="container-fluid">
@@ -67,6 +67,8 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#scroll">Kapcsolat</a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="diszallatok.php">Díszállatok</a>
         </li>
         </div>
       

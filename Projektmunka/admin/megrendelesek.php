@@ -37,7 +37,9 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
        {
         $kimenet .= "
             <tr>
-            <td class=\"alkategoria_nev\"}>{$sor['szemelynev']}</td>
+            <td class=\"alkategoria_nev\"}>{$sor['szemelynev']}
+            </span>
+            </td>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
             <td class=\"darab\">{$sor['Osszeg']}Ft</td>
