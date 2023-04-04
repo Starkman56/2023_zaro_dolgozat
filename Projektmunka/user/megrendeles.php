@@ -44,7 +44,6 @@
 
     function handleOrder() {
         let order = localStorage.getItem("cuccok");
-        console.log("teszt");
         $.ajax({
             method: "POST",
             url: "../api.php",
@@ -54,12 +53,12 @@
                 cuccok: order 
             },
             success:function(result) {
-                if (result.message == "Sikeres mentés") {                   
+                if (result.message == "Sikeres mentés") {  
                     localStorage.setItem("cuccok", JSON.stringify(null));
                     let cuccok = localStorage.getItem("cuccok");
                     //console.log("Cuccok tartalma mentés után:",cuccok);
                     window.location.href = "horgasz.php";
-                }else{
+                } else {
                     alert("Nincsen raktáron ennyi termék.");
                     window.location.href = "horgasz.php";
                 }
