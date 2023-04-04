@@ -15,7 +15,7 @@ if (isset($_POST['ok'])) {
     // változok clear
     $vonalkod = strip_tags(trim($_POST['vonalkod']));
     $ar = strip_tags(trim($_POST['ar']));
-     $nev = strip_tags(trim($_POST['nev']));
+    $nev = strip_tags(trim($_POST['nev']));
     $darab = strip_tags(trim($_POST['darab']));
     $felvdatum = strip_tags(trim($_POST['felvdatum']));
     $alkategoria_id = strip_tags(trim($_POST['alkategoria_id']));
@@ -43,26 +43,37 @@ if (isset($_POST['ok'])) {
      if (empty($leiras)  ){
         $hibak[] = "Adjon meg leírást!";
      }
-    if ($_FILES['foto']['error'] == 0 && $_FILES['foto']['size'] > 6000000) {
-        $hibak[] = "Nagy a kép formátuma";
+
+    $fotoQuery = "";
+
+    if ($_FILES['foto']['error'] != 4) {
+        if ($_FILES['foto']['error'] == 0 && $_FILES['foto']['size'] > 6000000) {
+            $hibak[] = "Nagy a kép formátuma";
+        }
+        if ($_FILES['foto']['error'] == 0 && !in_array($_FILES['foto']['type'], $mime)) {
+            $hibak[] = "Rossz a kép fájl kiterjesztése";
+        }
+        switch ($_FILES['foto']['type']) {
+            case "image/png":
+                $kit = ".png";
+                break;
+            case "image/gif":
+                $kit = ".gif";
+                break;
+            case "image/jpg":
+                $kit = ".jpg";
+                break;
+            default:
+                $kit = ".jpeg";
+        }
+
+        $foto = date("U") . $kit;
+        // kép mozgatása a végleges helyére
+        move_uploaded_file($_FILES['foto']['tmp_name'], "../keps/{$foto}");
+       
+       $fotoQuery = "foto = '{$foto}', ";
     }
-    if ($_FILES['foto']['error'] == 0 && !in_array($_FILES['foto']['type'], $mime)) {
-        $hibak[] = "Rossz a kép fájl kiterjesztése";
-    }
-    switch ($_FILES['foto']['type']) {
-        case "image/png":
-            $kit = ".png";
-            break;
-        case "image/gif":
-            $kit = ".gif";
-            break;
-        case "image/jpg":
-            $kit = ".jpg";
-            break;
-        default:
-            $kit = ".jpeg";
-    }
-    $foto = date("U") . $kit;
+
     // Hibák összeállítása
     if (isset($hibak)) {
         $kimenet = "<ul class=\"error-msg\">\n";
@@ -75,14 +86,12 @@ if (isset($_POST['ok'])) {
         $id = (int)$_GET['id'];
 
         $sql = "UPDATE termek
-                SET foto = '{$foto}', ar = '{$ar}', vonalkod = '{$vonalkod}', nev = '{$nev}', leiras = '{$leiras}', darab = '{$darab}', felvdatum = '{$felvdatum}', alkategoria_id = '{$alkategoria_id}'
+                SET $fotoQuery ar = '{$ar}', vonalkod = '{$vonalkod}', nev = '{$nev}', leiras = '{$leiras}', darab = '{$darab}', felvdatum = '{$felvdatum}', alkategoria_id = '{$alkategoria_id}'
                 WHERE id = {$id}";
 
         mysqli_query($dbconn, $sql);
-        var_dump($sql);
-        // kép mozgatása a végleges helyére
+        //var_dump($sql);
 
-        move_uploaded_file($_FILES['foto']['tmp_name'], "../keps/{$foto}");
         header("Location: adminlist.php");
     }
 } else {

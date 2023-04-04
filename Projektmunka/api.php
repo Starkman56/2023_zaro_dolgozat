@@ -61,20 +61,14 @@ function getCurrentProductNumber($order = array(), $dbconn) {
 function updateCurrentProductNumber($order = array(), $data = array(), $dbconn) {
 
     foreach($order as $product) {
-        echo "insideTheUpdateFunction";
         $newProductNumber = $data["products"][$product["termek_id"]] - $product["darab"];
         
-        echo $product["termek_id"] ." = ". $newProductNumber. "<br />";
         $sql = "
             UPDATE termek
             SET darab = {$newProductNumber}
             WHERE id = '{$product["termek_id"]}'
         ";        
         mysqli_query($dbconn, $sql); 
-        $result = array(
-            "message"   => "Sikeres",
-        );
-        return $result;
     }
 }
 
@@ -92,18 +86,14 @@ function saveOrder($order = array(), $dbconn) {
         <?php } ?>
     </select>
     */
-    $string = bin2hex(openssl_random_pseudo_bytes(10)); // 20 random chars
-    foreach($order as $orderItem) {  
-        $Osszeg = $orderItem["price"] * $orderItem["darab"]; 
 
+    foreach($order as $orderItem) {   
         $sql = "
             INSERT INTO megrendeles
-            (szemelyek_id, rendelt_darab, termek_id, Osszeg,rendeles_azonosito,rendeles_allapot_id) VALUES (
-                '{$_SESSION["id"]}','{$orderItem["darab"]}','{$orderItem["termek_id"]}','{$Osszeg}','{$string}','1'
+            (szemelyek_id, rendelt_darab, termek_id) VALUES (
+                '{$_SESSION["id"]}','{$orderItem["darab"]}','{$orderItem["termek_id"]}'
             )
         ";
-        
-        echo $sql."<br />";
         mysqli_query($dbconn, $sql);
     }
 
@@ -120,10 +110,7 @@ function updateProductAndSaveOrder($order = array(), $data = array(), $dbconn) {
     saveOrder($order, $dbconn);
 
     //TODO: Check in both function if there is a mysql error if there is, then return it
-    $result = array(
-        "message" => "Sikeres mentés",
-    );
-
+    $result = "Sikeres mentés";
     return $result;
 }   
 
@@ -148,11 +135,6 @@ if ($_POST["c"] == "handleOrder") {
     //Cherk currentProductAmount if we do have enough or not
     $data = getCurrentProductNumber($order, $dbconn);
    
-    
-    echo "<pre>";
-    print_r($data);
-    echo "</pre>";
-
     //if we do have enough product then update available and save order
     if($data["message"] == "") {
 
@@ -160,7 +142,7 @@ if ($_POST["c"] == "handleOrder") {
         $data["message"] = updateProductAndSaveOrder($order, $data, $dbconn);
     }
 
-    //echo $message;
+    //echo $data["message"];
     $result = array(
         "message" => $data["message"],
     );
@@ -168,6 +150,8 @@ if ($_POST["c"] == "handleOrder") {
 }
 
 if($_POST["c"] == "deleteProductAmount") {
+
+    $message = "Sikeres mentés";
 
     $products = json_decode($_POST["product"], true);
         
@@ -184,13 +168,13 @@ if($_POST["c"] == "deleteProductAmount") {
         $deletLine = true;        
         unset($products[$productToUpdateIndex]);
     }
-    
+
     $result = array(
         "products"   => $products,
         "deleteline" => $deletLine,
         "lineid"     => $lineId,
         "newAmount"  => $newAmount,
-        "message"    =>$message,
+        "message"    => $message,
     );
     echo json_encode($result);
 }
