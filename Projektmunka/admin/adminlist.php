@@ -43,7 +43,7 @@ $kimenet = "<table><thead>
             <td class=\"nev\">{$sor['nev']}</td>
             <td class=\"kategoria_nev\">{$sor['kategoria_nev']}</td>
             <td class=\"alkategoria_nev\">{$sor['alkategoria_nev']}</td>
-            <td class=\"felvdatum\">{$sor['felvdatum']}</td>
+            <td class=\"felvdatum\">{$sor['felv_datum']}</td>
             <td class=\"darab\">{$sor['darab']}</td>
             <td class=\"ar\">{$sor['ar']}</td>
             <td class=\"padd\"><a href=\"torles.php?id={$sor['id']}\">Törlés</a> | <a href=\"modos.php?id={$sor['id']}\">Módosítás</a></td>
