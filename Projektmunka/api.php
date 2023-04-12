@@ -86,12 +86,12 @@ function saveOrder($order = array(), $dbconn) {
         <?php } ?>
     </select>
     */
-
+    $string = bin2hex(openssl_random_pseudo_bytes(10)); // 20 random
     foreach($order as $orderItem) {   
         $sql = "
             INSERT INTO megrendeles
-            (szemelyek_id, rendelt_darab, termek_id) VALUES (
-                '{$_SESSION["id"]}','{$orderItem["darab"]}','{$orderItem["termek_id"]}'
+            (szemelyek_id, rendelt_darab, termek_id,rendeles_azonosito,rendeles_allapot_id) VALUES (
+                '{$_SESSION["id"]}','{$orderItem["darab"]}','{$orderItem["termek_id"]}','{$string}','1'
             )
         ";
         mysqli_query($dbconn, $sql);
