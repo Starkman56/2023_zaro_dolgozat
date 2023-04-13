@@ -143,11 +143,11 @@
                 <div class="dropdown" style="float:right;">
                         <button class="dropbtn">⮟</button>
                         <div class="dropdown-content">
-                            <a href="#">Díszhal táp</a>
-                            <a href="#">Rágcsáló táp</a>
-                            <a href="#">Díszállat kiegészítő</a>
-                            <a href="#">Kisállat alom</a>
-                            <a href="#">Levegőztető,szűrő</a>
+                            <a href="diszhaltap.php">Díszhal táp</a>
+                            <a href="ragcsalo.php">Rágcsáló táp</a>
+                            <a href="diszallatkiegesz.php">Díszállat kiegészítő</a>
+                            <a href="allatalom.php">Kisállat alom</a>
+                            <a href="levegozteto.php">Levegőztető,szűrő</a>
                         </div>
                 
                 </div>
@@ -161,11 +161,11 @@
                 <div class="dropdown" style="float:right;">
                         <button class="dropbtn">⮟</button>
                         <div class="dropdown-content">
-                            <a href="#">Konyha</a>
-                            <a href="#">Fürdőszoba</a>
-                            <a href="#">Játék</a>
-                            <a href="#">Dísz</a>
-                            <a href="#">Ajándék</a>
+                            <a href="konyha.php">Konyha</a>
+                            <a href="furdo.php">Fürdőszoba</a>
+                            <a href="jatek.php">Játék</a>
+                            <a href="disz.php">Dísz</a>
+                            <a href="ajandek.php">Ajándék</a>
                         </div>
                 
                 </div>
@@ -180,11 +180,11 @@
                     <div class="dropdown" style="float:right;">
                         <button class="dropbtn">⮟</button>
                         <div class="dropdown-content">
-                            <a href="#">Madáretető</a>
-                            <a href="#">Odu</a>
-                            <a href="#">Kulcstartó</a>
-                            <a href="#">Kenyértartó</a>
-                            <a href="#">Fonott kosár</a>
+                            <a href="madar.php">Madáretető</a>
+                            <a href="odu.php">Odu</a>
+                            <a href="kulcstarto.php">Kulcstartó</a>
+                            <a href="kenyer.php">Kenyértartó</a>
+                            <a href="kosar.php">Fonott kosár</a>
                         </div>
                 </div>
             </li>
