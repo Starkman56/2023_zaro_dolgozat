@@ -128,13 +128,7 @@ table thead th
   background: rgb(167, 81, 81);
 }
 
-table .kep{
-    max-width: 10rem;
-    max-height: 10rem;
-    text-align: center;
-   
-    
-}
+
 table td{
     text-align: center;
     height: 10rem;
@@ -143,6 +137,17 @@ table td{
     padding : 1rem;
     font-size: 1rem;
     color: white;
+}
+table tr{
+  max-height: 10rem;
+}
+table .kep{
+  max-width: 10rem;
+  max-height: 10rem;
+  text-align: center;
+}
+table .kep img{
+  max-height: 80%;
 }
 .megrendelestable td{
   height: 5rem;

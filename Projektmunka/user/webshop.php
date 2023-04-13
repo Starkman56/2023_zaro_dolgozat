@@ -45,13 +45,13 @@ require("../kapcsolat/kapcs.php");
   <a href="horgasz.php"><img class="webshopkep " src="../keps/fishing.jpg" alt=""><figcaption>Horgász áru</figcaption></a>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
-  <img class="webshopkep" src="../keps/diszallat.jpg" alt=""><figcaption>Díszállatok</figcaption>
+  <a href="diszallat.php"><img class="webshopkep" src="../keps/diszallat.jpg" alt=""><figcaption>Díszállatok</figcaption></a>
   </div>
   <div class="alap animate__animated animate__backInLeft hover-img2">
-  <img class="webshopkep" src="../keps/muanyag_termekek.jpg" alt=""><figcaption>Háztartási eszközök</figcaption>
+  <a href="haztartas.php"><img class="webshopkep" src="../keps/muanyag_termekek.jpg" alt=""><figcaption>Háztartási eszközök</figcaption></a>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
-  <img class="webshopkep" src="../keps/madareteto.jpg" alt=""><figcaption>Fatermékek</figcaption>
+  <a href="kezmuvesfatermek.php"><img class="webshopkep" src="../keps/madareteto.jpg" alt=""><figcaption>Fatermékek</figcaption></a>
   </div>
   
 </div>

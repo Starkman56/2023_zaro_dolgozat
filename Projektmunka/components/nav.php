@@ -138,7 +138,7 @@
             <li>
                 <div class="flex">
 
-                <a href="#">Diszállat</a>
+                <a href="diszallat.php">Diszállat</a>
 
                 <div class="dropdown" style="float:right;">
                         <button class="dropbtn">⮟</button>
@@ -156,7 +156,7 @@
            <li>
                 <div class="flex">
 
-                <a href="#">Háztartási</a>
+                <a href="haztartas.php">Háztartási</a>
 
                 <div class="dropdown" style="float:right;">
                         <button class="dropbtn">⮟</button>
@@ -175,7 +175,7 @@
             <li>
                 <div class="flex">
 
-                    <a href="horgasz.php">Kézműves fatermékek</a> 
+                    <a href="kezmuvesfatermek.php">Kézműves fatermékek</a> 
 
                     <div class="dropdown" style="float:right;">
                         <button class="dropbtn">⮟</button>

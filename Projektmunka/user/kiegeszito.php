@@ -21,7 +21,7 @@ require("../components/beolvas.php");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php require("../components/links.php") ?>
-    <title>kiegeszito</title>    
+    <title>Kiegészítők</title>    
 </head>
 <body>
 <?php require("../components/nav.php"); ?>
