@@ -47,7 +47,7 @@ window.onload = function(){
                 //console.log("Ez a storage ág",e);
                 //console.log("parent element",e.target.parentElement.children[0].value);
                 let cucc = {                   
-                    id: i + 1, 
+                    id: parseInt(e.target.parentElement.parentElement.parentElement.children[0].children[2].innerHTML), 
                     name: e.target.parentElement.parentElement.parentElement.children[0].children[1].innerHTML,
                     no: parseInt(e.target.parentElement.parentElement.children[1].innerHTML),
                     price: parseInt(e.target.parentElement.parentElement.children[2].innerHTML),
