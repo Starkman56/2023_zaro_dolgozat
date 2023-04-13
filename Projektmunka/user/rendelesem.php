@@ -12,13 +12,14 @@ if(!isset($_SESSION['belepett']))
 }
 
 require("../kapcsolat/kapcs.php");
-
-$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, Osszeg, szemelyek.id 
+$bentvan = $_SESSION["felhnev"];
+$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, szemelyek.id 
 AS szemelyesid from szemelyek
 INNER JOIN megrendeles
 ON megrendeles.szemelyek_id = szemelyek.id
 INNER JOIN termek
 ON megrendeles.termek_id = termek.id
+WHERE szemelyek.felhnev = '{$bentvan}';
 ";
 
 $eredmeny = mysqli_query($dbconn, $sql);
@@ -27,7 +28,6 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
             <th>Felhasználó neve</th>
             <th>Termék neve</th>
             <th>Rendelés (DB)</th>
-            <th>Összeg (FT)</th>
             <th>Státusz</th>
             </tr>";
             $kimenet .= "</thead><tbody class=\"tabla\">";
@@ -40,7 +40,6 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
             <td class=\"alkategoria_nev\"}>{$sor['szemelyeknev']}</td>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
-            <td class=\"darab\">{$sor['Osszeg']}Ft</td>
             <td class=\"padd\">
             <ul>
             <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
@@ -62,14 +61,16 @@ $kimenet .= "</tbody></table>";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megrendeléseim</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../css/adminlista.css">
 </head>
 
 <body>
+    
     <div class="cim">
-    <div class="cimkozepre"><h1>Rendelésem</h1>
+    <div class="cimkozepre"><h1>Megrendeléseim</h1>
     <div class="menu">
+    <p class="kozep"><a href="main.php">Vissza</a></p>
     </div>
     </div>
     <div class="content">

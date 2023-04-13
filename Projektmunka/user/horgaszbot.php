@@ -35,7 +35,12 @@ require("../components/beolvas.php");
             print $kimenet;
             ?>
         </div>
+        <div id="modal" class="hidden">
+            <img src="" alt="">
+            <button>×</button>
+        </div>
     </div>
+    
     <?php
 require("../components/footer.php");
 ?>

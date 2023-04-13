@@ -86,16 +86,12 @@ require("../components/mainnav.php");
                 </details>
                 </span>
             </p>
-            
-
         </div>
     </div>
     <br>
 <!--aricle 2-->
     <div class="article">
-
         <div class="kep">
-
             <img src="../keps/neonhal.png" alt="">
         </div>
         <div class="leiras">
@@ -119,24 +115,19 @@ require("../components/mainnav.php");
                     <li>Eledel: élő és száraz eledel</li>
                     <li>Különlegességek: Irizáló kék oldalcsíkjai leginkább az akvárium enyhe megvilágításával bontakoznak ki. A neonhalak természetükből adódóan az enyhén savas vizet szeretik, de magasabb ph-értéket és keménységi fokot is elviselnek. Igazán robosztusnak számítanak, de nem kerülik őket a betegségek sem. Gyakorta előforduló betegségük a neonbetegség.</li>
                 </ul>
-               
                 </details>
                 </span>
             </p>
-        
         </div>
     </div>
     <br>
     <!--aricle 3-->
     <div class="article">
-
         <div class="kep">
-
             <img src="../keps/platti.png" alt="">
         </div>
         <div class="leiras">
             <h1 class="cim">Platti</h1>
-
             <h2 class="cim">Díszhalak</h2>
             <p>
             A kedvelt díszhal, a fekete molli tulajdonképpen a Dél- és Közép-Amerikában őshonos jukatáni fogasponty fekete tenyészalakja. A különböző tenyészalakokkal való keresztezés következtében különböző uszonyformái is létrejöttek. Így létezik kis, kerek hátuszonyú, hosszú hátuszonyú és vitorlás uszonyú fekete molli is.
@@ -144,7 +135,6 @@ require("../components/mainnav.php");
                 </p>
                 <details>
                     <summary>Több információ</summary>
-                  
                     <ul>
                         <li>Eredet: Közép-Amerikától Kolumbiáig</li>
                         <li>Hossz: 6-10 cm</li>
@@ -160,16 +150,13 @@ require("../components/mainnav.php");
                     </details>
                     </span>
                 </p>
-
         </div>
     </div>
     <br>
     <!--aricle 4-->
 
     <div class="article">
-
         <div class="kep">
-
             <img src="../keps/pancelos.png" alt="">
         </div>
         <div class="leiras">
@@ -196,15 +183,11 @@ require("../components/mainnav.php");
                 </details>
                 </span>
             </p>
-
         </div>
     </div>
     <!--aricle 5-->
-
     <div class="article">
-
         <div class="kep">
-
             <img src="../keps/molli.png" alt="">
         </div>
         <div class="leiras">
@@ -216,8 +199,7 @@ require("../components/mainnav.php");
             <p>A 6-10 cm nagyságú, koromfekete díszhalak robosztusnak számítanak, gondozásuk pedig könnyű. Mindazonáltal ezek a melegkedvelő példányok érzékenyen tudnak reagálni a víz hőmérsékletének és keménységének ingadozására.</p>
             <details>
                 <summary>Több információ</summary>
-                <ul>
-                    
+                <ul>  
                 <li>Eredet: Közép-Amerikától Kolumbiáig</li>
                 <li>Hossz: 6-10 cm</li>
                 <li>Tartás: rajokban</li>
@@ -232,15 +214,11 @@ require("../components/mainnav.php");
                 </details>
                 </span>
             </p>
-
         </div>
     </div>
     <!--aricle 6-->
-
     <div class="article">
-
         <div class="kep">
-
             <img src="../keps/diszkoszhal.png" alt="">
         </div>
         <div class="leiras">
@@ -253,7 +231,6 @@ require("../components/mainnav.php");
             <details>
                 <summary>Több információ</summary>
                 <ul>
-                   
                 <li>Eredet: Amazónia, Peru, Kolumbia és Brazília gyökerekben gazdag biotópjai</li>
                 <li>Hossz: 12-15 cm</li>
                 <li>Tartás: rajokban 6-8 hallal együtt</li>
