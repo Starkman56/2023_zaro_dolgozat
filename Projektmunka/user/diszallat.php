@@ -11,7 +11,6 @@ session_start();
 if (!isset($_SESSION['belepett'])) {
     //header("Location: false.html");
     //exit();
-    echo '<script>alert("A rendeléshez belépés szükséges!")</script>';
 }
 
 //Meghívás 
@@ -36,7 +35,7 @@ require("../components/beolvas.php");
     <?php require("../components/links.php") ?>
   
 
-    <title>horgasz</title>
+    <title>Díszállat</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
