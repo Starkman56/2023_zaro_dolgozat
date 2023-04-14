@@ -43,6 +43,7 @@ require("../components/beolvas.php");
 <?php require("../components/nav.php"); ?>
     <!--Website container-->
     <div class="container">
+    <div class="nincsentalalat hidden" >Nincsen ilyen termék az oldalon</div>
         <div class="cards">
             <?php
             print $kimenet;
