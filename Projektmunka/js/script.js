@@ -182,6 +182,20 @@ for (const image of images) {
 modal.children[1].addEventListener("click", () => {
     modal.classList.add("hidden");
 });
+//galeria kep
+let mod = document.getElementById('modal');
+let imagesgaleria = document.getElementsByClassName('galeriakep');
+for (const image of imagesgaleria) {
+    image.addEventListener("dblclick", () => {
+        modal.children[0].src = image.src;
+        modal.classList.remove("hidden");
+    });
+}
+
+modal.children[1].addEventListener("click", () => {
+    modal.classList.add("hidden");
+});
+
 
 function profilinfo(){
     if (document.getElementById("profilid").className == "profilinfo")
