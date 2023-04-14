@@ -5,6 +5,7 @@
 }
 html {
   scroll-behavior: smooth;
+  min-height: 73rem;
 }
 body {
     background-color: #d2b9b9;
@@ -42,6 +43,9 @@ article{
     padding:20px;
     border-radius: 10px;
     background-color: rgba(242, 222, 186, 1);
+}
+.hidden{
+  display: none;
 }
 h1{
     margin: auto;
@@ -779,7 +783,6 @@ a figcaption{
 footer{
   color:#caced1 !important;
   width: 100% !important;
-  position: absolute;
   margin-top: 3rem;
   left: 0 ; right: 0; bottom: 0; 
 }
@@ -1374,8 +1377,13 @@ iframe{
   background-color: white;
   border-radius: 12px 12px 5px 12px;
   text-indent: 30px;
-
-
+}
+.nincsentalalat{
+  margin: auto;
+  width: fit-content;
+  padding: 1rem;
+  background-color: #caced1;
+  border-radius: 1rem;
 }
 
 
@@ -1455,7 +1463,6 @@ iframe{
     margin: auto;
 }
 }
-
 
 @media (max-width: 1100px) {
   .cards { grid-template-columns: repeat(3, 1fr);
@@ -1649,6 +1656,7 @@ iframe{
     }
 }
 @media (max-width: 700px) {
+
   .cards { grid-template-columns: repeat(1, 1fr); }
   .card{
     margin: auto;

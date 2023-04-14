@@ -151,11 +151,28 @@ function search_item() {
         else {
             x[i].style.display="flex";  
         }
-       
+    }
+    let cardContainer = document.getElementsByClassName('cards')[0];
+    let empty = true;
+    for (const card of cardContainer.children) {
+        if (card.style.display != "none") {
+            empty = false;
+        }
+    }
+    let footer = document.getElementById('scroll');
+    if (empty) {
+        // console.log("Üres");
+        footer.style.position = "absolute";
+        cardContainer.parentElement.children[0].classList.remove("hidden");
+    }
+    else {
+        //nincsentalalat
+        // console.log("Nem üres");
+        footer.style.position = "static";
+        cardContainer.parentElement.children[0].classList.add("hidden");
     }
 }
-
-
+//admin kereső
 function search_itemadmin() {
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
@@ -166,7 +183,7 @@ function search_itemadmin() {
         }
         else {
             x[i].parentElement.classList.remove("hidden");
-        }  
+        }
     }
 }
 
