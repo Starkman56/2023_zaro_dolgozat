@@ -37,7 +37,25 @@ require("../kapcsolat/kapcs.php");
     <?php require("../components/mainnav.php"); ?>
 <div class="galeriamain">
   <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
+  <img class="galeriakep " src="../keps/galeria1.jpg" alt="">
+  </div>
+  <div class="alap animate__animated animate__backInLeft">    
+  <img class="galeriakep " src="../keps/galeria2.jpg" alt="">
+  </div>
+  <div class="alap animate__animated animate__backInLeft">    
+  <img class="galeriakep " src="../keps/galeria3.jpg" alt="">
+  </div>
+  <div class="alap animate__animated animate__backInLeft">    
+  <img class="galeriakep " src="../keps/galeria4.jpg" alt="">
+  </div>
+  <div class="alap animate__animated animate__backInLeft">    
+  <img class="galeriakep " src="../keps/galeria5.jpg" alt="">
+  </div>
+  <div class="alap animate__animated animate__backInLeft">    
+  <img class="galeriakep " src="../keps/galeria6.jpg" alt="">
+  </div>
+  <div class="alap animate__animated animate__backInLeft">    
+  <img class="galeriakep " src="../keps/galeria7.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
   <img class="galeriakep " src="../keps/fishing.jpg" alt="">
@@ -45,25 +63,10 @@ require("../kapcsolat/kapcs.php");
   <div class="alap animate__animated animate__backInLeft">    
   <img class="galeriakep " src="../keps/fishing.jpg" alt="">
   </div>
-  <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
-  </div>
-  <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
-  </div>
-  <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
-  </div>
-  <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
-  </div>
-  <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
-  </div>
-  <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
-  </div>
-
+  <div id="modal" class="hidden">
+            <img src="" alt="">
+            <button>×</button>
+        </div>
 </div>
 
     <!-- nav scriptek -->

@@ -42,10 +42,10 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
             <td class=\"padd\">
             <ul>
-            <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
-            <li>Feldolgozás alatt<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
-            <li>Futárszolgálatnál<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
-            <li>Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
+            <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"  style='pointer-events: none;'><li>
+            <li>Feldolgozás alatt<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" style='pointer-events: none;'><li>
+            <li>Futárszolgálatnál<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" style='pointer-events: none;'><li>
+            <li>Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" style='pointer-events: none;'><li>
             </ul>
             </td>
             </tr> ";

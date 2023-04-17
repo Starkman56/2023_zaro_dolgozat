@@ -14,9 +14,10 @@ window.onload = function(){
     cartCloseBtn.addEventListener("click",function(){
         cartBox.classList.remove('active');
     })
-    const kosarhozgomb = document.getElementsByClassName('kosarhoz')
-    console.log("Ez a kosár gomb",kosarhozgomb);
+    const kosarhozgomb = document.getElementsByClassName('kosarhoz');
+
     let cuccok = [];
+
 /*
     if(JSON.parse(localStorage.getItem('cuccok')) === null) {
         localStorage.setItem("cuccok", cuccok);
@@ -25,7 +26,6 @@ window.onload = function(){
     for (let i = 0; i < kosarhozgomb.length; i++) {
         kosarhozgomb[i].addEventListener("click",function(e){
            let raktardb = parseInt(e.target.parentElement.parentElement.children[1].innerHTML);
-           console.log(raktardb);
            if(parseInt(e.target.parentElement.children[0].value) > raktardb ) {
             Swal.fire(
                 'Figyelem!',
@@ -34,14 +34,22 @@ window.onload = function(){
               )
               return false;
         };
-            if(parseInt(e.target.parentElement.children[0].value)== 0){
-                Swal.fire(
-                    'Figyelem!',
-                    'Kérjük állítsa be hány darab terméket szeretne rendelni!',
-                    'warning'
-                  )
-                  return false;
-            };
+                if(parseInt(e.target.parentElement.children[0].value)== 0){
+                    Swal.fire(
+                        'Figyelem!',
+                        'Kérjük állítsa be hány darab terméket szeretne rendelni!',
+                        'warning'
+                    )
+                    return false;
+                 };
+            // if ((e.target.parentElement.parentElement.parentElement.children[0].innerHTML)== "Belépés") {
+            //     Swal.fire(
+            //         'Figyelem!',
+            //         'Rendeléshez belépés szükséges',
+            //         'warning'
+            //       )
+            //       return false;
+            // }
             //console.log("Ez a kosár forciklus belseje, a storage vizsgálat elött");
             if(typeof(Storage) !== 'undefined'){
                 //console.log("Ez a storage ág",e);
@@ -151,11 +159,28 @@ function search_item() {
         else {
             x[i].style.display="flex";  
         }
-       
+    }
+    let cardContainer = document.getElementsByClassName('cards')[0];
+    let empty = true;
+    for (const card of cardContainer.children) {
+        if (card.style.display != "none") {
+            empty = false;
+        }
+    }
+    let footer = document.getElementById('scroll');
+    if (empty) {
+        // console.log("Üres");
+        footer.style.position = "absolute";
+        cardContainer.parentElement.children[0].classList.remove("hidden");
+    }
+    else {
+        //nincsentalalat
+        // console.log("Nem üres");
+        footer.style.position = "static";
+        cardContainer.parentElement.children[0].classList.add("hidden");
     }
 }
-
-
+//admin kereső
 function search_itemadmin() {
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
@@ -166,7 +191,7 @@ function search_itemadmin() {
         }
         else {
             x[i].parentElement.classList.remove("hidden");
-        }  
+        }
     }
 }
 
@@ -182,6 +207,20 @@ for (const image of images) {
 modal.children[1].addEventListener("click", () => {
     modal.classList.add("hidden");
 });
+//galeria kep
+let mod = document.getElementById('modal');
+let imagesgaleria = document.getElementsByClassName('galeriakep');
+for (const image of imagesgaleria) {
+    image.addEventListener("dblclick", () => {
+        modal.children[0].src = image.src;
+        modal.classList.remove("hidden");
+    });
+}
+
+modal.children[1].addEventListener("click", () => {
+    modal.classList.add("hidden");
+});
+
 
 function profilinfo(){
     if (document.getElementById("profilid").className == "profilinfo")
