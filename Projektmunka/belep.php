@@ -23,14 +23,14 @@ if(isset($_POST['ok']))
         
        if($row['jog'] == 'admin')
        {
-        $_SESSION['felh_nev'] = $row['nev'];
+        $_SESSION['felh_nev'] = $row['felh_nev'];
         $_SESSION['id'] = $row['id'];
         $_SESSION['belepett'] = true;
         header('Location:admin/adminlist.php');
        }
        elseif($row['jog'] == 'user')
        {
-        $_SESSION['felh_nev'] = $row['nev'];
+        $_SESSION['felh_nev'] = $row['felh_nev'];
         $_SESSION['id'] = $row['id'];
         $_SESSION['belepett'] = true;
         $id = $row['id'];

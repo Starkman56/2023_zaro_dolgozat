@@ -6,6 +6,8 @@ h1{
 h2{
     margin: 2rem auto;
     width: fit-content;
+    text-align: center;
+    font-size: 15px;
 }
 h4{
     margin: auto;
@@ -23,6 +25,7 @@ input{
     margin: auto;
     width: fit-content;
     background:rgba(224, 224, 224, 0.9);
+
 }
 .navbar-nav {
     width: 100%;
@@ -58,4 +61,10 @@ color: white;
 border-bottom: 1px solid rgb(255, 255, 255);
 padding-bottom: 0.5rem;
 }
-  
+#kuldes{
+    text-align: center;
+    width: fit-content;
+    margin:1rem auto;
+    padding: 0.3rem;
+
+}

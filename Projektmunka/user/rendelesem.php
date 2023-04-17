@@ -12,14 +12,15 @@ if(!isset($_SESSION['belepett']))
 }
 
 require("../kapcsolat/kapcs.php");
-$bentvan = $_SESSION["felhnev"];
+$bentvan = $_SESSION["felh_nev"];
+echo $bentvan;
 $sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, szemelyek.id 
 AS szemelyesid from szemelyek
 INNER JOIN megrendeles
 ON megrendeles.szemelyek_id = szemelyek.id
 INNER JOIN termek
 ON megrendeles.termek_id = termek.id
-WHERE szemelyek.felhnev = '{$bentvan}';
+WHERE szemelyek.felh_nev = '{$bentvan}';
 ";
 
 $eredmeny = mysqli_query($dbconn, $sql);
@@ -35,7 +36,7 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
         while($sor = mysqli_fetch_assoc($eredmeny))
         
        {
-        $kimenet .= "
+        $kimenet .="
             <tr>
             <td class=\"alkategoria_nev\"}>{$sor['szemelyeknev']}</td>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>

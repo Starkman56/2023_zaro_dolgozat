@@ -21,7 +21,7 @@
     <h1>Megrendelés</h1>
     <h3 id="rendeles"></h3>
     <h4 id="total"></h4>
-    <h2>A rendelés véglegesítéséhez kérjük kattintson a megerősítés gombra: <input type="submit" name="tel" id="tel" onclick="handleOrder();">  </h2>
+    <h2>A rendelés véglegesítéséhez kérjük kattintson a megerősítés gombra: <br> <input type="submit" name="tel" id="kuldes" value="Megerősítés" onclick="handleOrder();">  </h2>
     
 <script>
     let asd = new Array();
