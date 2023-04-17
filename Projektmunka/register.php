@@ -1,34 +1,29 @@
 <?php
-
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 //lapvédelem
 session_start();
-
-
 require("kapcsolat/kapcs.php");
+
+
 if(isset($_POST['ok']))
 {
     $nev = mysqli_real_escape_string($dbconn, $_POST['nev']);
-    $felhnev = mysqli_real_escape_string($dbconn, $_POST['felhnev']);
+    $felhnev = mysqli_real_escape_string($dbconn, $_POST['felh_nev']);
     $email = mysqli_real_escape_string($dbconn, $_POST['email']);
     $jelszo = sha1($_POST['jelszo']);
     $jelszoujra = sha1($_POST['jelszoujra']);
-    $iranyitoszam = $_POST['iranyitoszam'];
+    $iranyitoszam = $_POST['irsz'];
     $telepules = $_POST['telepules'];
     $szallitasicim = $_POST['szallitasi_cim'];
     $tel = $_POST['tel'];
 
+   
 
     $select = "SELECT * FROM `szemelyek`
                WHERE email = '$email' && jelszo = '$jelszo'";
-
-
     $result = mysqli_query($dbconn, $select);
-
-
     if(mysqli_num_rows($result) > 0)
     {
         $error[] = 'Ez a felhasználó már léttezik!';
@@ -41,17 +36,15 @@ if(isset($_POST['ok']))
         }
         else
         {
-            $insert = "INSERT INTO `szemelyek`(`nev`, `felhnev`, `email`, `jelszo`, `iranyitoszam`, `telepules`, `szallitasi_cim`, `tel`) VALUES ('$nev','$felhnev','$email','$jelszo','$iranyitoszam' ,'$telepules' ,'$szallitasicim','$tel')";
+            $insert = "INSERT INTO `szemelyek`(`nev`, `felh_nev`, `email`, `jelszo`, `tel`,`szallitasi_cim`,`irsz`) VALUES ('$nev','$felhnev','$email','$jelszo','$tel','$szallitasicim',(SELECT `telepules`.`id` FROM `telepules` WHERE `irsz` = '$iranyitoszam'))";
             mysqli_query($dbconn,$insert);
             header('Location:belep.php');
         }
     }
+
+
 }
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,18 +56,14 @@ if(isset($_POST['ok']))
 <meta name="apple-mobile-web-app-capable" content="yes" /> 
     <title>Document</title>
     <link rel="stylesheet" href="css/register.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src=""></script>
+    <script src="js/script.js"></script>
+
+
 </head>
 <body>
-
-
-
-
-<div class="background" id="background"></div>
-   
-
-        
-        
-        
+<div class="background" id="background"></div>    
         <form method="post">
         <div class="hiba">
         <?php
@@ -94,7 +83,7 @@ if(isset($_POST['ok']))
             </div>
          <!-- felh név -->
             <div class="bevitel">
-                <input type="text" name="felhnev" id="felhnev"  placeholder="Felhasználó név" required>
+                <input type="text" name="felh_nev" id="felh_nev"  placeholder="Felhasználó név" required>
             </div>
          <!--  email -->
             <div class="bevitel">
@@ -110,15 +99,15 @@ if(isset($_POST['ok']))
             </div> 
         <!--  iranyitoszam -->
             <div class="bevitel">
-                <input type="text" name="iranyitoszam" id="iranyitoszam" placeholder="Irányítószám" required>
+                <input type="text" name="irsz" id="irsz" placeholder="Irányítószám" required >
             </div>
         <!--  telepules -->
             <div class="bevitel">
-                 <input type="text" name="telepules" id="telepules" placeholder="Település" required>
+                 <input type="text" name="telepules" id="telepules" placeholder="Település" required value="">
             </div>
         <!-- szallitasicim -->
             <div class="bevitel">
-                <input type="text" name="szallitasicim" id="szallitasicim"  placeholder="Utca, házszám" required>
+                <input type="text" name="szallitasi_cim" id="szallitasi_cim"  placeholder="Utca, házszám" required>
             </div>
         <!--  telefon -->
              <div class="bevitel">
@@ -136,18 +125,13 @@ if(isset($_POST['ok']))
                     <option value="user">User</option>
                     <option value="admin">Admin</option>
                     </select>   
-            </div>
-
-            
-           
-        </form>
+            </div>    
+        </form> 
        
-    
-   
-    
-    
-   
+        
+
 </body>
+
 </html>
 
 
