@@ -72,7 +72,7 @@
         ';
       }
       else{
-        $bentvan = $_SESSION["felhnev"];
+        $bentvan = $_SESSION["felh_nev"];
         $logout = '<a href="../user/logout.php"><li class="nav-item jobbra " id="logout">
         <img src="../keps/kilepesicon.jpg"  alt="Logo" width="35rem" >
         <a class="nav-link" href="../user/logout.php">Kilépés</a>

@@ -29,7 +29,7 @@ h1{
     margin: 20px;
 
 }
-.bevitel input{
+.bevitel input, .bevitel select{
     height: 3rem;
     width: 30rem;
     margin: 0.5rem;

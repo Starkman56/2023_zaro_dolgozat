@@ -12,26 +12,49 @@ $sql = "SELECT * from szemelyek WHERE id = {$_SESSION['id']}";
 $eredmeny = mysqli_query($dbconn, $sql);
 if (isset($_POST['ok'])) {
     $nev = mysqli_real_escape_string($dbconn, $_POST['nev']);
-    $felhnev = mysqli_real_escape_string($dbconn, $_POST['felhnev']);
+    $felhnev = mysqli_real_escape_string($dbconn, $_POST['felh_nev']);
     $email = mysqli_real_escape_string($dbconn, $_POST['email']);
-    $iranyitoszam = $_POST['iranyitoszam'];
+    $iranyitoszam = $_POST['irsz'];
     $telepules = $_POST['telepules'];
-    $szallitasicim = $_POST['szallitasicim'];
+    $szallitasicim = $_POST['szallitasi_cim'];
     $tel = $_POST['tel'];
 
         $sql = "UPDATE szemelyek
-                SET nev = '{$nev}', felhnev = '{$felhnev}', email = '{$email}', iranyitoszam = '{$iranyitoszam}', telepules = '{$telepules}', szallitasicim = '{$szallitasicim}', tel = '{$tel}'
+                SET nev = '{$nev}', felh_nev = '{$felhnev}', email = '{$email}', irsz = '{$iranyitoszam}', szallitasi_cim = '{$szallitasicim}', tel = '{$tel}'
                 WHERE id = {$_SESSION['id']}";
         mysqli_query($dbconn, $sql);
+
+        $_SESSION["felh_nev"] = $nev;
+
         header('Location:webshop.php');
 } else {
     $sor = mysqli_fetch_assoc($eredmeny);
     $nev = $sor['nev'];
-    $felhnev = $sor['felhnev'];
+    $felhnev = $sor['felh_nev'];
     $email = $sor['email'];
-    $iranyitoszam = $sor['iranyitoszam'];
-    $telepules = $sor['telepules'];
-    $szallitasicim = $sor['szallitasicim'];
+    $iranyitoszam = $sor['irsz'];
+
+    $telepulesListaQuery = "
+        SELECT id, telepules, irsz
+        FROM telepules
+    ";
+    
+    $telepulesLista = mysqli_query($dbconn, $telepulesListaQuery);
+    $telepulesBeolvasas = mysqli_fetch_all($telepulesLista, MYSQLI_ASSOC);
+
+    $options = "";
+
+    foreach ($telepulesBeolvasas as $lista) {
+        $selected = "";
+
+        if($sor["irsz"] == $lista["id"]) {
+            $selected = "selected";
+        }
+        
+        $options .= "<option value='{$lista["id"]}' {$selected} >{$lista["irsz"]} - {$lista["telepules"]}</option>";
+    }
+
+    $szallitasicim = $sor['szallitasi_cim'];
     $tel = $sor['tel'];
 }
 ?>
@@ -45,6 +68,14 @@ if (isset($_POST['ok'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>      
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>    
+    <script>
+        $(document).ready(function() {
+            $('#iranyitoszam').select2();
+        });
+    </script>
     <link rel="stylesheet" href="../css/register.css">
 </head>
 <body>
@@ -76,7 +107,7 @@ if (isset($_POST['ok'])) {
             </div>
          <!-- felh név -->
             <div class="bevitel">
-                <input type="text" name="felhnev" id="felhnev"  placeholder="Felhasználó név" required value="<?php print $felhnev; ?>">
+                <input type="text" name="felh_nev" id="felhnev"  placeholder="Felhasználó név" required value="<?php print $felhnev; ?>">
             </div>
          <!--  email -->
             <div class="bevitel jelszoujra">
@@ -84,16 +115,14 @@ if (isset($_POST['ok'])) {
             </div>
         
         <!--  iranyitoszam -->
-            <div class="bevitel">
-                <input type="text" name="iranyitoszam" id="iranyitoszam" placeholder="Irányítószám" required value="<?php print $iranyitoszam; ?>">
-            </div>
-        <!--  telepules -->
-            <div class="bevitel">
-                 <input type="text" name="telepules" id="telepules" placeholder="Település" required value="<?php print $telepules; ?>">
-            </div>
+        <div class="bevitel">
+            <select name="irsz" id="iranyitoszam">
+                <?= $options;  ?>
+            </select>
+        </div>
         <!-- szallitasicim -->
             <div class="bevitel">
-                <input type="text" name="szallitasicim" id="szallitasicim"  placeholder="Utca, házszám" required value="<?php print $szallitasicim; ?>">
+                <input type="text" name="szallitasi_cim" id="szallitasicim"  placeholder="Utca, házszám" required value="<?php print $szallitasicim; ?>">
             </div>
         <!--  telefon -->
              <div class="bevitel">

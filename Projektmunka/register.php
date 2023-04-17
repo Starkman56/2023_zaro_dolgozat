@@ -15,7 +15,6 @@ if(isset($_POST['ok']))
     $jelszo = sha1($_POST['jelszo']);
     $jelszoujra = sha1($_POST['jelszoujra']);
     $iranyitoszam = $_POST['irsz'];
-    $telepules = $_POST['telepules'];
     $szallitasicim = $_POST['szallitasi_cim'];
     $tel = $_POST['tel'];
 
@@ -36,7 +35,7 @@ if(isset($_POST['ok']))
         }
         else
         {
-            $insert = "INSERT INTO `szemelyek`(`nev`, `felh_nev`, `email`, `jelszo`, `tel`,`szallitasi_cim`,`irsz`) VALUES ('$nev','$felhnev','$email','$jelszo','$tel','$szallitasicim',(SELECT `telepules`.`id` FROM `telepules` WHERE `irsz` = '$iranyitoszam'))";
+            $insert = "INSERT INTO `szemelyek`(`nev`, `felh_nev`, `email`, `jelszo`, `tel`,`szallitasi_cim`,`irsz`) VALUES ('$nev','$felhnev','$email','$jelszo','$tel','$szallitasicim', '$iranyitoszam')";
             mysqli_query($dbconn,$insert);
             header('Location:belep.php');
         }
@@ -44,6 +43,21 @@ if(isset($_POST['ok']))
 
 
 }
+
+$telepulesListaQuery = "
+SELECT id, telepules, irsz
+FROM telepules
+";
+
+$telepulesLista = mysqli_query($dbconn, $telepulesListaQuery);
+$telepulesBeolvasas = mysqli_fetch_all($telepulesLista, MYSQLI_ASSOC);
+
+$options = "";
+
+foreach ($telepulesBeolvasas as $lista) {
+$options .= "<option value='{$lista["id"]}'>{$lista["irsz"]} - {$lista["telepules"]}</option>";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,8 +69,16 @@ if(isset($_POST['ok']))
 <meta name="HandheldFriendly" content="true" />
 <meta name="apple-mobile-web-app-capable" content="yes" /> 
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />    
     <link rel="stylesheet" href="css/register.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>      
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>    
+    <script>
+        $(document).ready(function() {
+            $('#iranyitoszam').select2();
+        });
+    </script>    
     <script src=""></script>
     <script src="js/script.js"></script>
 
@@ -98,13 +120,11 @@ if(isset($_POST['ok']))
                 <input type="password" name="jelszoujra" id="jelszoujra" placeholder="Jelszó újra" required>
             </div> 
         <!--  iranyitoszam -->
-            <div class="bevitel">
-                <input type="text" name="irsz" id="irsz" placeholder="Irányítószám" required >
-            </div>
-        <!--  telepules -->
-            <div class="bevitel">
-                 <input type="text" name="telepules" id="telepules" placeholder="Település" required value="">
-            </div>
+        <div class="bevitel">
+            <select name="irsz" id="iranyitoszam">
+                <?= $options;  ?>
+            </select>
+        </div>
         <!-- szallitasicim -->
             <div class="bevitel">
                 <input type="text" name="szallitasi_cim" id="szallitasi_cim"  placeholder="Utca, házszám" required>
