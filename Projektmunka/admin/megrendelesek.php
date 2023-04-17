@@ -34,14 +34,16 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
         while($sor = mysqli_fetch_assoc($eredmeny))
         
        {
+        // Továbbfejlesztési javaslat: Ne legyen automatikusan beállítva a checked a Megrendelve checkbox-hoz, hanem csak akkor, ha ki is van fizetve.
+        // Erre esetleg lehetne egy új státusz
         $kimenet .= "
             <tr>
             <td class=\"alkategoria_nev\"}>{$sor['szemelyeknev']}</td>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
             <td class=\"padd\">
-            <ul>
-            <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
+            <ul>            
+            <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" checked><li>
             <li>Feldolgozás alatt<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
             <li>Futárszolgálatnál<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
             <li>Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"><li>
