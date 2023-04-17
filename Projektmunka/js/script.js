@@ -224,3 +224,6 @@ function deleteProductAmount(termek_id) {
     })
 }
 
+
+
+
