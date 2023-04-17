@@ -13,7 +13,6 @@ if(!isset($_SESSION['belepett']))
 
 require("../kapcsolat/kapcs.php");
 $bentvan = $_SESSION["felh_nev"];
-echo $bentvan;
 $sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, szemelyek.id 
 AS szemelyesid from szemelyek
 INNER JOIN megrendeles
