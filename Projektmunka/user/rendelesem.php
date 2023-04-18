@@ -13,7 +13,7 @@ if(!isset($_SESSION['belepett']))
 
 require("../kapcsolat/kapcs.php");
 $bentvan = $_SESSION["felh_nev"];
-$sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, szemelyek.id 
+$sql = "SELECT termek.nev AS 'termeknev', termek.ar AS 'ara', szemelyek.nev AS 'szemelyeknev', megrendeles.rendeles_allapot_id AS 'status', megrendeles.rendelt_darab , szemelyek.id 
 AS szemelyesid from szemelyek
 INNER JOIN megrendeles
 ON megrendeles.szemelyek_id = szemelyek.id
@@ -23,29 +23,36 @@ WHERE szemelyek.felh_nev = '{$bentvan}';
 ";
 
 $eredmeny = mysqli_query($dbconn, $sql);
+
 $kimenet = "<table class=\"megrendelestable\"><thead>
             <tr>
-            <th>Felhasználó neve</th>
             <th>Termék neve</th>
             <th>Rendelés (DB)</th>
+            <th>Végösszeg</th>
             <th>Státusz</th>
             </tr>";
-            $kimenet .= "</thead><tbody class=\"tabla\">";
+
+            $kimenet .= "</thead><tbody class=\"tabla\">
+            <tr>
+                <td colspan=4 class=\"hidden szemely_id\"}>{$_SESSION['id']}</td>                
+            </tr>            
+            ";
             
         while($sor = mysqli_fetch_assoc($eredmeny))
         
        {
+        $vegossszeg =  $sor['rendelt_darab'] * $sor['ara'];
         $kimenet .="
             <tr>
-            <td class=\"alkategoria_nev\"}>{$sor['szemelyeknev']}</td>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
+            <td class=\"darab\">{$vegossszeg} Ft</td>
             <td class=\"padd\">
             <ul>
-            <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\"  style='pointer-events: none;'><li>
-            <li>Feldolgozás alatt<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" style='pointer-events: none;'><li>
-            <li>Futárszolgálatnál<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" style='pointer-events: none;'><li>
-            <li>Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" style='pointer-events: none;'><li>
+            <li>Megrendelve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" ".($sor["status"] == 1 ? "checked" : "disabled")." style='pointer-events: none;'><li>
+            <li>Feldolgozás alatt<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" ".($sor["status"] == 2 ? "checked" : "disabled")." style='pointer-events: none;'><li>
+            <li>Futárszolgálatnál<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" ".($sor["status"] == 3 ? "checked" : "disabled")." style='pointer-events: none;'><li>
+            <li>Kézbesítve<input type=\"checkbox\" name=\"checkbox_name\" value=\"checkox_value\" ".($sor["status"] == 4 ? "checked" : "disabled")." style='pointer-events: none;'><li>
             </ul>
             </td>
             </tr> ";
