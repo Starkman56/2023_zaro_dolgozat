@@ -4,23 +4,18 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 //lapvédelem
 session_start();
-
 if(!isset($_SESSION['belepett']))
 {
     header("Location: ../false.html");
     exit();
 }
-
 require("../kapcsolat/kapcs.php");
-
 $sql = "SELECT * from termek
 INNER JOIN alkategoriak
 ON alkategoriak.alkategoria_id = termek.alkategoria_id
 INNER JOIN kategoriak
 ON alkategoriak.kategoria_id = kategoriak.kategoria_id";
-
 $eredmeny = mysqli_query($dbconn, $sql);
-
 $kimenet = "<table><thead>
             <tr>
             <th>Fotó:</th>
@@ -51,7 +46,6 @@ $kimenet = "<table><thead>
         }
 $kimenet .= "</tbody></table>";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,10 +55,7 @@ $kimenet .= "</tbody></table>";
     <title>Document</title>
     <link rel="stylesheet" href="../css/adminlista.css">
 </head>
-
 <body>
-    
-    
 <div class="cim">
     <div class="cimkozepre"><h1>Raktáron</h1>
         <div class="menu">
