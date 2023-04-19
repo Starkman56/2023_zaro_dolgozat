@@ -4,11 +4,9 @@
     padding: 0;
 }
 
-
-
 .kozep
 {
-    margin:0.5rem auto;
+    margin:0.5rem 0.5rem 0.5rem auto;
     width: fit-content;
     padding: 0.5rem;
     border: 2px solid black;
@@ -29,7 +27,7 @@
 .menu{
   display: flex;
   flex-direction: row;
-  
+  margin: auto;
 }
 
 .cimkozepre

@@ -43,13 +43,13 @@ require("../kapcsolat/kapcs.php");
   <img class="galeriakep " src="../keps/galeria2.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/galeria3.jpg" alt="">
+  <img class="galeriakep " src="../keps/galeria9.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
   <img class="galeriakep " src="../keps/galeria4.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/galeria5.jpg" alt="">
+  <img class="galeriakep " src="../keps/galeria3.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
   <img class="galeriakep " src="../keps/galeria6.jpg" alt="">
@@ -58,10 +58,10 @@ require("../kapcsolat/kapcs.php");
   <img class="galeriakep " src="../keps/galeria7.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
+  <img class="galeriakep " src="../keps/galeria8.jpg" alt="">
   </div>
   <div class="alap animate__animated animate__backInLeft">    
-  <img class="galeriakep " src="../keps/fishing.jpg" alt="">
+  <img class="galeriakep " src="../keps/galeria5.jpg" alt="">
   </div>
   <div id="modal" class="hidden">
             <img src="" alt="">

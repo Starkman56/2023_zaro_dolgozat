@@ -21,8 +21,8 @@ INNER JOIN termek
 ON megrendeles.termek_id = termek.id
 WHERE szemelyek.felh_nev = '{$bentvan}';
 ";
-
 $eredmeny = mysqli_query($dbconn, $sql);
+$kimenet ="";
 $kimenet .= "<table class=\"megrendelestable\"><thead>
             <tr>
             <th>Termék neve</th>

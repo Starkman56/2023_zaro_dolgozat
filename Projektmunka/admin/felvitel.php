@@ -12,7 +12,7 @@ if (isset($_POST['ok'])) {
     $nev = strip_tags(trim($_POST['nev']));
     $ar = strip_tags(trim($_POST['ar']));
     $darab = strip_tags(trim($_POST['darab']));
-    $felvdatum = strip_tags(trim($_POST['felvdatum']));
+    $felvdatum = strip_tags(trim($_POST['felv_datum']));
     $alkategoria_id = strip_tags(trim($_POST['alkategoria_id']));
     $leiras = strip_tags(trim($_POST['leiras']));
     
@@ -72,7 +72,7 @@ if (isset($_POST['ok'])) {
         require("../kapcsolat/kapcs.php");
         echo"$alkategoria_id";
         $sql = "INSERT INTO termek
-                (vonalkod,nev,felvdatum,ar,darab,foto,alkategoria_id,leiras)
+                (vonalkod,nev,felv_datum,ar,darab,foto,alkategoria_id,leiras)
                 VALUE('{$vonalkod}','{$nev}','{$felvdatum}','{$ar}','{$darab}','{$foto}','{$alkategoria_id}','{$leiras}') 
                 "; 
         mysqli_query($dbconn, $sql);    
@@ -153,7 +153,7 @@ if (isset($_POST['ok'])) {
         <!-- Dátum megadása -->
         <div class="bevitel">
             <label for="felvdatum">*Felvitel dátuma:</label>
-            <input type="date" name="felvdatum" id="felvdatum">
+            <input type="date" name="felv_datum" id="felv_datum">
         </div>
         <!-- ár megadása -->
         <div class="bevitel">
