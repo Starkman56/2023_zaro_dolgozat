@@ -8,6 +8,7 @@ session_start();
 require("kapcsolat/kapcs.php");
 if(isset($_POST['ok']))
 {
+    
     $email = mysqli_real_escape_string($dbconn, $_POST['email']);
     $pass = sha1($_POST['jelszo']);
 

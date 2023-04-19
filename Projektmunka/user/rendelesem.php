@@ -23,8 +23,7 @@ WHERE szemelyek.felh_nev = '{$bentvan}';
 ";
 
 $eredmeny = mysqli_query($dbconn, $sql);
-
-$kimenet = "<table class=\"megrendelestable\"><thead>
+$kimenet .= "<table class=\"megrendelestable\"><thead>
             <tr>
             <th>Termék neve</th>
             <th>Rendelés (DB)</th>
@@ -77,7 +76,7 @@ $kimenet .= "</tbody></table>";
     <div class="cim">
     <div class="cimkozepre"><h1>Megrendeléseim</h1>
     <div class="menu">
-    <p class="kozep"><a href="main.php">Vissza</a></p>
+    <a href="main.php"><p class="kozep">Vissza</p></a>
     </div>
     </div>
     <div class="content">
