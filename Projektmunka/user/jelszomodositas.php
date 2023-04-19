@@ -49,7 +49,10 @@ if (isset($_POST['ok'])) {
 </head>
 <body>
     <div class="background" id="background"></div>
+
     <form method="post">
+
+       
         <?php
         if(isset($error))
         {
@@ -74,3 +77,7 @@ if (isset($_POST['ok'])) {
         </div>
         <div class="gomb"><input type="submit" value="Mentés" id="ok" name="ok"></div>
         <a href="main.php">Vissza!</a>
+     
+        
+     </body>
+     </html>

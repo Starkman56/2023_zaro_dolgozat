@@ -176,5 +176,23 @@ if($_POST["c"] == "deleteProductAmount") {
         "newAmount"  => $newAmount,
         "message"    => $message,
     );
-    echo json_encode($result);
+    echo json_encode($result);    
+}
+
+
+if($_POST["c"] == "updateProductStatus") {
+
+    $message = "Sikeres mentés";
+
+    $sql = "
+       UPDATE megrendeles SET rendeles_allapot_id = '{$_POST["status"]}'
+       WHERE termek_id = '{$_POST["termek_id"]}' AND szemelyek_id = '{$_POST["szemely_id"]}'
+    ";
+    echo $sql;
+    mysqli_query($dbconn, $sql);   
+
+    $result = array(
+        "message"    => $message,
+    );
+    echo json_encode($result);    
 }

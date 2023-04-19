@@ -138,14 +138,7 @@ $options .= "<option value='{$lista["id"]}'>{$lista["irsz"]} - {$lista["telepule
              <div  class="bevitel">
                 <input type="submit" value="Regisztrálok" id="ok" name="ok">
              </div>
-             <p class="belepes">Van már fiókod? <a href="belep.php">Jelentkezz be itt!</a></p>
-
-            <div class="melles">
-                <select name="user_type">
-                    <option value="user">User</option>
-                    <option value="admin">Admin</option>
-                    </select>   
-            </div>    
+             <p class="belepes">Van már fiókod? <a href="belep.php">Jelentkezz be itt!</a></p>   
         </form> 
        
         

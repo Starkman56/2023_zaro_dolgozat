@@ -6,15 +6,7 @@ error_reporting(E_ALL);
 session_start();
 
 if (!isset($_SESSION['belepett'])) {
-    //header("Location: false.html");
-    // echo  '<script> let login = document.getElementById("login");
-    // console.log(login);
-    // login.classList.remove("hidden")</script>';
-    // '<script>document.getElementById("register").classList.remove("hidden")</script>';
-    //exit();
-}
-else{
-//echo  '<script>document.getElementById("logout").classList.remove("hidden")</script>';
+
 }
     //Elemek meghívása
 require("../kapcsolat/kapcs.php");
@@ -28,9 +20,7 @@ require("../kapcsolat/kapcs.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- nav linkek -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/ujstyle.css">
     <title>Webshop</title>

@@ -171,7 +171,9 @@ table .kep img{
   font-size: 1rem;
   color: rgb(255, 0, 0);
 }
-
+.hidden{
+  display: none;
+}
 table .padd{
     min-width: 5rem;
     min-height: 5rem;
@@ -236,9 +238,10 @@ table .padd ul{
         text-align: center;
     }
     table .padd{
-        min-width: 5rem;
+        min-width: 15rem;
         min-height: 5rem;
         text-align: center;
+
     }
     table .nev{
         min-width: 8rem;

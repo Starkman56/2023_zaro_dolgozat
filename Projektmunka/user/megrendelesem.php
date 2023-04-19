@@ -4,15 +4,12 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 //lapvédelem
 session_start();
-
 if(!isset($_SESSION['belepett']))
 {
     header("Location: ../false.html");
     exit();
 }
-
 require("../kapcsolat/kapcs.php");
-
 $sql = "SELECT termek.nev AS 'termeknev', szemelyek.nev AS 'szemelyeknev', megrendeles.rendelt_darab, szemelyek.id 
 AS szemelyesid from szemelyek
 INNER JOIN megrendeles
@@ -20,7 +17,6 @@ ON megrendeles.szemelyek_id = szemelyek.id
 INNER JOIN termek
 ON megrendeles.termek_id = termek.id
 ";
-
 $eredmeny = mysqli_query($dbconn, $sql);
 $kimenet = "<table class=\"megrendelestable\"><thead>
             <tr>
@@ -51,9 +47,6 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
        }
 $kimenet .= "</tbody></table>";
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +56,6 @@ $kimenet .= "</tbody></table>";
     <title>Document</title>
     <link rel="stylesheet" href="../css/adminlista.css">
 </head>
-
 <body>
     <div class="cim">
     <div class="cimkozepre"><h1>Megrendelések</h1>
