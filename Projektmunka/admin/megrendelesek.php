@@ -84,8 +84,8 @@ $kimenet .= "</tbody></table>";
     <div class="cim">
     <div class="cimkozepre"><h1>Megrendelések</h1>
     <div class="menu">
-    <p class="kozep"><a href="adminlist.php">Termék táblázat</a></p>
-    <p class="kozep"><a href="logout.php">Kijelenkezés</a></p>
+    <a href="adminlist.php"><p class="kozep">Termék táblázat</p></a>
+    <a href="logout.php"><p class="kozep">Kijelenkezés</p></a>
     </div>
     </div>
     <div class="content">

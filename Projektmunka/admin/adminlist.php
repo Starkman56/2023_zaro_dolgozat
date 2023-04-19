@@ -68,14 +68,14 @@ $kimenet .= "</tbody></table>";
 <div class="cim">
     <div class="cimkozepre"><h1>Raktáron</h1>
         <div class="menu">
-            <p class="kozep"><a href="megrendelesek.php">Megrendelések</a></p>
-             <p class="kozep"><a href="logout.php">Kijelenkezés</a></p>
+        <a href="megrendelesek.php"><p class="kozep">Megrendelések</p></a>
+        <a href="logout.php"><p class="kozep">Kijelenkezés</p></a>
         </div>
           <input class="KeresoItem" id="searchbar" onkeyup="search_itemadmin()" type="text"
         name="search" placeholder="Keresés a termékek között...">
     </div>
     <div class="content">
-    <p class="szovegkozepre"><a href="felvitel.php">Új áru felvitele</a></p>
+    <a href="felvitel.php"><p class="szovegkozepre">Új áru felvitele</a></p>
     <div class="respons">
             <?php
             echo $kimenet;
