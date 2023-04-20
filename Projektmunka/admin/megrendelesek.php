@@ -50,9 +50,9 @@ $kimenet = "<table class=\"megrendelestable\"><thead>
     
         $kimenet .= "
             <tr>
-            <td class=\"hidden szemely_id\"}>{$sor['szemelyesid']}</td>        
-            <td class=\"hidden termek_id\"}>{$sor['id']}</td>        
-            <td class=\"alkategoria_nev\"}>{$sor['szemelyeknev']}</td>
+            <td class=\"hidden szemely_id\">{$sor['szemelyesid']}</td>        
+            <td class=\"hidden termek_id\">{$sor['id']}</td>        
+            <td class=\"alkategoria_nev\">{$sor['szemelyeknev']}</td>
             <td class=\"felvdatum\">{$sor['termeknev']}</td>
             <td class=\"darab\">{$sor['rendelt_darab']} db</td>
             <td class=\"padd\">
