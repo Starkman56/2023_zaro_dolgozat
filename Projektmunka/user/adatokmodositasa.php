@@ -18,14 +18,11 @@ if (isset($_POST['ok'])) {
     $telepules = $_POST['telepules'];
     $szallitasicim = $_POST['szallitasi_cim'];
     $tel = $_POST['tel'];
-
         $sql = "UPDATE szemelyek
                 SET nev = '{$nev}', felh_nev = '{$felhnev}', email = '{$email}', irsz = '{$iranyitoszam}', szallitasi_cim = '{$szallitasicim}', tel = '{$tel}'
                 WHERE id = {$_SESSION['id']}";
         mysqli_query($dbconn, $sql);
-
         $_SESSION["felh_nev"] = $nev;
-
         header('Location:webshop.php');
 } else {
     $sor = mysqli_fetch_assoc($eredmeny);
@@ -33,34 +30,24 @@ if (isset($_POST['ok'])) {
     $felhnev = $sor['felh_nev'];
     $email = $sor['email'];
     $iranyitoszam = $sor['irsz'];
-
     $telepulesListaQuery = "
         SELECT id, telepules, irsz
         FROM telepules
     ";
-    
     $telepulesLista = mysqli_query($dbconn, $telepulesListaQuery);
     $telepulesBeolvasas = mysqli_fetch_all($telepulesLista, MYSQLI_ASSOC);
-
     $options = "";
-
     foreach ($telepulesBeolvasas as $lista) {
         $selected = "";
-
         if($sor["irsz"] == $lista["id"]) {
             $selected = "selected";
-        }
-        
+        }   
         $options .= "<option value='{$lista["id"]}' {$selected} >{$lista["irsz"]} - {$lista["telepules"]}</option>";
     }
-
     $szallitasicim = $sor['szallitasi_cim'];
     $tel = $sor['tel'];
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,15 +66,8 @@ if (isset($_POST['ok'])) {
     <link rel="stylesheet" href="../css/register.css">
 </head>
 <body>
-
-
-
-
-<div class="background" id="background"></div>
-   
-
-        
-        <div class="hiba">
+<div class="background" id="background"></div>        
+    <div class="hiba">
         <?php
         if(isset($error))
         {
@@ -98,7 +78,6 @@ if (isset($_POST['ok'])) {
         }
         ?>
         </div>
-        
         <form method="post">
             <h1>Adatok módosítása</h1>
         <!-- teljes név -->
@@ -113,7 +92,6 @@ if (isset($_POST['ok'])) {
             <div class="bevitel jelszoujra">
                  <input type="email" name="email" id="email"  placeholder="E-mail cím" required value="<?php print $email; ?>">
             </div>
-        
         <!--  iranyitoszam -->
         <div class="bevitel">
             <select name="irsz" id="iranyitoszam">
@@ -128,29 +106,12 @@ if (isset($_POST['ok'])) {
              <div class="bevitel">
                 <input type="text" name="tel" id="tel" placeholder="Telefonszám" required value="<?php print $tel;?>">
             </div>
-       
         <!-- submit gomb -->
              <div  class="bevitel">
                 <input type="submit" value="Módosítás jóváhagyása" id="ok" name="ok">
              </div>
             <a href="main.php">Vissza!</a></p>
-
-            <!-- <div class="melles">
-                <select name="user_type">
-                    <option value="user">User</option>
-                    <option value="admin">Admin</option>
-                    </select>   
-            </div> -->
-
-            
-           
         </form>
-       
-    
-   
-    
-    
-   
 </body>
 </html>
 

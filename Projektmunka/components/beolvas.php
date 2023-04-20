@@ -1,10 +1,6 @@
 <?php
-
-
 $eredmeny = mysqli_query($dbconn, $sql);
-
 $kimenet = "";
-
 //$sor = mysqli_fetch_assoc($eredmeny);
 /*
 echo "<pre>";
@@ -35,6 +31,4 @@ while ($sor = mysqli_fetch_assoc($eredmeny)) {
             ";        
 }
 $kimenet .= "";
-
-
 ?>

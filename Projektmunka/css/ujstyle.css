@@ -139,7 +139,7 @@ transition: all .2s ease-in-out;
 }
 .card:hover{
  
-scale: 30rem;
+scale: 40rem;
 transform: scale(1.05);
 box-shadow: 0 0 1em  rgba(0, 0, 0, .3) ;
 border: solid 2px rgb(173, 181, 189);
@@ -1714,6 +1714,7 @@ iframe{
     padding-bottom: 2rem;
     gap: 2rem;
 }
+
 .navbar{
   width: 102%;
 
@@ -1722,6 +1723,14 @@ iframe{
 .alap{
   padding: 0.1rem;
 }
+.card:hover{
+ 
+  scale: 30rem;
+  transform: scale(1.05);
+  box-shadow: 0 0 1em  rgba(0, 0, 0, .3) ;
+  border: solid 2px rgb(173, 181, 189);
+  height: 45rem;
+  }
 
 
 }

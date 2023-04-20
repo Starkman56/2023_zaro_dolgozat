@@ -14,8 +14,6 @@ require("../kapcsolat/kapcs.php");
 $sql =  "SELECT * from termek 
 WHERE alkategoria_id = 2";
 require("../components/beolvas.php");
-
-
 ?>
 <?php 
 require("../components/kategoria.php");
