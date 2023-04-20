@@ -83,7 +83,7 @@ if(isset($_POST['ok']))
             </div>        
             <div class="gomb"><input type="submit" value="Bejelentkezés" id="ok" name="ok"></div>
             <p class="reg">Nincs még fiókja? <a href="register.php">Regisztráljon itt!</a></p>
-
+            
     </form>
       
     
