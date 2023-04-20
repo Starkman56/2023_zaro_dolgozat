@@ -40,6 +40,7 @@ h1{
     border: solid #DEE2E6 1px 0px 0px 1px;
 
 }
+
 .bevitel input:hover{
     
     background-color: transparent;
@@ -121,4 +122,51 @@ input[type="submit"]:hover{
 .error{
     color: rgb(226, 62, 62);
     
+}
+
+.select2-container .select2-choice {
+    padding: 5px 10px;
+    height: 40px;
+    width: 132px; 
+    font-size: 1.2em;  
+}
+
+.select2-dropdown.select2-dropdown--below{
+    width: 30rem !important;
+    margin-left: 2rem;
+    background-color: #DEE2E6;
+}
+
+.select2-container--default .select2-selection--single{
+    height: 3rem;
+    width: 31.9rem;
+    margin: 0.5rem;
+    padding-left: 30px;
+    background-color: #F8F9FA;
+    border:none;
+    box-shadow: 5px 5px  #DEE2E6, 10px 10px  #CED4DA, 15px 15px #ADB5BD;
+    border: solid #DEE2E6 1px 0px 0px 1px;
+    border-radius: 0px;
+    font-size: 1.2rem;
+    
+    
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  
+    width: 40px;
+    color: #fff;
+     font-size: 2em;
+    padding: 4px 12px;
+    height: 27px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60px;
+    background-color: #CED4DA;
+    margin-top: 0.85rem;
+    border-radius: 5px;
+}
+.kapcs{
+    font-size: 0.7rem;
 }

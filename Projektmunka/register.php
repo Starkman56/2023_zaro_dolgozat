@@ -121,7 +121,7 @@ $options .= "<option value='{$lista["id"]}'>{$lista["irsz"]} - {$lista["telepule
             </div> 
         <!--  iranyitoszam -->
         <div class="bevitel">
-            <select name="irsz" id="iranyitoszam">
+            <select class="js-example-basic-single" name="irsz" id="iranyitoszam">
                 <?= $options;  ?>
             </select>
         </div>
