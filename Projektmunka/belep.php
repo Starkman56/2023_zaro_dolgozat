@@ -84,8 +84,13 @@ if(isset($_POST['ok']))
             <div class="gomb"><input type="submit" value="Bejelentkezés" id="ok" name="ok"></div>
             <p class="reg">Nincs még fiókja? <a href="register.php">Regisztráljon itt!</a></p>
             <p class="kapcs">Elfelejtette jelszavát?<a href="user/main.php#scroll"> Lépjen kapcsolatba velünk!</a></p>
+<<<<<<< HEAD
           
 
+=======
+    </form>
+      
+>>>>>>> 373adf30a00067d9576b4ab972237a6ba78c792a
     
     
  
