@@ -83,7 +83,7 @@ if(isset($_POST['ok']))
             </div>        
             <div class="gomb"><input type="submit" value="Bejelentkezés" id="ok" name="ok"></div>
             <p class="reg">Nincs még fiókja? <a href="register.php">Regisztráljon itt!</a></p>
-            
+            <p class="kapcs">Elfelejtette jelszavát?<a href="user/main.php#scroll"> Lépjen kapcsolatba velünk!</a></p>
     </form>
       
     
@@ -99,8 +99,6 @@ if(isset($_POST['ok']))
     }, 1000);
   }
 });
-
-
    </script>
 
 </body>
