@@ -57,7 +57,7 @@ $kimenet .= "</tbody></table>";
 </head>
 <body>
 <div class="cim">
-    <div class="cimkozepre"><h1>Raktáron</h1>
+    <div class="cimkozepre">
         <div class="menu">
         <a href="megrendelesek.php"><p class="kozep">Megrendelések</p></a>
         <a href="logout.php"><p class="kozep">Kijelenkezés</p></a>
