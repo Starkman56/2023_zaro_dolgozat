@@ -17,7 +17,7 @@ if (isset($_POST['ok'])) {
     $ar = strip_tags(trim($_POST['ar']));
     $nev = strip_tags(trim($_POST['nev']));
     $darab = strip_tags(trim($_POST['darab']));
-    $felvdatum = strip_tags(trim($_POST['felvdatum']));
+    $felvdatum = strip_tags(trim($_POST['felv_datum']));
     $alkategoria_id = strip_tags(trim($_POST['alkategoria_id']));
     $leiras = strip_tags(trim($_POST['leiras']));
     $mime = array("image/gif", "image/png", "image/jpg", "image/jpeg");
@@ -86,7 +86,7 @@ if (isset($_POST['ok'])) {
         $id = (int)$_GET['id'];
 
         $sql = "UPDATE termek
-                SET $fotoQuery ar = '{$ar}', vonalkod = '{$vonalkod}', nev = '{$nev}', leiras = '{$leiras}', darab = '{$darab}', felvdatum = '{$felvdatum}', alkategoria_id = '{$alkategoria_id}'
+                SET $fotoQuery ar = '{$ar}', vonalkod = '{$vonalkod}', nev = '{$nev}', leiras = '{$leiras}', darab = '{$darab}', felv_datum = '{$felvdatum}', alkategoria_id = '{$alkategoria_id}'
                 WHERE id = {$id}";
 
         mysqli_query($dbconn, $sql);
@@ -99,7 +99,7 @@ if (isset($_POST['ok'])) {
     $sql = "SELECT * from termek WHERE id = {$id}";
     $eredmeny = mysqli_query($dbconn, $sql);
     $sor = mysqli_fetch_assoc($eredmeny);
-    $felvdatum = $sor['felvdatum'];
+    $felvdatum = $sor['felv_datum'];
     $ar = $sor['ar'];
     $vonalkod = $sor['vonalkod'];
     $darab = $sor['darab'];
@@ -182,7 +182,7 @@ if (isset($_POST['ok'])) {
         <!-- Dátum megadása -->
         <div class="bevitel">
             <label for="felvdatum">*Felvitel dátuma:</label>
-            <input type="date" name="felvdatum" id="felvdatum" value="<?php print $felvdatum; ?>">
+            <input type="date" name="felv_datum" id="felv_datum" value="<?php print $felvdatum; ?>">
         </div>
         <!-- ár megadása -->
         <div class="bevitel">

@@ -37,7 +37,7 @@ window.onload = function(){
                 if(parseInt(e.target.parentElement.children[0].value)== 0){
                     Swal.fire(
                         'Figyelem!',
-                        'Kérjük állítsa be hány darab terméket szeretne rendelni!',
+                        '0 terméket nem lehet kosárba tenni',
                         'warning'
                     )
                     return false;
@@ -186,7 +186,7 @@ function search_itemadmin() {
     input=input.toLowerCase();
     let x = document.getElementsByClassName('nev');
     for (i = 0; i < x.length; i++) {
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+        if (!x[i].parentElement.innerHTML.toLowerCase().includes(input)) {
             x[i].parentElement.classList.add("hidden");
         }
         else {
