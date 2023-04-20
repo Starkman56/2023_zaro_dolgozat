@@ -43,7 +43,6 @@ if(isset($_POST['ok']))
         $error[] = "Helytelen e-mail címet, vagy jelszót adott meg!";
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -58,6 +57,7 @@ if(isset($_POST['ok']))
 <meta name="apple-mobile-web-app-capable" content="yes" /> 
     <title>Document</title>
     <link rel="stylesheet" href="css/register.css">
+
 </head>
 <body> 
     <div class="background" id="background"></div>
@@ -83,15 +83,27 @@ if(isset($_POST['ok']))
             </div>        
             <div class="gomb"><input type="submit" value="Bejelentkezés" id="ok" name="ok"></div>
             <p class="reg">Nincs még fiókja? <a href="register.php">Regisztráljon itt!</a></p>
-
+            <p class="kapcs">Elfelejtette jelszavát?<a href="user/main.php#scroll"> Lépjen kapcsolatba velünk!</a></p>
+            
     </form>
       
     
-            
+    
  
     
     <script src="js/hater.js"></script>
-   
+   <script>
+    $(document).ready(function(){
+  if(window.location.hash) {
+    $('html, body').animate({
+        scrollTop: $(window.location.hash).offset().top
+    }, 1000);
+  }
+});
+
+
+   </script>
+
 </body>
 
 </html>
