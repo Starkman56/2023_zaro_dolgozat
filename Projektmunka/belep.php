@@ -85,10 +85,6 @@ if(isset($_POST['ok']))
             <p class="reg">Nincs még fiókja? <a href="register.php">Regisztráljon itt!</a></p>
             <p class="kapcs">Elfelejtette jelszavát?<a href="user/main.php#scroll"> Lépjen kapcsolatba velünk!</a></p>
     </form>
-    
-    
- 
-    
     <script src="js/hater.js"></script>
    <script>
     $(document).ready(function(){

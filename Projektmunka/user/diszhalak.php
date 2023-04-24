@@ -185,6 +185,7 @@ require("../components/mainnav.php");
             </p>
         </div>
     </div>
+    <br>
     <!--aricle 5-->
     <div class="article">
         <div class="kep">
@@ -216,6 +217,7 @@ require("../components/mainnav.php");
             </p>
         </div>
     </div>
+    <br>
     <!--aricle 6-->
     <div class="article">
         <div class="kep">
@@ -248,6 +250,7 @@ require("../components/mainnav.php");
 
         </div>
     </div>
+    <br>
     <!--aricle 7-->
 
     <div class="article">
@@ -285,6 +288,7 @@ require("../components/mainnav.php");
 
         </div>
     </div>
+    <br>
     <!--aricle 8-->
 
     <div class="article">
@@ -320,6 +324,7 @@ require("../components/mainnav.php");
 
         </div>
     </div>
+    <br>
     <!--aricle 9-->
 
     <div class="article">
@@ -356,6 +361,7 @@ require("../components/mainnav.php");
 
         </div>
     </div>
+    <br>
     <!--aricle 10-->
 
     <div class="article">
@@ -391,6 +397,7 @@ require("../components/mainnav.php");
 
         </div>
     </div>
+    <br>
     <!--aricle 11-->
 
     <div class="article">
