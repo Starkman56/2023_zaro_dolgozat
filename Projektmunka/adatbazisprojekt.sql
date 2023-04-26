@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Ápr 18. 10:55
+-- Létrehozás ideje: 2023. Ápr 26. 10:50
 -- Kiszolgáló verziója: 10.4.24-MariaDB
 -- PHP verzió: 8.1.5
 
@@ -103,8 +103,9 @@ CREATE TABLE `megrendeles` (
 
 INSERT INTO `megrendeles` (`id`, `megrendeles_datuma`, `kezbesites_datum`, `szemelyek_id`, `termek_id`, `rendeles_allapot_id`, `rendelt_darab`, `rendeles_azonosito`) VALUES
 (89, '2023-04-17 11:50:30', '2023-04-17 11:50:30', 5, 84, 1, 3, '449670eee7dca9cd166a'),
-(90, '2023-04-17 14:40:19', '2023-04-17 14:40:19', 5, 110, 4, 10, '1ec941c694fe1e3d3017'),
-(91, '2023-04-18 10:51:43', '2023-04-18 10:51:43', 5, 84, 1, 2, '2c42bdf5ce85d53e4691');
+(90, '2023-04-17 14:40:19', '2023-04-17 14:40:19', 4, 110, 2, 10, '1ec941c694fe1e3d3017'),
+(93, '2023-04-24 12:48:25', '2023-04-24 12:48:25', 2, 97, 3, 1, '1ec941c694fe1e3d301722'),
+(94, '2023-04-24 12:48:46', '2023-04-24 12:48:46', 4, 96, 2, 5, '1ec9413c694fe1e3d3017');
 
 -- --------------------------------------------------------
 
@@ -154,8 +155,9 @@ INSERT INTO `szemelyek` (`id`, `nev`, `felh_nev`, `email`, `jelszo`, `jog`, `tel
 (2, '312312312', '1234', '1234@1234', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 'user', '321312', '312312', 502),
 (3, '2312312', '321312312', 'kordics.b@gmail.com', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 'user', '123321', '23123', 502),
 (4, 'Teszt Aladár', 'tesztaladar', 'tesztuser@gmail.com', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 'user', '0123456789', 'Vasút utca 3.', 272),
-(5, 'Kis cica', 'kiscica', 'kiscica@gmail.com', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 'user', '0123456789', 'Vasút utca 3.', 504),
-(6, 'AdminAdmin', 'Adminfelh', 'Admin@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin', '3232012', 'Eperfa ut 3', 1);
+(5, 'Kis cica', 'Szabó Máté', 'kiscica@gmail.com', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 'user', '0123456789', 'Vasút utca 3.', 507),
+(6, 'AdminAdmin', 'Adminfelh', 'Admin@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin', '3232012', 'Eperfa ut 3', 1),
+(7, 'aasasdasd', 'asdasd', 'kiscicaaa@gmail.com', '85136c79cbf9fe36bb9d05d0639c70c265c18d37', 'user', 'asdasd', 'asdasd', 1);
 
 -- --------------------------------------------------------
 
@@ -4356,8 +4358,8 @@ CREATE TABLE `termek` (
 --
 
 INSERT INTO `termek` (`id`, `vonalkod`, `felv_datum`, `ar`, `darab`, `foto`, `nev`, `alkategoria_id`, `leiras`) VALUES
-(83, '00000000', '2023-03-03', 27000, 1, '1681366951.jpeg', 'Okuma Ceymar River Feeder', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
-(84, '00000000', '2023-03-03', 29100, 30, '1681366957.jpeg', 'Okuma Ceymar River Plus', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik. ggg'),
+(83, '00000000', '2023-03-03', 27000, 100, '1681366951.jpeg', 'Okuma Ceymar River Feeder', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
+(84, '00000000', '2023-03-03', 29100, 29, '1681366957.jpeg', 'Okuma Ceymar River Plus', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik. ggg'),
 (85, '00000000', '2023-04-14', 32000, 42, '1681366969.jpeg', 'Okuma Ceymar Black', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
 (86, '00000000', '2023-03-03', 41000, 96, '1681366976.jpeg', 'Okuma Custom Black Ceymar River Feeder', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
 (87, '00000000', '2023-03-03', 54900, 100, '1681366985.jpeg', 'Okuma Ceymar River Feeder Professional', 1, 'Pontyos és egyéb békéshalas horgászatra kifejlesztett Okuma Ceymar feeder botok élménygazdag horgászatot eredményeznek. Kirobbanó fárasztási erővel rendelkezik.'),
@@ -4471,7 +4473,7 @@ ALTER TABLE `kategoriak`
 -- AUTO_INCREMENT a táblához `megrendeles`
 --
 ALTER TABLE `megrendeles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT a táblához `rendeles_allapot`
@@ -4483,7 +4485,7 @@ ALTER TABLE `rendeles_allapot`
 -- AUTO_INCREMENT a táblához `szemelyek`
 --
 ALTER TABLE `szemelyek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT a táblához `telepules`
@@ -4495,7 +4497,7 @@ ALTER TABLE `telepules`
 -- AUTO_INCREMENT a táblához `termek`
 --
 ALTER TABLE `termek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
 
 --
 -- Megkötések a kiírt táblákhoz

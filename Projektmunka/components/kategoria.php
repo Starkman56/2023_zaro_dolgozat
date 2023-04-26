@@ -14,7 +14,7 @@
 
     <!--Website container-->
     <div class="container">
-        <div class="nincsentalalat hidden" >Nincsen ilyen termék az oldalon</div>
+        <div class="nincsentalalat hidden" >Nincs ilyen termék az oldalon</div>
         <div class="cards">
             <?php
             print $kimenet;

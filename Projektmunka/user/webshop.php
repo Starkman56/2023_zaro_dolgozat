@@ -31,7 +31,7 @@ require("../kapcsolat/kapcs.php");
   <a href="haztartas.php"><img class="webshopkep" src="../keps/muanyag_termekek.jpg" alt=""><figcaption>Háztartási eszközök</figcaption></a>
   </div>
   <div class="alap animate__animated animate__backInRight hover-img2">
-  <a href="kezmuvesfatermek.php"><img class="webshopkep" src="../keps/madareteto.jpg" alt=""><figcaption>Fatermékek</figcaption></a>
+  <a href="kezmuvesfatermek.php"><img class="webshopkep" src="../keps/madareteto.jpg" alt=""><figcaption>Fa termékek</figcaption></a>
   </div>  
 </div>
 <?php

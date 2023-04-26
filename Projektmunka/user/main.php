@@ -72,7 +72,7 @@ require("../kapcsolat/kapcs.php");
   </div>
   
   <div class="alap animate__animated animate__backInLeft">
-  <p class="szoveg">A üzletünk már több <b> 20 éve</b> üzemel ,de eddig nem volt lehetőség online vásárlásra , egésszen ideáig! <br><br>
+  <p class="szoveg">Az üzletünk már több <b> 20 éve</b> üzemel ,de eddig nem volt lehetőség online vásárlásra , egészen ideáig! <br><br>
   Új webáruházunkban minden terméket megtalál, amit az üzletünkben forgalmazunk és az otthona kényelmében vásárolhat! Célunk , hogy minden vásárlónk számára <b>minőségi termékekkel</b> szolgáljunk, a lehető <b>legjobb árakon.</b><br><br>
   <i> A képre kattintva tovább navigálhat a webáruház oldalára ! </i>
 
